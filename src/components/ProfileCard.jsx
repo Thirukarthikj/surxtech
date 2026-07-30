@@ -24,6 +24,7 @@ const ProfileCardComponent = ({
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
   name = '',
+  skillSummary = 'Web · Apps · Architecture',
   title = '',
   handle = '',
   status = 'Online',
@@ -321,7 +322,7 @@ const ProfileCardComponent = ({
             <div className="pc-details">
               <h3>{name}</h3>
               <p className="pc-role">{title}</p>
-              <div className="pc-summary">Web · Apps · Cloud Architecture</div>
+              <div className="pc-summary">{skillSummary}</div>
             </div>
 
             {/* User Info Bar at Bottom */}

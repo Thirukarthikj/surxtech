@@ -39,7 +39,7 @@ export default function WhySurxTech() {
               <div className="orbit-dot orbit-dot3"></div>
             </div>
             <div className="tech-center">
-              <div className="tech-logo-big">S</div>
+              <img src="/logo.png" alt="SurxTech Logo" className="tech-logo-img" />
               <div className="tech-name-big">
                 SURX<span>TECH</span>
               </div>
