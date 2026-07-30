@@ -121,7 +121,7 @@ export default function TeamSection() {
         }}
       >
         <Sparkles size={18} color="#2563eb" />
-        <span>Other team member profile cards will be updated soon!</span>
+        <span>Other team member profile will be updated soon!</span>
       </div>
 
       {/* TEAM MEMBER PROFILE MODAL */}
