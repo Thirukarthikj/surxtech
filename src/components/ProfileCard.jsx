@@ -16,6 +16,7 @@ const round = (v, precision = 3) => parseFloat(v.toFixed(precision));
 
 const ProfileCardComponent = ({
   avatarUrl = '',
+  icon = '⚡',
   innerGradient,
   className = '',
   enableTilt = true,
@@ -303,9 +304,9 @@ const ProfileCardComponent = ({
               <p>{title}</p>
             </div>
 
-            {/* Avatar in Center/Bottom */}
-            <div className="pc-avatar-wrap">
-              {avatarUrl && (
+            {/* Avatar / Icon Badge in Center */}
+            <div className="pc-avatar-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {avatarUrl ? (
                 <img
                   className="avatar"
                   src={avatarUrl}
@@ -315,6 +316,24 @@ const ProfileCardComponent = ({
                     e.target.style.display = 'none';
                   }}
                 />
+              ) : (
+                <div
+                  style={{
+                    width: '110px',
+                    height: '110px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #2563eb, #0284c7)',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '48px',
+                    boxShadow: '0 12px 32px rgba(37, 99, 235, 0.3)',
+                    border: '3px solid rgba(255, 255, 255, 0.9)'
+                  }}
+                >
+                  {icon || (name ? name.charAt(0) : '⚡')}
+                </div>
               )}
             </div>
 
@@ -323,15 +342,20 @@ const ProfileCardComponent = ({
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <img
-                      src={miniAvatarUrl || avatarUrl}
-                      alt={`${name || 'User'} mini avatar`}
-                      loading="lazy"
-                      onError={e => {
-                        e.target.style.opacity = '0.5';
-                        if (avatarUrl) e.target.src = avatarUrl;
-                      }}
-                    />
+                    {miniAvatarUrl || avatarUrl ? (
+                      <img
+                        src={miniAvatarUrl || avatarUrl}
+                        alt={`${name || 'User'} mini avatar`}
+                        loading="lazy"
+                        onError={e => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                    ) : (
+                      <span style={{ fontSize: '15px', fontWeight: 'bold', color: '#2563eb' }}>
+                        {icon || (name ? name.charAt(0) : '⚡')}
+                      </span>
+                    )}
                   </div>
                   <div className="pc-user-text">
                     <div className="pc-handle">@{handle}</div>

@@ -18,65 +18,10 @@ const members = [
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     email: 'jthirukarthick@gmail.com',
-    avatarUrl: '/images/team/thirukarthick.svg',
+    avatarUrl: '',
     handle: 'thirukarthick',
     status: 'Online ⚡',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #eff6ff 50%, #bfdbfe 100%)',
-  },
-  {
-    id: 'ananya',
-    icon: '🎨',
-    bg: 'linear-gradient(135deg,#0284c7,#2563eb)',
-    teamTitle: 'Design Lead',
-    memberName: 'Ananya Roy',
-    roleTitle: 'Lead UI/UX Strategist',
-    skillSummary: 'Figma · Design Systems · Motion · Prototypes',
-    bio: 'Passionate about craft and conversion. Ananya leads user research, wireframing, component design systems, and visual branding that elevate startups into enterprise-grade products.',
-    skills: ['Figma', 'User Research', 'Design Systems', 'Prototyping', 'Adobe CC'],
-    experience: '5+ Years Experience · 40+ Brand Kits Built',
-    linkedin: 'https://linkedin.com',
-    email: 'design@surxtech.com',
-    avatarUrl: '/images/team/ananya.svg',
-    handle: 'ananyaroy',
-    status: 'Designing 🎨',
-    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f0f9ff 50%, #bae6fd 100%)',
-  },
-  {
-    id: 'vikram',
-    icon: '⚙️',
-    bg: 'linear-gradient(135deg,#1d4ed8,#60a5fa)',
-    teamTitle: 'Engineering',
-    memberName: 'Vikram Sharma',
-    roleTitle: 'Senior DevOps Engineer',
-    skillSummary: 'Node · Python · AWS · Docker · PostgreSQL',
-    bio: 'Infrastructure specialist ensuring 99.99% server uptime and lightning-fast API responses. Vikram architects cloud databases, CI/CD pipelines, and microservices.',
-    skills: ['Node.js', 'Python', 'Docker', 'PostgreSQL', 'AWS EC2/RDS', 'GraphQL'],
-    experience: '6+ Years Experience · 99.99% Uptime Record',
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    email: 'dev@surxtech.com',
-    avatarUrl: '/images/team/vikram.svg',
-    handle: 'vikramsharma',
-    status: 'In Code ⚙️',
-    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #e0f2fe 50%, #93c5fd 100%)',
-  },
-  {
-    id: 'rohan',
-    icon: '🎬',
-    bg: 'linear-gradient(135deg,#0369a1,#38bdf8)',
-    teamTitle: 'Content & Media',
-    memberName: 'Rohan Patel',
-    roleTitle: 'Media Lead & Editor',
-    skillSummary: 'Premiere · Motion Graphics · Brand Films · Social',
-    bio: 'Creative storyteller transforming raw footage into broadcast-quality promotional films, social media reels, motion graphics intros, and sound designs.',
-    skills: ['Premiere Pro', 'After Effects', 'Motion Graphics', 'Color Grading', 'Sound Design'],
-    experience: '4+ Years Experience · 1.5M+ Social Views',
-    linkedin: 'https://linkedin.com',
-    email: 'media@surxtech.com',
-    avatarUrl: '/images/team/rohan.svg',
-    handle: 'rohanpatel',
-    status: 'Creating 🎬',
-    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #ebf8ff 50%, #7dd3fc 100%)',
   },
 ];
 
@@ -98,29 +43,29 @@ export default function TeamSection() {
           The People
         </div>
         <h2 className="s-title">
-          Meet Our <span className="highlight-text">Team</span>
+          Meet Our <span className="highlight-text">Founder</span>
         </h2>
         <p style={{ color: 'var(--muted)', marginTop: '12px', fontSize: '15px', maxWidth: '580px', margin: '12px auto 0' }}>
-          A tight-knit crew of designers, developers, and strategists who love building things that matter. Hover or move your cursor to interact with our 3D profiles.
+          Lead architect and tech strategist behind SurxTech. Hover or click to explore the personal portfolio.
         </p>
       </div>
 
       <div
         className="team-interactive-grid"
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '28px',
-          maxWidth: '1280px',
+          display: 'flex',
+          justifyContent: 'center',
+          maxWidth: '360px',
           margin: '0 auto',
           padding: '0 12px'
         }}
       >
         {members.map((m) => (
-          <div key={m.id} style={{ cursor: 'pointer' }} onClick={() => handleMemberClick(m)}>
+          <div key={m.id} style={{ width: '100%', cursor: 'pointer' }} onClick={() => handleMemberClick(m)}>
             <ProfileCard
               avatarUrl={m.avatarUrl}
               miniAvatarUrl={m.avatarUrl}
+              icon={m.icon}
               name={m.memberName}
               title={m.roleTitle}
               handle={m.handle}
