@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe } from 'lucide-react';
+import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe, Sparkles } from 'lucide-react';
 import ProfileCard from './ProfileCard';
 
 const members = [
@@ -76,6 +76,29 @@ export default function TeamSection() {
             />
           </div>
         ))}
+      </div>
+
+      {/* OTHER TEAM MEMBERS UPDATING SOON BANNER */}
+      <div
+        style={{
+          padding: '14px 24px',
+          background: 'rgba(37, 99, 235, 0.05)',
+          border: '1px dashed rgba(37, 99, 235, 0.3)',
+          borderRadius: '16px',
+          maxWidth: '460px',
+          margin: '40px auto 0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+          color: '#2563eb',
+          fontSize: '13.5px',
+          fontWeight: 600,
+          boxShadow: '0 4px 14px rgba(37, 99, 235, 0.04)'
+        }}
+      >
+        <Sparkles size={18} color="#2563eb" />
+        <span>Other team member profile cards will be updated soon!</span>
       </div>
 
       {/* TEAM MEMBER PROFILE MODAL */}

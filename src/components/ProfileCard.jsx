@@ -298,14 +298,8 @@ const ProfileCardComponent = ({
       <div ref={shellRef} className="pc-card-shell">
         <section className="pc-card">
           <div className="pc-inside">
-            {/* Clean Details at Top */}
-            <div className="pc-details">
-              <h3>{name}</h3>
-              <p>{title}</p>
-            </div>
-
-            {/* Avatar / Icon Badge in Center */}
-            <div className="pc-avatar-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {/* Avatar / Icon Badge at Top */}
+            <div className="pc-avatar-wrap">
               {avatarUrl ? (
                 <img
                   className="avatar"
@@ -317,46 +311,23 @@ const ProfileCardComponent = ({
                   }}
                 />
               ) : (
-                <div
-                  style={{
-                    width: '110px',
-                    height: '110px',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #2563eb, #0284c7)',
-                    color: '#ffffff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '48px',
-                    boxShadow: '0 12px 32px rgba(37, 99, 235, 0.3)',
-                    border: '3px solid rgba(255, 255, 255, 0.9)'
-                  }}
-                >
+                <div className="pc-icon-badge">
                   {icon || (name ? name.charAt(0) : '⚡')}
                 </div>
               )}
+            </div>
+
+            {/* Details Section */}
+            <div className="pc-details">
+              <h3>{name}</h3>
+              <p className="pc-role">{title}</p>
+              <div className="pc-summary">Web · Apps · Cloud Architecture</div>
             </div>
 
             {/* User Info Bar at Bottom */}
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
-                  <div className="pc-mini-avatar">
-                    {miniAvatarUrl || avatarUrl ? (
-                      <img
-                        src={miniAvatarUrl || avatarUrl}
-                        alt={`${name || 'User'} mini avatar`}
-                        loading="lazy"
-                        onError={e => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                    ) : (
-                      <span style={{ fontSize: '15px', fontWeight: 'bold', color: '#2563eb' }}>
-                        {icon || (name ? name.charAt(0) : '⚡')}
-                      </span>
-                    )}
-                  </div>
                   <div className="pc-user-text">
                     <div className="pc-handle">@{handle}</div>
                     <div className="pc-status">{status}</div>
@@ -368,7 +339,7 @@ const ProfileCardComponent = ({
                   type="button"
                   aria-label={`View profile for ${name || 'user'}`}
                 >
-                  {contactText}
+                  {contactText} ↗
                 </button>
               </div>
             )}
