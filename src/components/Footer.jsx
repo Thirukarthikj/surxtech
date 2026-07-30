@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link to="/" className="f-logo">
-            <div className="f-logo-mark">S</div>
+            <img src="/logo.png" alt="SurxTech Logo" className="f-logo-img" />
             <span className="f-logo-text">
               SURX<em>TECH</em>
             </span>

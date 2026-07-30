@@ -28,13 +28,13 @@
   width: 100%;
   border-radius: var(--card-radius);
   position: relative;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
   transform: translateZ(0) rotateX(0deg) rotateY(0deg);
   background: #ffffff;
   backface-visibility: hidden;
   overflow: hidden;
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* POPUP 3D TILT ELEVATION ON HOVER */
@@ -42,8 +42,8 @@
 .pc-card.active {
   transition: none;
   transform: translateY(-6px) scale(1.015) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
-  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18), 0 6px 16px rgba(0, 0, 0, 0.06);
-  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .pc-card-shell.entering .pc-card {
@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 3px solid #ffffff;
 }
 
@@ -92,7 +92,7 @@
   max-width: 100px;
   max-height: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 12px rgba(37, 99, 235, 0.15));
+  filter: none;
 }
 
 /* TOP & CENTER DETAILS */
@@ -135,11 +135,11 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 10px 14px;
   pointer-events: auto;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
 }
 
@@ -189,7 +189,7 @@
   background: #1d4ed8;
   border-color: #1e40af;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {

@@ -8,9 +8,9 @@ const members = [
     icon: '⚡',
     bg: 'linear-gradient(135deg,#2563eb,#0ea5e9)',
     teamTitle: 'Development Team',
-    memberName: 'J. Thirukarthick',
+    memberName: 'J. Thirukarthik',
     roleTitle: 'Founder & Tech Lead',
-    skillSummary: 'Web · Mobile Apps · Architecture · Strategy',
+    skillSummary: 'Web · Mobile Apps · Architecture',
     bio: 'Lead architect behind SurxTech digital products. Thirukarthick specializes in building high-scale React, Next.js, Node.js applications and cloud infrastructures with robust security and performance.',
     skills: ['React', 'Next.js', 'Node.js', 'Flutter', 'TypeScript', 'AWS'],
     experience: '6+ Years Experience · 50+ Apps Delivered',
@@ -22,6 +22,26 @@ const members = [
     handle: 'thirukarthick',
     status: 'Online ⚡',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #eff6ff 50%, #bfdbfe 100%)',
+  },
+  {
+    id: 'surya',
+    icon: '🚀',
+    bg: 'linear-gradient(135deg,#6366f1,#8b5cf6)',
+    teamTitle: 'Executive Team',
+    memberName: 'S.Surya',
+    roleTitle: 'Co-Founder',
+    skillSummary: 'Strategy · Operations · Growth',
+    bio: 'Co-Founder at SurxTech. Driving product strategy, business growth, client partnerships, and creative operations across all startup initiatives.',
+    skills: ['Product Strategy', 'Business Growth', 'UI/UX Design', 'Client Relations', 'Operations'],
+    experience: 'Co-Founder & Executive Lead',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: '',
+    email: 'surya@surxtech.com',
+    avatarUrl: '',
+    handle: 'surya',
+    status: 'Online 🚀',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f5f3ff 50%, #ddd6fe 100%)',
   },
 ];
 
@@ -43,19 +63,21 @@ export default function TeamSection() {
           The People
         </div>
         <h2 className="s-title">
-          Meet Our <span className="highlight-text">Founder</span>
+          Meet Our <span className="highlight-text">Founders</span>
         </h2>
         <p style={{ color: 'var(--muted)', marginTop: '12px', fontSize: '15px', maxWidth: '580px', margin: '12px auto 0' }}>
-          Lead architect and tech strategist behind SurxTech. Hover or click to explore the personal portfolio.
+          The leadership team behind SurxTech. Hover or click to explore profile details.
         </p>
       </div>
 
       <div
         className="team-interactive-grid"
         style={{
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 340px))',
           justifyContent: 'center',
-          maxWidth: '360px',
+          gap: '32px',
+          maxWidth: '740px',
           margin: '0 auto',
           padding: '0 12px'
         }}
@@ -68,6 +90,7 @@ export default function TeamSection() {
               icon={m.icon}
               name={m.memberName}
               title={m.roleTitle}
+              skillSummary={m.skillSummary}
               handle={m.handle}
               status={m.status}
               innerGradient={m.innerGradient}

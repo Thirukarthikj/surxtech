@@ -24,7 +24,7 @@ export default function Navbar({ theme, toggleTheme }) {
   return (
     <nav id="nav" className={stuck ? 'stuck' : ''}>
       <Link to="/" className="logo">
-        <div className="logo-mark">S</div>
+        <img src="/logo.png" alt="SurxTech Logo" className="logo-img" />
         <span className="logo-text">SURX<em>TECH</em></span>
       </Link>
 
