@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#db2777" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8d7da"/>
+      <stop offset="100%" stop-color="#e2b0ab"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b0764"/>
+      <stop offset="100%" stop-color="#701a75"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glowing halo -->
+  <circle cx="200" cy="180" r="130" fill="none" stroke="url(#neon)" stroke-width="3" opacity="0.6"/>
+  <circle cx="200" cy="180" r="150" fill="none" stroke="#f472b6" stroke-width="1" stroke-dasharray="6 6" opacity="0.4"/>
+
+  <!-- Long Hair (Back) -->
+  <path d="M 120 140 C 100 240, 110 360, 140 420 L 260 420 C 290 360, 300 240, 280 140 Z" fill="#2e1065"/>
+
+  <!-- Body / Outfit -->
+  <path d="M 90 480 L 120 330 C 140 300, 260 300, 280 330 L 310 480 Z" fill="url(#suit)"/>
+
+  <!-- Neck & Collar -->
+  <rect x="182" y="240" width="36" height="65" rx="10" fill="url(#skin)"/>
+
+  <!-- Face -->
+  <path d="M 145 150 C 145 240, 255 240, 255 150 C 255 105, 145 105, 145 150 Z" fill="url(#skin)"/>
+
+  <!-- Front Hair -->
+  <path d="M 140 140 C 145 70, 255 70, 260 140 C 240 100, 220 90, 200 95 C 180 90, 160 100, 140 140 Z" fill="#2e1065"/>
+
+  <!-- Eyes -->
+  <ellipse cx="172" cy="158" rx="6" ry="4" fill="#3b0764"/>
+  <ellipse cx="228" cy="158" rx="6" ry="4" fill="#3b0764"/>
+  <circle cx="174" cy="156" r="2" fill="#ffffff"/>
+  <circle cx="230" cy="156" r="2" fill="#ffffff"/>
+
+  <!-- Smile -->
+  <path d="M 182 198 Q 200 212 218 198" fill="none" stroke="#be185d" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Badge -->
+  <g transform="translate(130, 390)">
+    <rect width="140" height="30" rx="15" fill="url(#neon)" opacity="0.9"/>
+    <text x="70" y="20" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">DESIGN LEAD 🎨</text>
+  </g>
+</svg>
