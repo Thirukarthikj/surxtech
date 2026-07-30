@@ -83,6 +83,14 @@ const members = [
 export default function TeamSection() {
   const [activeMember, setActiveMember] = useState(null);
 
+  const handleMemberClick = (m) => {
+    if (m.portfolioUrl) {
+      window.open(m.portfolioUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      setActiveMember(m);
+    }
+  };
+
   return (
     <section className="section alt" id="team" style={{ padding: '80px 24px', overflow: 'hidden' }}>
       <div className="team-hdr" style={{ textAlign: 'center', marginBottom: '48px' }}>
@@ -109,7 +117,7 @@ export default function TeamSection() {
         }}
       >
         {members.map((m) => (
-          <div key={m.id} style={{ cursor: 'pointer' }} onClick={() => setActiveMember(m)}>
+          <div key={m.id} style={{ cursor: 'pointer' }} onClick={() => handleMemberClick(m)}>
             <ProfileCard
               avatarUrl={m.avatarUrl}
               miniAvatarUrl={m.avatarUrl}
@@ -118,8 +126,8 @@ export default function TeamSection() {
               handle={m.handle}
               status={m.status}
               innerGradient={m.innerGradient}
-              contactText="View Profile"
-              onContactClick={() => setActiveMember(m)}
+              contactText={m.portfolioUrl ? "View Portfolio" : "View Profile"}
+              onContactClick={() => handleMemberClick(m)}
             />
           </div>
         ))}
