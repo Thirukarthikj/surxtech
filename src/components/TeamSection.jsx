@@ -14,7 +14,7 @@ const members = [
     bio: 'Lead architect behind SurxTech digital products. Thirukarthick specializes in building high-scale React, Next.js, Node.js applications and cloud infrastructures with robust security and performance.',
     skills: ['React', 'Next.js', 'Node.js', 'Flutter', 'TypeScript', 'AWS'],
     experience: '6+ Years Experience · 50+ Apps Delivered',
-    portfolioUrl: 'https://thirukarthik.web.app/',
+    portfolioUrl: 'https://thiruportfolio-navy.vercel.app/',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     email: 'jthirukarthick@gmail.com',
