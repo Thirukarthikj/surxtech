@@ -3,7 +3,7 @@ import { X, Send, ArrowRight, MessageCircle } from 'lucide-react';
 import './WhatsAppChat.css';
 
 export default function WhatsAppChat({
-  phoneNumber = '', // If provided e.g. '919876543210'
+  phoneNumber = '919342553805', // +91 9342553805
   companyName = 'SurxTech',
   defaultGreeting = 'Hi SurxTech! I am interested in discussing a project.',
 }) {
@@ -181,12 +181,12 @@ export default function WhatsAppChat({
               </button>
             </form>
             <a
-              href={phoneNumber ? `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}` : "https://wa.me/?text=Hi%20SurxTech"}
+              href={phoneNumber ? `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=Hi%20SurxTech` : "https://wa.me/?text=Hi%20SurxTech"}
               target="_blank"
               rel="noopener noreferrer"
               className="wa-direct-link"
             >
-              ⚡ Open WhatsApp Direct Chat
+              ⚡ Direct Chat: +91 93425 53805
             </a>
           </div>
         </div>

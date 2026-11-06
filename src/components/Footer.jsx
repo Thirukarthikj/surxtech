@@ -55,7 +55,7 @@ export default function Footer() {
           <ul className="f-links">
             <li><a href="mailto:surxtech@gmail.com">Email Us</a></li>
             <li><a href="https://instagram.com/surxtech" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://wa.me/?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="https://wa.me/919342553805?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer">WhatsApp (+91 93425 53805)</a></li>
             <li><a href="https://linkedin.com/company/surxtech" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
         </div>
@@ -70,7 +70,7 @@ export default function Footer() {
           <a href="mailto:surxtech@gmail.com" className="soc-btn" title="Email">
             <Mail size={16} />
           </a>
-          <a href="https://wa.me/?text=Hi%20SurxTech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+          <a href="https://wa.me/919342553805?text=Hi%20SurxTech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp (+91 93425 53805)">
             <MessageSquare size={16} />
           </a>
           <a href="https://linkedin.com/company/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">

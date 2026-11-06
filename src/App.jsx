@@ -92,7 +92,7 @@ export default function App() {
 
       <Footer />
       <BackToTop />
-      <WhatsAppChat />
+      <WhatsAppChat phoneNumber="919342553805" />
 
       {selectedService && (
         <ServiceModal

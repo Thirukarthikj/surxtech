@@ -67,13 +67,13 @@ export default function ContactSection({ selectedServiceFromModal }) {
                 <div className="c-chan-val">@surxtech</div>
               </div>
             </a>
-            <a href="https://wa.me/?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer" className="c-chan">
+            <a href="https://wa.me/919342553805?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer" className="c-chan">
               <div className="c-chan-icon">
                 <MessageCircle size={20} color="var(--blue)" />
               </div>
               <div>
                 <div className="c-chan-lbl">WhatsApp / Call</div>
-                <div className="c-chan-val">Connect with our team</div>
+                <div className="c-chan-val">+91 93425 53805</div>
               </div>
             </a>
             <a
