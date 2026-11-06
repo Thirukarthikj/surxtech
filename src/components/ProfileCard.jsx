@@ -18,6 +18,7 @@ const ProfileCardComponent = ({
   avatarUrl = '',
   icon = '⚡',
   innerGradient,
+  bgImage = '',
   className = '',
   enableTilt = true,
   enableMobileTilt = false,
@@ -304,6 +305,14 @@ const ProfileCardComponent = ({
       <div ref={shellRef} className="pc-card-shell">
         <section className="pc-card">
           <div className="pc-inside">
+            {bgImage && (
+              <div
+                className="pc-card-bg-image"
+                style={{
+                  backgroundImage: `url(${bgImage})`
+                }}
+              />
+            )}
             {/* Avatar / Icon Badge at Top */}
             <div className="pc-avatar-wrap">
               {avatarUrl ? (

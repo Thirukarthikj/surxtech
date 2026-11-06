@@ -22,6 +22,7 @@ const members = [
     handle: 'thirukarthick',
     status: 'Online ⚡',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #eff6ff 50%, #bfdbfe 100%)',
+    bgImage: '/images/team-cards/bg-tech-lead.jpg',
   },
   {
     id: 'surya',
@@ -42,6 +43,7 @@ const members = [
     handle: 'surya',
     status: 'Online 🚀',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f5f3ff 50%, #ddd6fe 100%)',
+    bgImage: '/images/team-cards/bg-strategy.jpg',
   },
   {
     id: 'varunraj',
@@ -62,6 +64,7 @@ const members = [
     handle: 'varunraj',
     status: 'Online 💻',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f0fdfa 50%, #ccfbf1 100%)',
+    bgImage: '/images/team-cards/bg-fullstack.jpg',
   },
   {
     id: 'rajarajan',
@@ -82,6 +85,7 @@ const members = [
     handle: 'rajarajan',
     status: 'Online ⚙️',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #ecfdf5 50%, #a7f3d0 100%)',
+    bgImage: '/images/team-cards/bg-cloud-systems.jpg',
   },
   {
     id: 'stephenraj',
@@ -102,6 +106,7 @@ const members = [
     handle: 'stephenraj',
     status: 'Designing 🎨',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fdf2f8 50%, #fbcfe8 100%)',
+    bgImage: '/images/team-cards/bg-ui-ux.jpg',
   },
   {
     id: 'shivan',
@@ -122,6 +127,7 @@ const members = [
     handle: 'shivan',
     status: 'Editing 🎬',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fffbeb 50%, #fed7aa 100%)',
+    bgImage: '/images/team-cards/bg-video-editor.png',
   },
 ];
 
@@ -168,6 +174,7 @@ export default function TeamSection() {
               avatarUrl={m.avatarUrl}
               miniAvatarUrl={m.avatarUrl}
               icon={m.icon}
+              bgImage={m.bgImage}
               name={m.memberName}
               title={m.roleTitle}
               skillSummary={m.skillSummary}
