@@ -169,19 +169,18 @@ export default function TeamSection() {
         }}
       >
         {members.map((m) => (
-          <div key={m.id} style={{ width: '100%', cursor: 'pointer' }} onClick={() => handleMemberClick(m)}>
+          <div key={m.id} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <ProfileCard
-              avatarUrl={m.avatarUrl}
-              miniAvatarUrl={m.avatarUrl}
               icon={m.icon}
+              cardBg={m.bg}
               bgImage={m.bgImage}
               name={m.memberName}
               title={m.roleTitle}
               skillSummary={m.skillSummary}
-              handle={m.handle}
-              status={m.status}
-              innerGradient={m.innerGradient}
-              contactText={m.portfolioUrl ? "View Portfolio" : "View Profile"}
+              linkedin={m.linkedin}
+              github={m.github}
+              email={m.email}
+              contactText={m.portfolioUrl ? "Portfolio" : "View Profile"}
               onContactClick={() => handleMemberClick(m)}
             />
           </div>
