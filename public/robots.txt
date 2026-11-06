@@ -8,3 +8,4 @@ Host: https://www.surxtech.com
 
 # Sitemaps
 Sitemap: https://www.surxtech.com/sitemap.xml
+

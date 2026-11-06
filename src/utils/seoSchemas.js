@@ -160,3 +160,4 @@ export const createArticleSchema = ({
     '@id': url.startsWith('http') ? url : `https://www.surxtech.com${url}`,
   },
 });
+
