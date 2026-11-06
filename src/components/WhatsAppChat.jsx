@@ -17,10 +17,10 @@ export default function WhatsAppChat({
     {
       id: 'welcome',
       sender: 'ai',
-      text: "👋 **Hello! Welcome to SurxTech.**\n\nI am your AI Project Consultant. Ask me about our software services, tech stack recommendations, pricing philosophy, or **College Mini/Major Projects & Internships**!",
+      text: "👋 **Hello! I am SurxTech AI**, the AI chatbot designed to communicate with our clients.\n\nI can help you explore our services, recommend modern tech stacks, discuss project ideas, estimate timelines, or guide you through **College Mini/Major Projects & Internships**!",
       time: 'Just now',
-      actionLabel: 'Chat on WhatsApp',
-      whatsappText: 'Hi SurxTech! I am interested in discussing a project.',
+      actionLabel: 'Chat on WhatsApp (+91 93425 53805)',
+      whatsappText: 'Hi SurxTech! I am chatting with SurxTech AI and would like to discuss a project.',
     },
   ]);
 
@@ -197,7 +197,7 @@ export default function WhatsAppChat({
                 </div>
                 <div>
                   <h4 className="wa-title">
-                    {activeTab === 'ai' ? 'SurxTech AI Assistant' : `${companyName} Support`}
+                    {activeTab === 'ai' ? 'SurxTech AI' : `${companyName} Support`}
                   </h4>
                   <p className="wa-subtitle">
                     <span
@@ -209,7 +209,7 @@ export default function WhatsAppChat({
                         background: '#25D366',
                       }}
                     />
-                    {activeTab === 'ai' ? 'Online · Instant Answers' : 'Online · +91 93425 53805'}
+                    {activeTab === 'ai' ? 'AI Chatbot · Client Communication' : 'Online · +91 93425 53805'}
                   </p>
                 </div>
               </div>
@@ -330,8 +330,8 @@ export default function WhatsAppChat({
                 id="chatMessage"
                 name="chatMessage"
                 className="wa-input"
-                placeholder={activeTab === 'ai' ? 'Ask SurxTech AI anything...' : 'Type WhatsApp message...'}
-                aria-label={activeTab === 'ai' ? 'Ask SurxTech AI' : 'Type WhatsApp message'}
+                placeholder={activeTab === 'ai' ? 'Ask SurxTech AI about your project...' : 'Type WhatsApp message...'}
+                aria-label={activeTab === 'ai' ? 'Ask SurxTech AI about your project' : 'Type WhatsApp message'}
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 autoFocus

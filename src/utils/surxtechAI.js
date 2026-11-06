@@ -100,9 +100,9 @@ export function getAIResponse(userQuery) {
   // 8. General Greeting / Intro
   if (q.includes('hi') || q.includes('hello') || q.includes('hey') || q.includes('namaste') || q.includes('good morning') || q.includes('good evening') || q === '') {
     return {
-      text: `👋 **Hello! Welcome to SurxTech.**\n\nI am your AI Project Consultant. We specialize in:\n\n1. **Web & Mobile App Development**\n2. **College Mini & Major Projects with Viva Prep**\n3. **Practical Student Internships with Certificates**\n4. **UI/UX Design & Cinematic Video Editing**\n\nHow can our team help bring your vision to life? Feel free to ask anything or choose a topic below!`,
-      actionLabel: 'Direct WhatsApp Chat',
-      whatsappText: 'Hi SurxTech! I would like to discuss a project with your team.',
+      text: `👋 **Hello! I am SurxTech AI**, the AI chatbot for communicating with our clients.\n\nWhether you are planning a new software product, seeking architecture advice, or exploring college academic projects, I am here to help you with:\n\n1. **Web & Mobile App Development** (React, Next.js, Node.js, Flutter)\n2. **College Mini & Major Projects with Viva Prep**\n3. **Practical Student Internships with Certificates**\n4. **UI/UX Design, Branding & Cinematic Video Editing**\n\nWhat kind of project or idea would you like to discuss today?`,
+      actionLabel: 'Chat with Our Founders on WhatsApp',
+      whatsappText: 'Hi SurxTech! I am chatting with SurxTech AI and would like to discuss my project requirements.',
     };
   }
 
@@ -113,3 +113,4 @@ export function getAIResponse(userQuery) {
     whatsappText: `Hi SurxTech! I asked your AI assistant: "${userQuery}". Let's discuss this!`,
   };
 }
+
