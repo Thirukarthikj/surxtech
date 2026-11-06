@@ -394,21 +394,6 @@
   transform: scale(0.95);
 }
 
-.wa-direct-link {
-  display: block;
-  text-align: center;
-  margin-top: 8px;
-  font-size: 11px;
-  color: #64748b;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.wa-direct-link:hover {
-  color: #047857;
-  text-decoration: underline;
-}
-
 /* Adjust Back to Top button so it sits neatly above WhatsApp */
 #btt {
   bottom: 96px !important;

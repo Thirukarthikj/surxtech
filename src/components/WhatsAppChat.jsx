@@ -165,8 +165,11 @@ export default function WhatsAppChat({
             <form onSubmit={handleSend} className="wa-input-row">
               <input
                 type="text"
+                id="waMessage"
+                name="waMessage"
                 className="wa-input"
                 placeholder="Type your message..."
+                aria-label="Type your message for WhatsApp"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 autoFocus
@@ -180,14 +183,6 @@ export default function WhatsAppChat({
                 <Send size={16} style={{ marginLeft: '2px' }} />
               </button>
             </form>
-            <a
-              href={phoneNumber ? `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=Hi%20SurxTech` : "https://wa.me/?text=Hi%20SurxTech"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wa-direct-link"
-            >
-              ⚡ Direct Chat: +91 93425 53805
-            </a>
           </div>
         </div>
       )}
