@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe, Sparkles } from 'lucide-react';
+import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe, Sparkles, Instagram } from 'lucide-react';
 import ProfileCard from './ProfileCard';
 
 const members = [
@@ -17,6 +17,7 @@ const members = [
     portfolioUrl: 'https://thiruportfolio-navy.vercel.app/',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
+    instagram: 'https://instagram.com',
     email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'thirukarthick',
@@ -38,6 +39,7 @@ const members = [
     portfolioUrl: '',
     linkedin: 'https://linkedin.com',
     github: '',
+    instagram: 'https://instagram.com',
     email: 'surya@surxtech.com',
     avatarUrl: '',
     handle: 'surya',
@@ -59,6 +61,7 @@ const members = [
     portfolioUrl: 'https://varunraj.web.app/',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
+    instagram: 'https://instagram.com',
     email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'varunraj',
@@ -80,6 +83,7 @@ const members = [
     portfolioUrl: '',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
+    instagram: 'https://instagram.com',
     email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'rajarajan',
@@ -101,6 +105,7 @@ const members = [
     portfolioUrl: '',
     linkedin: 'https://linkedin.com',
     github: '',
+    instagram: 'https://instagram.com',
     email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'stephenraj',
@@ -122,6 +127,7 @@ const members = [
     portfolioUrl: '',
     linkedin: 'https://linkedin.com',
     github: '',
+    instagram: 'https://instagram.com',
     email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'shivan',
@@ -179,6 +185,7 @@ export default function TeamSection() {
               skillSummary={m.skillSummary}
               linkedin={m.linkedin}
               github={m.github}
+              instagram={m.instagram}
               email={m.email}
               contactText={m.portfolioUrl ? "Portfolio" : "View Profile"}
               onContactClick={() => handleMemberClick(m)}
@@ -315,6 +322,18 @@ export default function TeamSection() {
                   title="GitHub Profile"
                 >
                   <Github size={18} />
+                </a>
+              )}
+              {activeMember.instagram && (
+                <a
+                  href={activeMember.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="soc-btn"
+                  style={{ width: '44px', height: '44px' }}
+                  title="Instagram Profile"
+                >
+                  <Instagram size={18} />
                 </a>
               )}
             </div>
