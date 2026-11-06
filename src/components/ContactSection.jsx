@@ -88,7 +88,7 @@ export default function ContactSection({ selectedServiceFromModal }) {
               </div>
               <div>
                 <div className="c-chan-lbl">Location</div>
-                <div className="c-chan-val">Nilakottai, Dindigul · Remote Worldwide</div>
+                <div className="c-chan-val">Nilakottai, Dindigul, Tamil Nadu</div>
               </div>
             </a>
           </div>

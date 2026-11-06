@@ -3,23 +3,23 @@ import React from 'react';
 const whyItems = [
   {
     icon: '⚡',
-    title: 'Fast Turnaround',
-    desc: 'We move quickly without cutting corners. Your timeline is treated as seriously as your vision.',
+    title: 'Rapid Engineering & Delivery',
+    desc: 'We build quickly with clean architecture without cutting corners. Your business launch or academic deadline is treated with absolute commitment.',
   },
   {
-    icon: '💎',
-    title: 'Premium Quality',
-    desc: 'Every pixel crafted with intention. Every function tested to perfection before it ships.',
+    icon: '🔒',
+    title: '100% Code & Asset Ownership',
+    desc: 'You receive complete source code, database schemas, and design assets upon handover. Zero proprietary vendor lock-in.',
   },
   {
     icon: '🎯',
-    title: 'Client-First Mindset',
-    desc: 'Your goals drive everything. We listen deeply, adapt fast, and deliver exactly what you need.',
+    title: 'Honest Technical Mentoring',
+    desc: 'For students, we ensure line-by-line comprehension so you can confidently defend your project in college viva reviews and interviews.',
   },
   {
-    icon: '🕐',
-    title: '24/7 Support',
-    desc: 'Always available. Fast replies and dedicated assistance whenever you need us.',
+    icon: '📍',
+    title: 'Local Engineering Office',
+    desc: 'Headquartered in Nilakottai, Dindigul District — offering direct developer access, transparent pricing, and 24/7 technical support.',
   },
 ];
 
@@ -39,19 +39,19 @@ export default function WhySurxTech() {
               <div className="orbit-dot orbit-dot3"></div>
             </div>
             <div className="tech-center">
-              <img src="/logo.png" alt="SurxTech Logo" className="tech-logo-img" />
+              <img src="/logo.png" alt="SURXTECH Logo" className="tech-logo-img" />
               <div className="tech-name-big">
                 SURX<span>TECH</span>
               </div>
-              <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '6px', letterSpacing: '0.08em' }}>
-                YOUR DIGITAL PARTNER
+              <div style={{ fontSize: '11px', color: 'var(--muted)', marginTop: '6px', letterSpacing: '0.08em', fontWeight: 700 }}>
+                IT &amp; SOFTWARE SOLUTIONS
               </div>
             </div>
           </div>
 
           <div className="f-card f-card-1">
             <div className="f-val">100%</div>
-            <div className="f-lbl">Client Satisfaction</div>
+            <div className="f-lbl">Code Ownership</div>
           </div>
           <div className="f-card f-card-2">
             <div className="f-val" style={{ color: 'var(--sky)' }}>
@@ -61,20 +61,20 @@ export default function WhySurxTech() {
           </div>
           <div className="f-card f-card-3">
             <div className="f-val" style={{ color: '#7c3aed' }}>
-              24/7
+              Nilakottai
             </div>
-            <div className="f-lbl">Support Available</div>
+            <div className="f-lbl">Dindigul, TN</div>
           </div>
         </div>
 
         <div className="split-content">
-          <div className="s-label">Why SurxTech</div>
+          <div className="s-label">Why Choose SURXTECH</div>
           <h2 className="s-title">
-            Why Businesses<br />
-            <span className="ghost">Trust Us</span>
+            Why Businesses &amp; Students<br />
+            <span className="highlight-text">Trust Our Team</span>
           </h2>
           <p>
-            We combine sharp creativity with technical depth to deliver solutions that don't just look good — they perform. Every project gets our absolute best, from first brief to final delivery.
+            We combine production software engineering standards with transparent local mentoring. Whether developing an enterprise web portal or building an IEEE-aligned MCA/engineering project, we prioritize clean code, measurable performance, and real technical mastery.
           </p>
           <div className="why-list">
             {whyItems.map((item, i) => (

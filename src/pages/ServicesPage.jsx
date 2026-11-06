@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ServicesBento, { servicesData } from '../components/ServicesBento';
 import ServiceModal from '../components/ServiceModal';
 import ProcessSection from '../components/ProcessSection';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
-import { Send, Check, MessageSquare, GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
+import { Send, Check, MessageSquare, GraduationCap, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
 
 export default function ServicesPage({ onSelectService, selectedService, setSelectedService }) {
   const [enquiryForm, setEnquiryForm] = useState({
@@ -47,11 +49,33 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
     }
   };
 
+  const breadcrumbs = [
+    { name: 'Home', item: '/' },
+    { name: 'Services', item: '/services' },
+  ];
+
   return (
-    <div className="page-wrapper" style={{ paddingTop: '120px' }}>
+    <div className="page-wrapper" style={{ paddingTop: '100px' }}>
+      <SEO
+        title="Software Development & Student Project Solutions | SURXTECH Dindigul"
+        description="Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile apps, and student final-year project guidance."
+        canonical="/services"
+        breadcrumbs={breadcrumbs}
+      />
+
+      {/* Segment Navigation Quick Links */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px 20px', display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <Link to="/business-solutions" className="btn-primary" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
+          <Briefcase size={15} /> Business Solutions Hub →
+        </Link>
+        <Link to="/student-projects" className="btn-outline" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
+          <GraduationCap size={15} /> Student Projects Hub →
+        </Link>
+      </div>
+
       <ServicesBento onSelectService={handleServiceSelectFromBento} />
 
-      {/* STUDENT INTERNSHIP & PROJECTS SPOTLIGHT */}
+      {/* STUDENT PROJECTS & GUIDANCE SPOTLIGHT */}
       <section className="section" style={{ paddingTop: '20px', paddingBottom: '40px' }}>
         <div
           style={{
@@ -66,13 +90,13 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
         >
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
             <div className="s-label" style={{ justifyContent: 'center' }}>
-              <GraduationCap size={16} /> Student Development Programs
+              <GraduationCap size={16} /> Student Project Solutions
             </div>
             <h2 className="s-title" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', marginBottom: '12px' }}>
-              Empowering <span className="highlight-text">College Students</span>
+              College Student <span className="highlight-text">Project Guidance</span>
             </h2>
             <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.7' }}>
-              We provide practical, hands-on internships and complete college project solutions (mini &amp; major) for engineering and IT students.
+              We mentor MCA, BCA, B.Sc CS, BE, and B.Tech students through final-year and mini projects with source code, report documentation, and 1-on-1 viva coaching.
             </p>
           </div>
 

@@ -293,13 +293,30 @@ export default function TeamSection() {
                   <Globe size={16} /> Visit Portfolio
                 </a>
               )}
-              <a
-                href={`mailto:${activeMember.email}`}
-                className="btn-primary"
-                style={{ flex: 1, justifyContent: 'center', fontSize: '13.5px', padding: '12px 20px' }}
-              >
-                <Mail size={16} /> Email {activeMember.memberName.split(' ')[0]}
-              </a>
+              {activeMember.instagram && (
+                <a
+                  href={activeMember.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{
+                    flex: 1,
+                    justifyContent: 'center',
+                    fontSize: '13.5px',
+                    padding: '12px 20px',
+                    background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
+                    color: '#ffffff',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    borderRadius: '10px',
+                    textDecoration: 'none',
+                    border: 'none',
+                  }}
+                >
+                  <Instagram size={16} /> Instagram @{activeMember.instagram.split('.com/')[1] || 'surxtech'}
+                </a>
+              )}
               {activeMember.linkedin && (
                 <a
                   href={activeMember.linkedin}
@@ -322,18 +339,6 @@ export default function TeamSection() {
                   title="GitHub Profile"
                 >
                   <Github size={18} />
-                </a>
-              )}
-              {activeMember.instagram && (
-                <a
-                  href={activeMember.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="soc-btn"
-                  style={{ width: '44px', height: '44px' }}
-                  title="Instagram Profile"
-                >
-                  <Instagram size={18} />
                 </a>
               )}
             </div>

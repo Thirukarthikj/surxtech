@@ -2,97 +2,93 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import MarqueeBanner from '../components/MarqueeBanner';
+import TechStack from '../components/TechStack';
+import WhySurxTech from '../components/WhySurxTech';
+import ProcessSection from '../components/ProcessSection';
+import FAQSection, { defaultFaqs } from '../components/FAQSection';
 import CTASection from '../components/CTASection';
-import { ArrowRight, Layers, LayoutGrid, Cpu, Briefcase, Users, PhoneCall, Sparkles } from 'lucide-react';
-
-const homeExploreCards = [
-  {
-    icon: <Users size={28} color="var(--blue)" />,
-    title: 'About SurxTech',
-    subtitle: 'Who We Are & What Drives Us',
-    desc: 'Learn about our agency, technical ethos, product standards, and engineering values.',
-    link: '/about',
-    linkText: 'Explore About Page',
-    badge: 'Agency Profile',
-  },
-  {
-    icon: <Sparkles size={28} color="#8b5cf6" />,
-    title: 'Meet Our Team',
-    subtitle: 'Founders & Engineers',
-    desc: 'Explore interactive profiles for our tech leads, full stack developers, UI/UX designers, and media editors.',
-    link: '/team',
-    linkText: 'Meet The Team',
-    badge: 'Core Team',
-  },
-  {
-    icon: <LayoutGrid size={28} color="var(--sky)" />,
-    title: 'Services & Internships',
-    subtitle: 'Capabilities & Student Programs',
-    desc: 'Web apps, mobile products, UI/UX, student industrial internships, and college projects.',
-    link: '/services',
-    linkText: 'View Services & Enquire',
-    badge: 'Services Suite',
-  },
-  {
-    icon: <Cpu size={28} color="var(--violet)" />,
-    title: 'Development Process',
-    subtitle: '4-Stage Agile Methodology',
-    desc: 'From initial discovery & design prototypes to clean architecture, fast build & deployment.',
-    link: '/process',
-    linkText: 'See How We Work',
-    badge: 'Workflow',
-  },
-  {
-    icon: <Briefcase size={28} color="#059669" />,
-    title: 'Selected Portfolio',
-    subtitle: 'Real Client Case Studies',
-    desc: 'Explore SaaS platforms, mobile apps, e-commerce storefronts, and brand design kits.',
-    link: '/work',
-    linkText: 'Browse Work Portfolio',
-    badge: 'Case Studies',
-  },
-  {
-    icon: <PhoneCall size={28} color="#f43f5e" />,
-    title: 'Start a Project',
-    subtitle: 'Connect With Our Engineers',
-    desc: 'Get in touch for new web & app projects, free architectural estimates, or student internship inquiries.',
-    link: '/contact',
-    linkText: 'Contact & Let’s Talk',
-    badge: 'Quick Contact',
-  },
-];
+import SEO from '../components/SEO';
+import { organizationSchema, websiteSchema, localBusinessSchema, createFAQSchema } from '../utils/seoSchemas';
+import { businessServices, studentServices, genuineCaseStudies } from '../data/solutionsData';
+import { ArrowRight, CheckCircle2, ShieldCheck, Code2, GraduationCap, Briefcase, Sparkles, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function HomePage() {
+  const homeSchemas = [
+    organizationSchema,
+    websiteSchema,
+    localBusinessSchema,
+    createFAQSchema(defaultFaqs),
+  ];
+
   return (
     <div className="page-wrapper">
+      <SEO
+        title="SURXTECH | IT Company & Software Development in Dindigul"
+        description="SURXTECH provides website development, mobile apps, AI solutions and custom software for businesses, along with MCA, BCA and engineering student project guidance in Tamil Nadu."
+        canonical="/"
+        schema={homeSchemas}
+      />
+
       <Hero />
       <MarqueeBanner />
 
-      <section className="section">
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+      {/* ── COMPANY INTRODUCTION SECTION ── */}
+      <section className="section" style={{ paddingBottom: '40px' }}>
+        <div style={{ maxWidth: '980px', margin: '0 auto', textAlign: 'center' }}>
           <div className="s-label" style={{ justifyContent: 'center' }}>
-            Explore SurxTech
+            <MapPin size={14} style={{ marginRight: '4px' }} /> Technology Partner in Tamil Nadu
           </div>
-          <h2 className="s-title">
-            Discover Our <span className="ghost">Digital World</span>
+          <h2 className="s-title" style={{ fontSize: 'clamp(28px, 4vw, 44px)', marginBottom: '18px' }}>
+            IT Company &amp; Software Development in <span className="highlight-text">Dindigul</span>
           </h2>
-          <p style={{ color: 'var(--muted)', marginTop: '12px', fontWeight: '300', fontSize: '16px', maxWidth: '600px', margin: '12px auto 0' }}>
-            Navigate through our dedicated pages to see how we help startups and established brands build exceptional products.
+          <p style={{ color: 'var(--muted)', fontSize: '16.5px', lineHeight: '1.8', marginBottom: '24px' }}>
+            Headquartered in <strong>Nilakottai, Dindigul District</strong>, <strong>SURXTECH</strong> is a modern technology startup operating with a clear dual mission: delivering robust, production-grade <strong>digital solutions for businesses</strong> and providing transparent, hands-on <strong>technical project guidance for college students</strong> across Tamil Nadu.
           </p>
+          <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '14.5px', color: 'var(--ink)' }}>
+              <CheckCircle2 size={18} color="var(--blue)" /> 100% Source Code Ownership
+            </div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '14.5px', color: 'var(--ink)' }}>
+              <CheckCircle2 size={18} color="var(--blue)" /> Modern Tech: React, Node, Python, Flutter
+            </div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '14.5px', color: 'var(--ink)' }}>
+              <CheckCircle2 size={18} color="var(--blue)" /> Nilakottai &amp; Dindigul Local Engineering Team
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CUSTOMER SEGMENT A: BUSINESS SOLUTIONS ── */}
+      <section className="section alt" id="business-solutions">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '44px', flexWrap: 'wrap', gap: '20px' }}>
+          <div>
+            <div className="s-label">
+              <Briefcase size={14} style={{ marginRight: '4px' }} /> Segment A: Enterprise &amp; SME Solutions
+            </div>
+            <h2 className="s-title">
+              Digital Solutions for <span className="highlight-text">Growing Businesses</span>
+            </h2>
+            <p style={{ color: 'var(--muted)', marginTop: '10px', fontSize: '15.5px', maxWidth: '640px' }}>
+              Engineered for small and medium businesses, startups, retailers, clinics, institutions, and service providers seeking modern web, mobile, and custom software systems.
+            </p>
+          </div>
+          <Link to="/business-solutions" className="btn-primary" style={{ padding: '12px 24px' }}>
+            View All Business Solutions <ArrowRight size={16} />
+          </Link>
         </div>
 
         <div className="home-hub-grid">
-          {homeExploreCards.map((card, idx) => (
-            <Link key={idx} to={card.link} className="home-hub-card">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
-                <div className="hub-card-icon">{card.icon}</div>
-                <span className="hub-card-badge">{card.badge}</span>
+          {businessServices.slice(0, 6).map((svc) => (
+            <Link key={svc.slug} to={svc.path} className="home-hub-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
+                <div className="hub-card-icon" style={{ fontSize: '28px' }}>{svc.icon}</div>
+                <span className="hub-card-badge">Business Solution</span>
               </div>
-              <h3 className="hub-card-title">{card.title}</h3>
-              <div className="hub-card-sub">{card.subtitle}</div>
-              <p className="hub-card-desc">{card.desc}</p>
+              <h3 className="hub-card-title">{svc.shortTitle}</h3>
+              <div className="hub-card-sub" style={{ color: 'var(--blue)', fontWeight: 600 }}>{svc.primaryKeyword}</div>
+              <p className="hub-card-desc">{svc.description.slice(0, 130)}...</p>
               <div className="hub-card-btn">
-                <span>{card.linkText}</span>
+                <span>Explore {svc.shortTitle}</span>
                 <ArrowRight size={16} />
               </div>
             </Link>
@@ -100,7 +96,170 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTASection />
+      {/* ── CUSTOMER SEGMENT B: STUDENT PROJECT SOLUTIONS ── */}
+      <section className="section" id="student-projects">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '44px', flexWrap: 'wrap', gap: '20px' }}>
+          <div>
+            <div className="s-label">
+              <GraduationCap size={14} style={{ marginRight: '4px' }} /> Segment B: Academic Guidance &amp; Mentoring
+            </div>
+            <h2 className="s-title">
+              College Student <span className="highlight-text">Project Guidance</span>
+            </h2>
+            <p style={{ color: 'var(--muted)', marginTop: '10px', fontSize: '15.5px', maxWidth: '640px' }}>
+              For MCA, BCA, B.Sc CS, BE, and B.Tech students across Tamil Nadu. We emphasize hands-on learning, architectural comprehension, and thorough viva preparation.
+            </p>
+          </div>
+          <Link to="/student-projects" className="btn-outline" style={{ padding: '12px 24px' }}>
+            Explore All Student Projects <ArrowRight size={16} />
+          </Link>
+        </div>
+
+        {/* Ethical Academic Support Commitment Banner */}
+        <div
+          style={{
+            background: 'rgba(37, 99, 235, 0.06)',
+            border: '1px solid rgba(37, 99, 235, 0.2)',
+            borderRadius: '16px',
+            padding: '20px 24px',
+            marginBottom: '36px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '16px',
+            flexWrap: 'wrap',
+          }}
+        >
+          <ShieldCheck size={28} color="var(--blue)" style={{ flexShrink: 0 }} />
+          <div style={{ flex: 1, minWidth: '260px' }}>
+            <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--ink)' }}>
+              Responsible Academic Guidance &amp; Mentorship
+            </div>
+            <div style={{ fontSize: '13.5px', color: 'var(--muted)', marginTop: '4px' }}>
+              We believe in honest educational support. We teach students the full source code structure, database queries, and architectural flows line-by-line so they gain genuine technical competence and defend their projects with confidence.
+            </div>
+          </div>
+        </div>
+
+        <div className="home-hub-grid">
+          {studentServices.slice(0, 6).map((proj) => (
+            <Link key={proj.slug} to={proj.path} className="home-hub-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
+                <div className="hub-card-icon" style={{ fontSize: '28px' }}>{proj.icon}</div>
+                <span className="hub-card-badge" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#059669', borderColor: 'rgba(16, 185, 129, 0.25)' }}>
+                  Student Guidance
+                </span>
+              </div>
+              <h3 className="hub-card-title">{proj.shortTitle}</h3>
+              <div className="hub-card-sub" style={{ color: '#059669', fontWeight: 600 }}>{proj.primaryKeyword}</div>
+              <p className="hub-card-desc">{proj.description.slice(0, 130)}...</p>
+              <div className="hub-card-btn">
+                <span>View {proj.shortTitle} Guidance</span>
+                <ArrowRight size={16} />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── TECHNOLOGIES & ENGINEERING EXPERTISE ── */}
+      <TechStack />
+
+      {/* ── RECENT CLIENT WORK & CASE STUDIES PREVIEW ── */}
+      <section className="section alt">
+        <div style={{ textAlign: 'center', marginBottom: '44px' }}>
+          <div className="s-label" style={{ justifyContent: 'center' }}>
+            <Sparkles size={14} style={{ marginRight: '4px' }} /> Proven Results
+          </div>
+          <h2 className="s-title">
+            Featured <span className="highlight-text">Case Studies</span>
+          </h2>
+          <p style={{ color: 'var(--muted)', marginTop: '10px', fontSize: '15.5px', maxWidth: '600px', margin: '10px auto 0' }}>
+            Real projects delivered with verified business impact, performance engineering, and measurable client results.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px', maxWidth: '1100px', margin: '0 auto' }}>
+          {genuineCaseStudies.map((cs) => (
+            <div
+              key={cs.id}
+              style={{
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: '24px',
+                padding: '32px',
+                boxShadow: 'var(--shadow-sm)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <span
+                  style={{
+                    display: 'inline-block',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    background: 'rgba(37,99,235,0.08)',
+                    color: 'var(--blue)',
+                    marginBottom: '14px',
+                  }}
+                >
+                  {cs.category}
+                </span>
+                <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px', lineHeight: 1.3 }}>
+                  {cs.title}
+                </h3>
+                <p style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: 1.6, marginBottom: '18px' }}>
+                  <strong>Client Challenge:</strong> {cs.problem}
+                </p>
+                <div style={{ marginBottom: '20px' }}>
+                  <div style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--ink)', textTransform: 'uppercase', marginBottom: '8px' }}>
+                    Key Outcomes:
+                  </div>
+                  {cs.results.map((res, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: 'var(--muted)', marginBottom: '4px' }}>
+                      <CheckCircle2 size={15} color="#10b981" /> {res}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                  {cs.tags.slice(0, 3).map((t, idx) => (
+                    <span key={idx} className="b-tag" style={{ fontSize: '11px', padding: '3px 8px' }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <Link to="/case-studies" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--blue)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  Read Study <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHY CHOOSE SURXTECH ── */}
+      <WhySurxTech />
+
+      {/* ── 4-STAGE DEVELOPMENT PROCESS ── */}
+      <ProcessSection />
+
+      {/* ── FREQUENTLY ASKED QUESTIONS ── */}
+      <FAQSection
+        faqs={defaultFaqs}
+        title="Frequently Asked Questions"
+        subtitle="Got Questions?"
+      />
+
+      {/* ── CTA SECTION ── */}
+      <CTASection
+        title="Building Digital Solutions for Businesses and Future Innovators"
+        subtitle="Need a high-performance business website, custom software, or college final year project guidance? Connect with our engineering team in Nilakottai, Dindigul."
+      />
     </div>
   );
 }

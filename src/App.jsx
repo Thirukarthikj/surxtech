@@ -7,6 +7,7 @@ import WhatsAppChat from './components/WhatsAppChat';
 import ServiceModal from './components/ServiceModal';
 import ProjectModal from './components/ProjectModal';
 
+// Existing Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
@@ -14,6 +15,17 @@ import ServicesPage from './pages/ServicesPage';
 import ProcessPage from './pages/ProcessPage';
 import WorkPage from './pages/WorkPage';
 import ContactPage from './pages/ContactPage';
+
+// New High-Intent Landing Pages
+import BusinessSolutionsPage from './pages/BusinessSolutionsPage';
+import BusinessDetailPage from './pages/BusinessDetailPage';
+import StudentProjectsPage from './pages/StudentProjectsPage';
+import StudentDetailPage from './pages/StudentDetailPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
 
 // Helper to auto-scroll to top on page route changes
 function ScrollToTopOnRoute() {
@@ -53,15 +65,8 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage
-                onSelectService={(svc) => setSelectedService(svc)}
-                onSelectProject={(proj) => setSelectedProject(proj)}
-              />
-            }
-          />
+          {/* Core Pages */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route
@@ -84,9 +89,50 @@ export default function App() {
             }
           />
           <Route
+            path="/portfolio"
+            element={
+              <WorkPage
+                onSelectProject={(proj) => setSelectedProject(proj)}
+              />
+            }
+          />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route
             path="/contact"
             element={<ContactPage selectedService={selectedService} />}
           />
+
+          {/* Business Solutions Landing Pages */}
+          <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
+          <Route path="/web-development" element={<BusinessDetailPage defaultSlug="web-development" />} />
+          <Route path="/ecommerce-development" element={<BusinessDetailPage defaultSlug="ecommerce-development" />} />
+          <Route path="/mobile-app-development" element={<BusinessDetailPage defaultSlug="mobile-app-development" />} />
+          <Route path="/custom-software-development" element={<BusinessDetailPage defaultSlug="custom-software-development" />} />
+          <Route path="/ai-solutions" element={<BusinessDetailPage defaultSlug="ai-solutions" />} />
+          <Route path="/ui-ux-design" element={<BusinessDetailPage defaultSlug="ui-ux-design" />} />
+          <Route path="/seo-services" element={<BusinessDetailPage defaultSlug="seo-services" />} />
+          <Route path="/website-maintenance" element={<BusinessDetailPage defaultSlug="website-maintenance" />} />
+
+          {/* Student Project Solutions Landing Pages */}
+          <Route path="/student-projects" element={<StudentProjectsPage />} />
+          <Route path="/mca-projects" element={<StudentDetailPage defaultSlug="mca-projects" />} />
+          <Route path="/bca-projects" element={<StudentDetailPage defaultSlug="bca-projects" />} />
+          <Route path="/engineering-projects" element={<StudentDetailPage defaultSlug="engineering-projects" />} />
+          <Route path="/python-projects" element={<StudentDetailPage defaultSlug="python-projects" />} />
+          <Route path="/mern-stack-projects" element={<StudentDetailPage defaultSlug="mern-stack-projects" />} />
+          <Route path="/ai-ml-projects" element={<StudentDetailPage defaultSlug="ai-ml-projects" />} />
+          <Route path="/react-projects" element={<StudentDetailPage defaultSlug="react-projects" />} />
+
+          {/* Blog & Thought Leadership */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetailPage />} />
+
+          {/* Legal Compliance */}
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />
+
+          {/* 404 Fallback */}
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
 
