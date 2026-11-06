@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Instagram, MessageCircle, MapPin, Send, Check } from 'lucide-react';
+import { Mail, Instagram, MessageCircle, MapPin, Send, Check, ArrowRight } from 'lucide-react';
 
 export default function ContactSection({ selectedServiceFromModal }) {
   const [formState, setFormState] = useState({
@@ -76,15 +76,21 @@ export default function ContactSection({ selectedServiceFromModal }) {
                 <div className="c-chan-val">Connect with our team</div>
               </div>
             </a>
-            <div className="c-chan" style={{ cursor: 'default' }}>
+            <a
+              href="https://maps.google.com/?q=Nilakottai,+Dindigul,+Tamil+Nadu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="c-chan"
+              title="View on Google Maps"
+            >
               <div className="c-chan-icon">
                 <MapPin size={20} color="var(--blue)" />
               </div>
               <div>
                 <div className="c-chan-lbl">Location</div>
-                <div className="c-chan-val">Coimbatore, India · Remote Worldwide</div>
+                <div className="c-chan-val">Nilakottai, Dindigul · Remote Worldwide</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -194,6 +200,74 @@ export default function ContactSection({ selectedServiceFromModal }) {
             )}
           </button>
         </form>
+      </div>
+
+      {/* GOOGLE MAP EMBED */}
+      <div className="contact-map-wrap" style={{ marginTop: '56px' }}>
+        <div
+          style={{
+            borderRadius: '24px',
+            overflow: 'hidden',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--shadow-lg)',
+            background: 'var(--surface)',
+          }}
+        >
+          <div
+            style={{
+              padding: '18px 24px',
+              borderBottom: '1px solid var(--border)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '12px',
+              background: 'var(--surface)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '10px',
+                  background: 'rgba(37,99,235,0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--blue)',
+                }}
+              >
+                <MapPin size={20} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: '15px', color: 'var(--ink)' }}>SurxTech Headquarters</div>
+                <div style={{ fontSize: '13px', color: 'var(--muted)' }}>Nilakottai, Dindigul, Tamil Nadu, India</div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.google.com/?q=Nilakottai,+Dindigul,+Tamil+Nadu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{ fontSize: '13px', padding: '10px 18px', gap: '6px' }}
+            >
+              Get Directions <ArrowRight size={14} />
+            </a>
+          </div>
+
+          <iframe
+            title="SurxTech Office Location Map - Nilakottai Dindigul"
+            src="https://maps.google.com/maps?q=Nilakottai,%20Dindigul,%20Tamil%20Nadu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="380"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   );

@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="f-copy">© {new Date().getFullYear()} SurxTech. All rights reserved. Coimbatore, India.</div>
+        <div className="f-copy">© {new Date().getFullYear()} SurxTech. All rights reserved. Nilakottai, Dindigul, India.</div>
         <div className="f-social">
           <a href="https://instagram.com/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="Instagram">
             <Camera size={16} />
@@ -70,7 +70,7 @@ export default function Footer() {
           <a href="mailto:surxtech@gmail.com" className="soc-btn" title="Email">
             <Mail size={16} />
           </a>
-          <a href="https://wa.me/919999999999" className="soc-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+          <a href="https://wa.me/?text=Hi%20SurxTech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
             <MessageSquare size={16} />
           </a>
           <a href="https://linkedin.com/company/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
