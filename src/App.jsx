@@ -3,6 +3,7 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import WhatsAppChat from './components/WhatsAppChat';
 import ServiceModal from './components/ServiceModal';
 import ProjectModal from './components/ProjectModal';
 
@@ -91,6 +92,7 @@ export default function App() {
 
       <Footer />
       <BackToTop />
+      <WhatsAppChat />
 
       {selectedService && (
         <ServiceModal
