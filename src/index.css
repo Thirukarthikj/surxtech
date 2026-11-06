@@ -597,6 +597,8 @@ nav.stuck {
 .b5 { grid-column: span 4; border-top: 2px solid #10b981; }
 .b6 { grid-column: span 7; border-top: 2px solid #f59e0b; }
 .b7 { grid-column: span 5; border-top: 2px solid #38bdf8; }
+.b8 { grid-column: span 6; border-top: 2px solid #8b5cf6; }
+.b9 { grid-column: span 6; border-top: 2px solid #06b6d4; }
 
 .b-icon {
   width: 52px;
@@ -1084,7 +1086,9 @@ nav.stuck {
 /* ── CTA ── */
 .cta-wrap { padding: 0 72px 110px; position: relative; z-index: 1; }
 .cta-inner {
-  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.74) 0%, rgba(29, 78, 216, 0.60) 50%, rgba(14, 165, 233, 0.52) 100%),
+    url('/images/ai-human-interaction.jpg') center/cover no-repeat;
   border-radius: 28px;
   padding: 90px 80px;
   text-align: center;
@@ -1092,6 +1096,12 @@ nav.stuck {
   overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(14, 165, 233, 0.2);
+}
+.cta-inner > * {
+  position: relative;
+  z-index: 2;
 }
 .cta-inner::before {
   content: '';
@@ -1101,8 +1111,9 @@ nav.stuck {
   transform: translateX(-50%);
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 65%);
   pointer-events: none;
+  z-index: 1;
 }
 .cta-inner .s-label { color: rgba(255, 255, 255, 0.8); }
 .cta-title { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 72px); font-weight: 800; color: #fff; line-height: 1.05; margin-bottom: 20px; }
@@ -1929,19 +1940,17 @@ footer {
 .about-hero-banner {
   max-width: 1140px;
   margin: 0 auto 60px;
-  padding: 0 20px;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  padding: 0 24px;
 }
 
 .about-hero-img {
   width: 100%;
-  max-height: 420px;
+  max-height: 440px;
   object-fit: cover;
-  border-radius: 28px;
+  border-radius: 24px;
   display: block;
   border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14);
 }
 
 .about-team-banner {
@@ -1962,7 +1971,7 @@ footer {
   .cta-wrap { padding: 0 32px 80px; }
   footer { padding: 56px 32px 36px; }
   .bento { grid-template-columns: repeat(2, 1fr); }
-  .b1, .b2, .b3, .b4, .b5, .b6, .b7 { grid-column: span 1; }
+  .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9 { grid-column: span 1; }
   .split-grid { grid-template-columns: 1fr; gap: 56px; }
   .split-visual { height: 400px; }
   .f-card-1, .f-card-2, .f-card-3 { display: none; }

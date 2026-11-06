@@ -3,23 +3,32 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import MarqueeBanner from '../components/MarqueeBanner';
 import CTASection from '../components/CTASection';
-import { ArrowRight, Layers, LayoutGrid, Cpu, Briefcase, Users, PhoneCall } from 'lucide-react';
+import { ArrowRight, Layers, LayoutGrid, Cpu, Briefcase, Users, PhoneCall, Sparkles } from 'lucide-react';
 
 const homeExploreCards = [
   {
     icon: <Users size={28} color="var(--blue)" />,
     title: 'About SurxTech',
     subtitle: 'Who We Are & What Drives Us',
-    desc: 'Learn about our agency, team members, core philosophy, and technical values.',
+    desc: 'Learn about our agency, technical ethos, product standards, and engineering values.',
     link: '/about',
     linkText: 'Explore About Page',
     badge: 'Agency Profile',
   },
   {
+    icon: <Sparkles size={28} color="#8b5cf6" />,
+    title: 'Meet Our Team',
+    subtitle: 'Founders & Engineers',
+    desc: 'Explore interactive profiles for our tech leads, full stack developers, UI/UX designers, and media editors.',
+    link: '/team',
+    linkText: 'Meet The Team',
+    badge: 'Core Team',
+  },
+  {
     icon: <LayoutGrid size={28} color="var(--sky)" />,
-    title: 'Services & Enquiries',
-    subtitle: '7 Core Digital Capabilities',
-    desc: 'Web apps, mobile products, UI/UX design, branding, and instant service enquiry form.',
+    title: 'Services & Internships',
+    subtitle: 'Capabilities & Student Programs',
+    desc: 'Web apps, mobile products, UI/UX, student industrial internships, and college projects.',
     link: '/services',
     linkText: 'View Services & Enquire',
     badge: 'Services Suite',
@@ -28,7 +37,7 @@ const homeExploreCards = [
     icon: <Cpu size={28} color="var(--violet)" />,
     title: 'Development Process',
     subtitle: '4-Stage Agile Methodology',
-    desc: 'From initial discovery & design prototypes to clean build & 24/7 post-launch support.',
+    desc: 'From initial discovery & design prototypes to clean architecture, fast build & deployment.',
     link: '/process',
     linkText: 'See How We Work',
     badge: 'Workflow',
@@ -41,6 +50,15 @@ const homeExploreCards = [
     link: '/work',
     linkText: 'Browse Work Portfolio',
     badge: 'Case Studies',
+  },
+  {
+    icon: <PhoneCall size={28} color="#f43f5e" />,
+    title: 'Start a Project',
+    subtitle: 'Connect With Our Engineers',
+    desc: 'Get in touch for new web & app projects, free architectural estimates, or student internship inquiries.',
+    link: '/contact',
+    linkText: 'Contact & Let’s Talk',
+    badge: 'Quick Contact',
   },
 ];
 

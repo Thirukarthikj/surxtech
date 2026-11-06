@@ -32,6 +32,8 @@ export default function Footer() {
             <li><Link to="/services">Graphic Design</Link></li>
             <li><Link to="/services">Video Editing</Link></li>
             <li><Link to="/services">Branding</Link></li>
+            <li><Link to="/services">Student Internships</Link></li>
+            <li><Link to="/services">College Projects</Link></li>
           </ul>
         </div>
 
@@ -40,6 +42,7 @@ export default function Footer() {
           <ul className="f-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/team">Our Team</Link></li>
             <li><Link to="/services">Our Services</Link></li>
             <li><Link to="/process">Our Process</Link></li>
             <li><Link to="/work">Portfolio</Link></li>
@@ -50,9 +53,9 @@ export default function Footer() {
         <div>
           <div className="f-group-title">Get In Touch</div>
           <ul className="f-links">
-            <li><a href="mailto:jthirukarthick@gmail.com">Email Us</a></li>
+            <li><a href="mailto:surxtech@gmail.com">Email Us</a></li>
             <li><a href="https://instagram.com/surxtech" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="https://wa.me/?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             <li><a href="https://linkedin.com/company/surxtech" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
         </div>
@@ -64,7 +67,7 @@ export default function Footer() {
           <a href="https://instagram.com/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="Instagram">
             <Camera size={16} />
           </a>
-          <a href="mailto:jthirukarthick@gmail.com" className="soc-btn" title="Email">
+          <a href="mailto:surxtech@gmail.com" className="soc-btn" title="Email">
             <Mail size={16} />
           </a>
           <a href="https://wa.me/919999999999" className="soc-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">

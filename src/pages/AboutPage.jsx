@@ -8,14 +8,6 @@ import { Users, ArrowRight } from 'lucide-react';
 export default function AboutPage() {
   return (
     <div className="page-wrapper" style={{ paddingTop: '120px' }}>
-      <div className="about-hero-banner">
-        <img
-          src="/images/agency-workspace.png"
-          alt="SurxTech Agency Studio Workspace"
-          className="about-hero-img"
-        />
-      </div>
-
       <WhySurxTech />
       <TechStack />
 

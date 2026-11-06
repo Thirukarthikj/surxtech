@@ -17,7 +17,7 @@ const members = [
     portfolioUrl: 'https://thiruportfolio-navy.vercel.app/',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
-    email: 'jthirukarthick@gmail.com',
+    email: 'surxtech@gmail.com',
     avatarUrl: '',
     handle: 'thirukarthick',
     status: 'Online ⚡',
@@ -43,6 +43,86 @@ const members = [
     status: 'Online 🚀',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f5f3ff 50%, #ddd6fe 100%)',
   },
+  {
+    id: 'varunraj',
+    icon: '💻',
+    bg: 'linear-gradient(135deg,#0284c7,#06b6d4)',
+    teamTitle: 'Development Team',
+    memberName: 'Varun Raj',
+    roleTitle: 'Full Stack Developer',
+    skillSummary: 'Frontend · Backend · APIs',
+    bio: 'Full Stack Developer at SurxTech specializing in building high-performance web applications, scalable backend microservices, and modern database architectures.',
+    skills: ['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'TypeScript'],
+    experience: 'Full Stack Developer · SurxTech',
+    portfolioUrl: 'https://varunraj.web.app/',
+    linkedin: 'https://linkedin.com',
+    github: 'https://github.com',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'varunraj',
+    status: 'Online 💻',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f0fdfa 50%, #ccfbf1 100%)',
+  },
+  {
+    id: 'rajarajan',
+    icon: '⚙️',
+    bg: 'linear-gradient(135deg,#059669,#10b981)',
+    teamTitle: 'Development Team',
+    memberName: 'Raja Rajan',
+    roleTitle: 'Full Stack Developer',
+    skillSummary: 'Next.js · Node.js · Cloud APIs',
+    bio: 'Full Stack Developer engineering robust cloud-native systems, seamless API integrations, and intuitive responsive user interfaces for modern businesses.',
+    skills: ['React', 'Next.js', 'Node.js', 'REST APIs', 'SQL', 'Docker', 'Git'],
+    experience: 'Full Stack Developer · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: 'https://github.com',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'rajarajan',
+    status: 'Online ⚙️',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #ecfdf5 50%, #a7f3d0 100%)',
+  },
+  {
+    id: 'stephenraj',
+    icon: '🎨',
+    bg: 'linear-gradient(135deg,#ec4899,#f43f5e)',
+    teamTitle: 'Design Team',
+    memberName: 'Stephen Raj',
+    roleTitle: 'UI/UX Designer',
+    skillSummary: 'Product Design · Figma · Systems',
+    bio: 'UI/UX Designer focused on crafting user-centered digital experiences, comprehensive design systems, interactive prototypes, and high-impact visual interfaces.',
+    skills: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping', 'Design Systems', 'User Research'],
+    experience: 'UI/UX Designer · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: '',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'stephenraj',
+    status: 'Designing 🎨',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fdf2f8 50%, #fbcfe8 100%)',
+  },
+  {
+    id: 'shivan',
+    icon: '🎬',
+    bg: 'linear-gradient(135deg,#f59e0b,#ea580c)',
+    teamTitle: 'Creative Media Team',
+    memberName: 'Shivan',
+    roleTitle: 'Video Editor & Motion Designer',
+    skillSummary: 'Video Editing · Motion VFX · Reels',
+    bio: 'Creative Video Editor and Motion Designer delivering cinematic brand videos, dynamic motion graphics, engaging short-form reels, and post-production visuals.',
+    skills: ['Premiere Pro', 'After Effects', 'Motion Graphics', 'Color Grading', 'Reels & Shorts', 'Sound Design'],
+    experience: 'Video Editor · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: '',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'shivan',
+    status: 'Editing 🎬',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fffbeb 50%, #fed7aa 100%)',
+  },
 ];
 
 export default function TeamSection() {
@@ -63,10 +143,10 @@ export default function TeamSection() {
           The People
         </div>
         <h2 className="s-title">
-          Meet Our <span className="highlight-text">Founders</span>
+          Meet Our <span className="highlight-text">Team</span>
         </h2>
         <p style={{ color: 'var(--muted)', marginTop: '12px', fontSize: '15px', maxWidth: '580px', margin: '12px auto 0' }}>
-          The leadership team behind SurxTech. Hover or click to explore profile details.
+          The founders, developers, designers, and creatives behind SurxTech. Hover or click to explore profile details.
         </p>
       </div>
 
@@ -77,7 +157,7 @@ export default function TeamSection() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 340px))',
           justifyContent: 'center',
           gap: '32px',
-          maxWidth: '740px',
+          maxWidth: '1160px',
           margin: '0 auto',
           padding: '0 12px'
         }}
@@ -99,29 +179,6 @@ export default function TeamSection() {
             />
           </div>
         ))}
-      </div>
-
-      {/* OTHER TEAM MEMBERS UPDATING SOON BANNER */}
-      <div
-        style={{
-          padding: '14px 24px',
-          background: 'rgba(37, 99, 235, 0.05)',
-          border: '1px dashed rgba(37, 99, 235, 0.3)',
-          borderRadius: '16px',
-          maxWidth: '460px',
-          margin: '40px auto 0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '10px',
-          color: '#2563eb',
-          fontSize: '13.5px',
-          fontWeight: 600,
-          boxShadow: '0 4px 14px rgba(37, 99, 235, 0.04)'
-        }}
-      >
-        <Sparkles size={18} color="#2563eb" />
-        <span>Other team member profile will be updated soon!</span>
       </div>
 
       {/* TEAM MEMBER PROFILE MODAL */}

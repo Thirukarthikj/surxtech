@@ -49,13 +49,13 @@ export default function ContactSection({ selectedServiceFromModal }) {
             We'd love to hear about your project. Send us a message and we'll get back to you within 24 hours, ready to help.
           </p>
           <div className="c-channels">
-            <a href="mailto:jthirukarthick@gmail.com" className="c-chan">
+            <a href="mailto:surxtech@gmail.com" className="c-chan">
               <div className="c-chan-icon">
                 <Mail size={20} color="var(--blue)" />
               </div>
               <div>
                 <div className="c-chan-lbl">Email</div>
-                <div className="c-chan-val">jthirukarthick@gmail.com</div>
+                <div className="c-chan-val">surxtech@gmail.com</div>
               </div>
             </a>
             <a href="https://instagram.com/surxtech" target="_blank" rel="noopener noreferrer" className="c-chan">
@@ -91,9 +91,12 @@ export default function ContactSection({ selectedServiceFromModal }) {
         <form className="c-form" onSubmit={handleSubmit}>
           <div className="f-row">
             <div className="f-grp">
-              <label className="f-lbl">First Name</label>
+              <label className="f-lbl" htmlFor="contact-first-name">First Name</label>
               <input
+                id="contact-first-name"
+                name="firstName"
                 type="text"
+                autoComplete="given-name"
                 className="f-inp"
                 placeholder="Your name"
                 required
@@ -102,9 +105,12 @@ export default function ContactSection({ selectedServiceFromModal }) {
               />
             </div>
             <div className="f-grp">
-              <label className="f-lbl">Last Name</label>
+              <label className="f-lbl" htmlFor="contact-last-name">Last Name</label>
               <input
+                id="contact-last-name"
+                name="lastName"
                 type="text"
+                autoComplete="family-name"
                 className="f-inp"
                 placeholder="Last name"
                 value={formState.lastName}
@@ -114,9 +120,12 @@ export default function ContactSection({ selectedServiceFromModal }) {
           </div>
 
           <div className="f-grp">
-            <label className="f-lbl">Email Address</label>
+            <label className="f-lbl" htmlFor="contact-email">Email Address</label>
             <input
+              id="contact-email"
+              name="email"
               type="email"
+              autoComplete="email"
               className="f-inp"
               placeholder="your@email.com"
               required
@@ -126,8 +135,10 @@ export default function ContactSection({ selectedServiceFromModal }) {
           </div>
 
           <div className="f-grp">
-            <label className="f-lbl">Service Needed</label>
+            <label className="f-lbl" htmlFor="contact-service">Service Needed</label>
             <select
+              id="contact-service"
+              name="service"
               className="f-sel"
               value={formState.service}
               onChange={(e) => setFormState({ ...formState, service: e.target.value })}
@@ -142,13 +153,17 @@ export default function ContactSection({ selectedServiceFromModal }) {
               <option value="Video Editing">Video Editing</option>
               <option value="Branding & Identity">Branding &amp; Identity</option>
               <option value="Content Creation">Content Creation</option>
+              <option value="College Student Internships">College Student Internships</option>
+              <option value="College Projects (Mini & Major)">College Projects (Mini &amp; Major)</option>
               <option value="Other">Other</option>
             </select>
           </div>
 
           <div className="f-grp">
-            <label className="f-lbl">Tell Us About Your Project</label>
+            <label className="f-lbl" htmlFor="contact-message">Tell Us About Your Project</label>
             <textarea
+              id="contact-message"
+              name="message"
               className="f-area"
               placeholder="Describe your idea, goals, and timeline..."
               value={formState.message}

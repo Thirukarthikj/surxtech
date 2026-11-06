@@ -18,8 +18,8 @@ export default function CTASection() {
           <Link to="/contact" className="btn-white">
             Start a Project <ArrowRight size={16} />
           </Link>
-          <a href="mailto:jthirukarthick@gmail.com" className="cta-email">
-            <Mail size={16} /> jthirukarthick@gmail.com
+          <a href="mailto:surxtech@gmail.com" className="cta-email">
+            <Mail size={16} /> surxtech@gmail.com
           </a>
         </div>
       </div>

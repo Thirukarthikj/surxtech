@@ -48,6 +48,14 @@ export default function Navbar({ theme, toggleTheme }) {
         </li>
         <li>
           <NavLink
+            to="/team"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Team
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/services"
             className={({ isActive }) => (isActive ? 'active' : '')}
           >

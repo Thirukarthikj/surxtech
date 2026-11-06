@@ -4,7 +4,7 @@ import ServiceModal from '../components/ServiceModal';
 import ProcessSection from '../components/ProcessSection';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
-import { Send, Check, MessageSquare } from 'lucide-react';
+import { Send, Check, MessageSquare, GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function ServicesPage({ onSelectService, selectedService, setSelectedService }) {
   const [enquiryForm, setEnquiryForm] = useState({
@@ -39,9 +39,176 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
     setEnquiryForm((prev) => ({ ...prev, service: svc.name }));
   };
 
+  const handleStudentProgramSelect = (serviceName) => {
+    setEnquiryForm((prev) => ({ ...prev, service: serviceName }));
+    const enquiryEl = document.getElementById('service-enquiry');
+    if (enquiryEl) {
+      enquiryEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="page-wrapper" style={{ paddingTop: '120px' }}>
       <ServicesBento onSelectService={handleServiceSelectFromBento} />
+
+      {/* STUDENT INTERNSHIP & PROJECTS SPOTLIGHT */}
+      <section className="section" style={{ paddingTop: '20px', paddingBottom: '40px' }}>
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            background: 'linear-gradient(135deg, rgba(37,99,235,0.04) 0%, rgba(14,165,233,0.06) 100%)',
+            border: '1px solid rgba(37, 99, 235, 0.2)',
+            borderRadius: '24px',
+            padding: '48px 36px',
+            boxShadow: '0 12px 36px rgba(37, 99, 235, 0.05)',
+          }}
+        >
+          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+            <div className="s-label" style={{ justifyContent: 'center' }}>
+              <GraduationCap size={16} /> Student Development Programs
+            </div>
+            <h2 className="s-title" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', marginBottom: '12px' }}>
+              Empowering <span className="highlight-text">College Students</span>
+            </h2>
+            <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.7' }}>
+              We provide practical, hands-on internships and complete college project solutions (mini &amp; major) for engineering and IT students.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '24px',
+            }}
+          >
+            {/* Card 1: Internship */}
+            <div
+              style={{
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: '20px',
+                padding: '32px 28px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'rgba(139, 92, 246, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '24px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  🎓
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#8b5cf6', marginBottom: '8px' }}>
+                  Industrial Training
+                </div>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
+                  Internships for College Students
+                </h3>
+                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
+                  Gain real industrial training working alongside senior software engineers. Build production-grade features in React, Node.js, Flutter, UI/UX, and cloud deployments.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
+                  {[
+                    'Live project exposure on real-world web & mobile applications',
+                    'Direct 1-on-1 mentorship from tech leads and architects',
+                    'Authorized Internship Certificate & Letter of Recommendation',
+                    'Technical interview preparation & resume enhancement'
+                  ].map((feat, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
+                      <CheckCircle2 size={16} color="var(--blue)" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                type="button"
+                className="btn-primary"
+                style={{ width: '100%', justifyContent: 'center' }}
+                onClick={() => handleStudentProgramSelect('College Student Internships')}
+              >
+                Apply for Internship <ArrowRight size={16} />
+              </button>
+            </div>
+
+            {/* Card 2: College Projects */}
+            <div
+              style={{
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: '20px',
+                padding: '32px 28px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'rgba(6, 182, 212, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '24px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  💡
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#06b6d4', marginBottom: '8px' }}>
+                  Academic Assistance
+                </div>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
+                  College Projects (Mini &amp; Major)
+                </h3>
+                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
+                  End-to-end development of mini, semester, and final-year academic projects for Engineering, BCA, MCA, and IT students with complete documentation.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
+                  {[
+                    '100% bug-free working source code with clean architecture',
+                    'Complete IEEE / University standard project documentation report',
+                    'System architecture diagrams, ER diagrams & database schema',
+                    'Full code explanation & viva presentation defense coaching'
+                  ].map((feat, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
+                      <CheckCircle2 size={16} color="var(--blue)" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                type="button"
+                className="btn-primary"
+                style={{ width: '100%', justifyContent: 'center' }}
+                onClick={() => handleStudentProgramSelect('College Projects (Mini & Major)')}
+              >
+                Enquire for College Project <ArrowRight size={16} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* OUR PROCESS SECTION */}
       <ProcessSection />
@@ -64,9 +231,12 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
           <form className="c-form" onSubmit={handleEnquireSubmit} style={{ marginTop: '32px' }}>
             <div className="f-row">
               <div className="f-grp">
-                <label className="f-lbl">Full Name *</label>
+                <label className="f-lbl" htmlFor="enquiry-fullname">Full Name *</label>
                 <input
+                  id="enquiry-fullname"
+                  name="name"
                   type="text"
+                  autoComplete="name"
                   className="f-inp"
                   placeholder="Your full name"
                   required
@@ -75,9 +245,12 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
                 />
               </div>
               <div className="f-grp">
-                <label className="f-lbl">Email Address *</label>
+                <label className="f-lbl" htmlFor="enquiry-email">Email Address *</label>
                 <input
+                  id="enquiry-email"
+                  name="email"
                   type="email"
+                  autoComplete="email"
                   className="f-inp"
                   placeholder="your@email.com"
                   required
@@ -89,8 +262,10 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
 
             <div className="f-row">
               <div className="f-grp">
-                <label className="f-lbl">Service Needed *</label>
+                <label className="f-lbl" htmlFor="enquiry-service">Service Needed *</label>
                 <select
+                  id="enquiry-service"
+                  name="service"
                   className="f-sel"
                   value={enquiryForm.service}
                   onChange={(e) => setEnquiryForm({ ...enquiryForm, service: e.target.value })}
@@ -104,9 +279,12 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
               </div>
 
               <div className="f-grp">
-                <label className="f-lbl">Company / Brand Name</label>
+                <label className="f-lbl" htmlFor="enquiry-company">Company / Brand Name</label>
                 <input
+                  id="enquiry-company"
+                  name="company"
                   type="text"
+                  autoComplete="organization"
                   className="f-inp"
                   placeholder="Company name (optional)"
                   value={enquiryForm.company}
@@ -116,8 +294,10 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
             </div>
 
             <div className="f-grp">
-              <label className="f-lbl">Desired Timeline</label>
+              <label className="f-lbl" htmlFor="enquiry-timeline">Desired Timeline</label>
               <select
+                id="enquiry-timeline"
+                name="timeline"
                 className="f-sel"
                 value={enquiryForm.timeline}
                 onChange={(e) => setEnquiryForm({ ...enquiryForm, timeline: e.target.value })}
@@ -129,8 +309,10 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
             </div>
 
             <div className="f-grp">
-              <label className="f-lbl">Project Details &amp; Requirements *</label>
+              <label className="f-lbl" htmlFor="enquiry-message">Project Details &amp; Requirements *</label>
               <textarea
+                id="enquiry-message"
+                name="message"
                 className="f-area"
                 required
                 placeholder="Share your goals, requirements, features, or design inspirations..."
