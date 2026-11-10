@@ -188,3 +188,4 @@ Because Google reported *"Referring page: None detected"*, Googlebot needs initi
 2. **Instagram Profile:** Verify that your bio on `@surxtech` links to `https://www.surxtech.com/`.
 3. **LinkedIn Company Page:** Ensure your company page lists the website URL.
 4. **Local Directory Citations:** List SURXTECH on Justdial, IndiaMART, Sulekha, and local Dindigul business directories with the exact NAP details.
+
