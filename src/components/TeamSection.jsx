@@ -18,7 +18,7 @@ const members = [
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     instagram: 'https://instagram.com/karthiks_83',
-    email: 'surxtech@gmail.com',
+    email: 'jthirukarthick@gmail.com',
     avatarUrl: '',
     handle: 'thirukarthick',
     status: 'Online ⚡',
