@@ -1,207 +1,309 @@
-:root {
-  --pointer-x: 50%;
-  --pointer-y: 50%;
-  --pointer-from-top: 0.5;
-  --pointer-from-left: 0.5;
-  --rotate-x: 0deg;
-  --rotate-y: 0deg;
-  --card-radius: 20px;
-}
-
-.pc-card-wrapper {
-  perspective: 800px;
-  position: relative;
-  touch-action: none;
+/* 3D Glass Layer Card Design from Uiverse.io by Smit-Prajapati, adapted for SurxTech Team */
+.parent {
   width: 100%;
-  max-width: 340px;
+  max-width: 310px;
+  height: 320px;
+  perspective: 1000px;
   margin: 0 auto;
 }
 
-.pc-card-shell {
-  position: relative;
-  z-index: 1;
+.parent .card {
+  height: 100%;
   width: 100%;
-}
-
-.pc-card {
-  min-height: 340px;
-  width: 100%;
-  border-radius: var(--card-radius);
+  border-radius: 46px;
+  background: var(--card-bg, linear-gradient(135deg, rgb(0, 255, 214) 0%, rgb(8, 226, 96) 100%));
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
   position: relative;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
-  transform: translateZ(0) rotateX(0deg) rotateY(0deg);
-  background: #ffffff;
-  backface-visibility: hidden;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* POPUP 3D TILT ELEVATION ON HOVER */
-.pc-card-wrapper:hover .pc-card,
-.pc-card.active {
-  transition: none;
-  transform: translateY(-6px) scale(1.015) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.pc-card-shell.entering .pc-card {
-  transition: transform 180ms ease-out;
-}
-
-.pc-inside {
+/* Subtle Position-related background image texture */
+.parent .card-bg-layer {
+  position: absolute;
   inset: 0;
-  position: relative;
-  background-image: var(--inner-gradient);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28px 20px 20px;
-  min-height: 340px;
-  box-sizing: border-box;
+  border-radius: 46px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28;
+  mix-blend-mode: luminosity;
+  filter: contrast(1.15) brightness(1.05);
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
 }
 
-/* AVATAR / ICON BADGE WRAPPER */
-.pc-avatar-wrap {
+.parent:hover .card-bg-layer {
+  transform: scale(1.06);
+  opacity: 0.42;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.parent .glass {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  border-radius: 42px;
+  border-top-right-radius: 90px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: translate3d(0px, 0px, 25px);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+[data-theme='dark'] .parent .glass {
+  background: linear-gradient(0deg, rgba(15, 23, 42, 0.72) 0%, rgba(30, 41, 59, 0.88) 100%);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.parent .content {
+  padding: 80px 32px 0px 28px;
+  transform: translate3d(0, 0, 26px);
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 2;
-  margin-bottom: 16px;
-  pointer-events: none;
 }
 
-.pc-icon-badge {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb, #0284c7);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 3px solid #ffffff;
-}
-
-.pc-avatar-wrap .avatar {
-  max-width: 100px;
-  max-height: 100px;
-  object-fit: contain;
-  filter: none;
-}
-
-/* TOP & CENTER DETAILS */
-.pc-details {
-  width: 100%;
-  text-align: center;
-  z-index: 5;
-  pointer-events: none;
-  margin-bottom: 20px;
-}
-
-.pc-details h3 {
-  font-weight: 800;
-  margin: 0 0 6px 0;
-  font-size: 1.35rem;
+.parent .content .title {
+  display: block;
   color: #0f172a;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
-.pc-details .pc-role {
+[data-theme='dark'] .parent .content .title {
+  color: #f8fafc;
+}
+
+.parent .content .role {
+  display: block;
+  color: var(--card-accent, #2563eb);
   font-weight: 700;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.parent .content .text {
+  display: block;
+  color: #475569;
   font-size: 13.5px;
-  margin: 0 0 8px 0;
-  color: #2563eb;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
-.pc-details .pc-summary {
-  font-size: 12.5px;
-  color: #64748b;
-  font-weight: 500;
+[data-theme='dark'] .parent .content .text {
+  color: #94a3b8;
 }
 
-/* BOTTOM USER INFO BAR */
-.pc-user-info {
-  width: 100%;
-  z-index: 10;
+.parent .bottom {
+  padding: 10px 12px;
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 10px 14px;
-  pointer-events: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  box-sizing: border-box;
+  transform: translate3d(0, 0, 26px);
+  z-index: 3;
 }
 
-.pc-user-details {
+.parent .bottom .view-more {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.pc-user-text {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.pc-handle {
-  font-size: 12px;
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.2;
-}
-
-.pc-status {
-  font-size: 11px;
-  font-weight: 600;
-  color: #2563eb;
-  line-height: 1;
-}
-
-.pc-contact-btn {
-  border: 1px solid rgba(37, 99, 235, 0.25);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 12px;
-  font-weight: 700;
-  color: #ffffff;
-  background: #2563eb;
+  gap: 4px;
+  justify-content: flex-end;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
 }
 
-.pc-contact-btn:hover {
-  background: #1d4ed8;
-  border-color: #1e40af;
-  transform: translateY(-1px);
-  box-shadow: none;
+.parent .bottom .view-more:hover {
+  transform: translate3d(0, 0, 10px);
 }
 
-@media (max-width: 768px) {
-  .pc-card {
-    min-height: 320px;
-  }
-  .pc-details h3 {
-    font-size: 1.25rem;
-  }
-  .pc-icon-badge {
-    width: 68px;
-    height: 68px;
-    font-size: 32px;
-  }
+.parent .bottom .view-more .view-more-button {
+  background: none;
+  border: none;
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+[data-theme='dark'] .parent .bottom .view-more .view-more-button {
+  color: #f8fafc;
+}
+
+.parent .bottom .view-more .svg {
+  fill: none;
+  stroke: #0f172a;
+  stroke-width: 3px;
+  max-height: 14px;
+  width: 14px;
+}
+
+[data-theme='dark'] .parent .bottom .view-more .svg {
+  stroke: #f8fafc;
+}
+
+.parent .bottom .social-buttons-container {
+  display: flex;
+  gap: 8px;
+  transform-style: preserve-3d;
+}
+
+.parent .bottom .social-buttons-container .social-button {
+  width: 30px;
+  aspect-ratio: 1;
+  padding: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 8px -4px;
+  cursor: pointer;
+}
+
+.parent .bottom .social-buttons-container .social-button:first-child {
+  transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s, background 0.2s, color 0.2s;
+}
+
+.parent .bottom .social-buttons-container .social-button:nth-child(2) {
+  transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s, background 0.2s, color 0.2s;
+}
+
+.parent .bottom .social-buttons-container .social-button:nth-child(3) {
+  transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s, background 0.2s, color 0.2s;
+}
+
+.parent .bottom .social-buttons-container .social-button .svg {
+  width: 14px;
+  height: 14px;
+  fill: #1e293b;
+}
+
+.parent .bottom .social-buttons-container .social-button:hover {
+  background: #0f172a;
+}
+
+.parent .bottom .social-buttons-container .social-button:hover .svg {
+  fill: #ffffff;
+}
+
+.parent .bottom .social-buttons-container .social-button:active {
+  background: #2563eb;
+}
+
+.parent .bottom .social-buttons-container .social-button:active .svg {
+  fill: #ffffff;
+}
+
+.parent .card .logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+.parent .card .logo .circle {
+  display: block;
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.22);
+  transition: all 0.5s ease-in-out;
+}
+
+.parent .card .logo .circle1 {
+  width: 170px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+}
+
+.parent .card .logo .circle2 {
+  width: 140px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  transition-delay: 0.4s;
+}
+
+.parent .card .logo .circle3 {
+  width: 110px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.parent .card .logo .circle4 {
+  width: 80px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.parent .card .logo .circle5 {
+  width: 52px;
+  transform: translate3d(0, 0, 100px);
+  top: 28px;
+  right: 28px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.parent .card .logo .circle5 .svg {
+  width: 22px;
+  height: 22px;
+  fill: #0f172a;
+}
+
+.parent:hover .card {
+  transform: rotate3d(1, 1, 0, 25deg);
+  box-shadow: rgba(0, 0, 0, 0.22) 30px 50px 25px -40px, rgba(0, 0, 0, 0.12) 0px 25px 30px 0px;
+}
+
+.parent:hover .card .bottom .social-buttons-container .social-button {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(0, 0, 0, 0.25) -5px 20px 10px 0px;
+}
+
+.parent:hover .card .logo .circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+
+.parent:hover .card .logo .circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+
+.parent:hover .card .logo .circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+
+.parent:hover .card .logo .circle5 {
+  transform: translate3d(0, 0, 120px);
 }

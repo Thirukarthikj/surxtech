@@ -1,355 +1,147 @@
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import React from 'react';
 import './ProfileCard.css';
 
-const DEFAULT_INNER_GRADIENT = 'linear-gradient(160deg, #1e293b 0%, #0f172a 100%)';
-
-const ANIMATION_CONFIG = {
-  INITIAL_DURATION: 1000,
-  INITIAL_X_OFFSET: 50,
-  INITIAL_Y_OFFSET: 40,
-  DEVICE_BETA_OFFSET: 20,
-  ENTER_TRANSITION_MS: 150
-};
-
-const clamp = (v, min = 0, max = 100) => Math.min(Math.max(v, min), max);
-const round = (v, precision = 3) => parseFloat(v.toFixed(precision));
-
-const ProfileCardComponent = ({
-  avatarUrl = '',
+export default function ProfileCard({
   icon = '⚡',
-  innerGradient,
-  className = '',
-  enableTilt = true,
-  enableMobileTilt = false,
-  mobileTiltSensitivity = 5,
-  miniAvatarUrl,
-  name = '',
-  skillSummary = 'Web · Apps · Architecture',
-  title = '',
-  handle = '',
-  status = 'Online',
+  cardBg = 'linear-gradient(135deg, rgb(0, 255, 214) 0%, rgb(8, 226, 96) 100%)',
+  bgImage = '',
+  name = 'Team Member',
+  title = 'Specialist',
+  skillSummary = 'Creative & Technical Engineering',
   contactText = 'View Profile',
-  showUserInfo = true,
-  onContactClick
-}) => {
-  const wrapRef = useRef(null);
-  const shellRef = useRef(null);
-
-  const enterTimerRef = useRef(null);
-  const leaveRafRef = useRef(null);
-
-  const tiltEngine = useMemo(() => {
-    if (!enableTilt) return null;
-
-    let rafId = null;
-    let running = false;
-    let lastTs = 0;
-
-    let currentX = 0;
-    let currentY = 0;
-    let targetX = 0;
-    let targetY = 0;
-
-    const DEFAULT_TAU = 0.12;
-    const INITIAL_TAU = 0.5;
-    let initialUntil = 0;
-
-    const setVarsFromXY = (x, y) => {
-      const shell = shellRef.current;
-      const wrap = wrapRef.current;
-      if (!shell || !wrap) return;
-
-      const width = shell.clientWidth || 1;
-      const height = shell.clientHeight || 1;
-
-      const percentX = clamp((100 / width) * x);
-      const percentY = clamp((100 / height) * y);
-
-      const centerX = percentX - 50;
-      const centerY = percentY - 50;
-
-      const properties = {
-        '--pointer-x': `${percentX}%`,
-        '--pointer-y': `${percentY}%`,
-        '--pointer-from-top': `${percentY / 100}`,
-        '--pointer-from-left': `${percentX / 100}`,
-        '--rotate-x': `${round(-(centerX / 6))}deg`,
-        '--rotate-y': `${round(centerY / 5)}deg`
-      };
-
-      for (const [k, v] of Object.entries(properties)) wrap.style.setProperty(k, v);
-    };
-
-    const step = ts => {
-      if (!running) return;
-      if (lastTs === 0) lastTs = ts;
-      const dt = (ts - lastTs) / 1000;
-      lastTs = ts;
-
-      const tau = ts < initialUntil ? INITIAL_TAU : DEFAULT_TAU;
-      const k = 1 - Math.exp(-dt / tau);
-
-      currentX += (targetX - currentX) * k;
-      currentY += (targetY - currentY) * k;
-
-      setVarsFromXY(currentX, currentY);
-
-      const stillFar = Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05;
-
-      if (stillFar || document.hasFocus()) {
-        rafId = requestAnimationFrame(step);
-      } else {
-        running = false;
-        lastTs = 0;
-        if (rafId) {
-          cancelAnimationFrame(rafId);
-          rafId = null;
-        }
-      }
-    };
-
-    const start = () => {
-      if (running) return;
-      running = true;
-      lastTs = 0;
-      rafId = requestAnimationFrame(step);
-    };
-
-    return {
-      setImmediate(x, y) {
-        currentX = x;
-        currentY = y;
-        setVarsFromXY(currentX, currentY);
-      },
-      setTarget(x, y) {
-        targetX = x;
-        targetY = y;
-        start();
-      },
-      toCenter() {
-        const shell = shellRef.current;
-        if (!shell) return;
-        this.setTarget(shell.clientWidth / 2, shell.clientHeight / 2);
-      },
-      beginInitial(durationMs) {
-        initialUntil = performance.now() + durationMs;
-        start();
-      },
-      getCurrent() {
-        return { x: currentX, y: currentY, tx: targetX, ty: targetY };
-      },
-      cancel() {
-        if (rafId) cancelAnimationFrame(rafId);
-        rafId = null;
-        running = false;
-        lastTs = 0;
-      }
-    };
-  }, [enableTilt]);
-
-  const getOffsets = (evt, el) => {
-    const rect = el.getBoundingClientRect();
-    return { x: evt.clientX - rect.left, y: evt.clientY - rect.top };
+  linkedin = 'https://linkedin.com',
+  github = 'https://github.com',
+  instagram = 'https://instagram.com',
+  email = 'surxtech@gmail.com',
+  onContactClick,
+}) {
+  const handleSocialClick = (e, url) => {
+    e.stopPropagation();
+    if (!url) return;
+    if (url.startsWith('mailto:')) {
+      window.location.href = url;
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
-  const handlePointerMove = useCallback(
-    event => {
-      const shell = shellRef.current;
-      if (!shell || !tiltEngine) return;
-      const { x, y } = getOffsets(event, shell);
-      tiltEngine.setTarget(x, y);
-    },
-    [tiltEngine]
-  );
-
-  const handlePointerEnter = useCallback(
-    event => {
-      const shell = shellRef.current;
-      if (!shell || !tiltEngine) return;
-
-      shell.classList.add('active');
-      shell.classList.add('entering');
-      if (enterTimerRef.current) window.clearTimeout(enterTimerRef.current);
-      enterTimerRef.current = window.setTimeout(() => {
-        shell.classList.remove('entering');
-      }, ANIMATION_CONFIG.ENTER_TRANSITION_MS);
-
-      const { x, y } = getOffsets(event, shell);
-      tiltEngine.setTarget(x, y);
-    },
-    [tiltEngine]
-  );
-
-  const handlePointerLeave = useCallback(() => {
-    const shell = shellRef.current;
-    if (!shell || !tiltEngine) return;
-
-    tiltEngine.toCenter();
-
-    const checkSettle = () => {
-      const { x, y, tx, ty } = tiltEngine.getCurrent();
-      const settled = Math.hypot(tx - x, ty - y) < 0.6;
-      if (settled) {
-        shell.classList.remove('active');
-        leaveRafRef.current = null;
-      } else {
-        leaveRafRef.current = requestAnimationFrame(checkSettle);
-      }
-    };
-    if (leaveRafRef.current) cancelAnimationFrame(leaveRafRef.current);
-    leaveRafRef.current = requestAnimationFrame(checkSettle);
-  }, [tiltEngine]);
-
-  const handleDeviceOrientation = useCallback(
-    event => {
-      const shell = shellRef.current;
-      if (!shell || !tiltEngine) return;
-
-      const { beta, gamma } = event;
-      if (beta == null || gamma == null) return;
-
-      const centerX = shell.clientWidth / 2;
-      const centerY = shell.clientHeight / 2;
-      const x = clamp(centerX + gamma * mobileTiltSensitivity, 0, shell.clientWidth);
-      const y = clamp(
-        centerY + (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
-        0,
-        shell.clientHeight
-      );
-
-      tiltEngine.setTarget(x, y);
-    },
-    [tiltEngine, mobileTiltSensitivity]
-  );
-
-  useEffect(() => {
-    if (!enableTilt || !tiltEngine) return;
-
-    const shell = shellRef.current;
-    if (!shell) return;
-
-    const pointerMoveHandler = handlePointerMove;
-    const pointerEnterHandler = handlePointerEnter;
-    const pointerLeaveHandler = handlePointerLeave;
-    const deviceOrientationHandler = handleDeviceOrientation;
-
-    shell.addEventListener('pointerenter', pointerEnterHandler);
-    shell.addEventListener('pointermove', pointerMoveHandler);
-    shell.addEventListener('pointerleave', pointerLeaveHandler);
-
-    const handleClick = () => {
-      if (!enableMobileTilt || location.protocol !== 'https:') return;
-      const anyMotion = window.DeviceMotionEvent;
-      if (anyMotion && typeof anyMotion.requestPermission === 'function') {
-        anyMotion
-          .requestPermission()
-          .then(state => {
-            if (state === 'granted') {
-              window.addEventListener('deviceorientation', deviceOrientationHandler);
-            }
-          })
-          .catch(console.error);
-      } else {
-        window.addEventListener('deviceorientation', deviceOrientationHandler);
-      }
-    };
-    shell.addEventListener('click', handleClick);
-
-    const initialX = (shell.clientWidth || 0) - ANIMATION_CONFIG.INITIAL_X_OFFSET;
-    const initialY = ANIMATION_CONFIG.INITIAL_Y_OFFSET;
-    tiltEngine.setImmediate(initialX, initialY);
-    tiltEngine.toCenter();
-    tiltEngine.beginInitial(ANIMATION_CONFIG.INITIAL_DURATION);
-
-    return () => {
-      shell.removeEventListener('pointerenter', pointerEnterHandler);
-      shell.removeEventListener('pointermove', pointerMoveHandler);
-      shell.removeEventListener('pointerleave', pointerLeaveHandler);
-      shell.removeEventListener('click', handleClick);
-      window.removeEventListener('deviceorientation', deviceOrientationHandler);
-      if (enterTimerRef.current) window.clearTimeout(enterTimerRef.current);
-      if (leaveRafRef.current) cancelAnimationFrame(leaveRafRef.current);
-      tiltEngine.cancel();
-      shell.classList.remove('entering');
-    };
-  }, [
-    enableTilt,
-    enableMobileTilt,
-    tiltEngine,
-    handlePointerMove,
-    handlePointerEnter,
-    handlePointerLeave,
-    handleDeviceOrientation
-  ]);
-
-  const cardStyle = useMemo(
-    () => ({
-      '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
-    }),
-    [innerGradient]
-  );
-
-  const handleContactClick = useCallback((e) => {
-    e.stopPropagation();
-    onContactClick?.();
-  }, [onContactClick]);
-
   return (
-    <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
-      <div ref={shellRef} className="pc-card-shell">
-        <section className="pc-card">
-          <div className="pc-inside">
-            {/* Avatar / Icon Badge at Top */}
-            <div className="pc-avatar-wrap">
-              {avatarUrl ? (
-                <img
-                  className="avatar"
-                  src={avatarUrl}
-                  alt={`${name || 'User'} avatar`}
-                  loading="lazy"
-                  onError={e => {
-                    e.target.style.display = 'none';
-                  }}
+    <div className="parent" onClick={onContactClick} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onContactClick && onContactClick(); } }}>
+      <div className="card" style={{ '--card-bg': cardBg, background: cardBg }}>
+        {/* Position-related subtle background illustration */}
+        {bgImage && (
+          <div
+            className="card-bg-layer"
+            style={{ backgroundImage: `url(${bgImage})` }}
+            aria-hidden="true"
+          />
+        )}
+
+        <div className="logo" aria-hidden="true">
+          <span className="circle circle1" />
+          <span className="circle circle2" />
+          <span className="circle circle3" />
+          <span className="circle circle4" />
+          <span className="circle circle5">
+            {typeof icon === 'string' && icon.length <= 4 ? (
+              <span style={{ fontSize: '24px', lineHeight: 1 }}>{icon}</span>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.667 31.69" className="svg">
+                <path
+                  id="Path_6"
+                  data-name="Path 6"
+                  d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z"
+                  transform="translate(0 0)"
                 />
-              ) : (
-                <div className="pc-icon-badge">
-                  {icon || (name ? name.charAt(0) : '⚡')}
-                </div>
-              )}
-            </div>
-
-            {/* Details Section */}
-            <div className="pc-details">
-              <h3>{name}</h3>
-              <p className="pc-role">{title}</p>
-              <div className="pc-summary">{skillSummary}</div>
-            </div>
-
-            {/* User Info Bar at Bottom */}
-            {showUserInfo && (
-              <div className="pc-user-info">
-                <div className="pc-user-details">
-                  <div className="pc-user-text">
-                    <div className="pc-handle">@{handle}</div>
-                    <div className="pc-status">{status}</div>
-                  </div>
-                </div>
-                <button
-                  className="pc-contact-btn"
-                  onClick={handleContactClick}
-                  type="button"
-                  aria-label={`View profile for ${name || 'user'}`}
-                >
-                  {contactText} ↗
-                </button>
-              </div>
+                <path
+                  id="Path_7"
+                  data-name="Path 7"
+                  d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z"
+                  transform="translate(-45.91 0)"
+                />
+                <path
+                  id="Path_8"
+                  data-name="Path 8"
+                  d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z"
+                  transform="translate(0 -51.963)"
+                />
+              </svg>
             )}
+          </span>
+        </div>
+
+        <div className="glass" aria-hidden="true" />
+
+        <div className="content">
+          <span className="title">{name}</span>
+          <span className="role">{title}</span>
+          <span className="text">{skillSummary}</span>
+        </div>
+
+        <div className="bottom">
+          <div className="social-buttons-container">
+            {/* Social Button 1: LinkedIn */}
+            <button
+              type="button"
+              className="social-button social-button1"
+              title="LinkedIn"
+              aria-label={`${name}'s LinkedIn`}
+              onClick={(e) => handleSocialClick(e, linkedin || 'https://linkedin.com')}
+            >
+              <svg viewBox="0 0 24 24" className="svg" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0-.01-3.24 1.62 1.62 0 0 0 .01 3.24M7.86 18.5V10.13H5.07V18.5h2.79z" />
+              </svg>
+            </button>
+
+            {/* Social Button 2: GitHub or Portfolio */}
+            <button
+              type="button"
+              className="social-button social-button2"
+              title={github ? "GitHub" : "Portfolio"}
+              aria-label={`${name}'s ${github ? "GitHub" : "Portfolio"}`}
+              onClick={(e) => handleSocialClick(e, github || 'https://github.com')}
+            >
+              <svg viewBox="0 0 24 24" className="svg" fill="currentColor">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+              </svg>
+            </button>
+
+            {/* Social Button 3: Instagram */}
+            <button
+              type="button"
+              className="social-button social-button3"
+              title="Instagram"
+              aria-label={`${name}'s Instagram`}
+              onClick={(e) => handleSocialClick(e, instagram || 'https://instagram.com')}
+            >
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" className="svg">
+                <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z" />
+              </svg>
+            </button>
           </div>
-        </section>
+
+          <div
+            className="view-more"
+            onClick={(e) => {
+              e.stopPropagation();
+              onContactClick && onContactClick();
+            }}
+          >
+            <button type="button" className="view-more-button">
+              {contactText}
+            </button>
+            <svg
+              className="svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-const ProfileCard = React.memo(ProfileCardComponent);
-export default ProfileCard;
+}

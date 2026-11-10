@@ -1,0 +1,12 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+Sitemap: https://www.surxtech.com/sitemap.xml

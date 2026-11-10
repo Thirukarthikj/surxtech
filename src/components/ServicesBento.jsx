@@ -77,6 +77,28 @@ export const servicesData = [
     class: 'b7',
     details: 'Engaging content that turns casual viewers into loyal customers. We craft strategic copy, social media campaigns, blog posts, and marketing funnel messaging optimized for audience growth.',
     deliverables: ['Social Media Campaign Strategy', 'Ad Copywriting & Scripts', 'Content Calendar Creation', 'Email Marketing Newsletters', 'SEO Blog Writing']
+  },
+  {
+    id: 'internships',
+    num: '08',
+    icon: '🎓',
+    name: 'College Student Internships',
+    desc: 'Hands-on industrial internships for college students. Work on live production applications with senior developer mentorship and verified certification.',
+    tags: ['Live Projects', 'Mentorship', 'Certification'],
+    class: 'b8',
+    details: 'We provide comprehensive industrial internship programs for college students looking for real-world development experience. Work directly alongside our engineers on React, Node.js, Flutter, UI/UX, and cloud deployments with official completion letters and verified recommendation certificates.',
+    deliverables: ['Hands-on Real-World Project Experience', '1-on-1 Guidance from Tech Leads', 'Verified Internship Certificate & LOR', 'Full Stack & Mobile Development Training', 'Resume Building & Technical Interview Prep']
+  },
+  {
+    id: 'college-projects',
+    num: '09',
+    icon: '💡',
+    name: 'College Projects (Mini & Major)',
+    desc: 'End-to-end college project solutions for engineering & IT students — complete working source code, project documentation report, PPT, and viva coaching.',
+    tags: ['Mini Projects', 'Final Year', 'IEEE & Custom'],
+    class: 'b9',
+    details: 'Get your mini and major college projects built with high code quality and contemporary frameworks. We provide clean, bug-free source code, database architectures, IEEE/college standard documentation, PPT presentations, and full viva explanation support.',
+    deliverables: ['Complete Working Source Code & GitHub Repo', 'IEEE / College Format Project Report & Documentation', 'System Architecture & Database Schema Diagrams', 'Project Presentation PPT & Demo Video', 'Complete Code Explanation & Viva Preparation']
   }
 ];
 

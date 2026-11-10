@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe, Sparkles } from 'lucide-react';
+import { User, X, ArrowRight, CheckCircle2, Linkedin, Github, Mail, Globe, Sparkles, Instagram } from 'lucide-react';
 import ProfileCard from './ProfileCard';
 
 const members = [
@@ -17,11 +17,13 @@ const members = [
     portfolioUrl: 'https://thiruportfolio-navy.vercel.app/',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
+    instagram: 'https://instagram.com/karthiks_83',
     email: 'jthirukarthick@gmail.com',
     avatarUrl: '',
     handle: 'thirukarthick',
     status: 'Online ⚡',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #eff6ff 50%, #bfdbfe 100%)',
+    bgImage: '/images/team-cards/bg-tech-lead.jpg',
   },
   {
     id: 'surya',
@@ -37,11 +39,101 @@ const members = [
     portfolioUrl: '',
     linkedin: 'https://linkedin.com',
     github: '',
+    instagram: 'https://instagram.com',
     email: 'surya@surxtech.com',
     avatarUrl: '',
     handle: 'surya',
     status: 'Online 🚀',
     innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f5f3ff 50%, #ddd6fe 100%)',
+    bgImage: '/images/team-cards/bg-strategy.jpg',
+  },
+  {
+    id: 'varunraj',
+    icon: '💻',
+    bg: 'linear-gradient(135deg,#0284c7,#06b6d4)',
+    teamTitle: 'Development Team',
+    memberName: 'Varun Raj',
+    roleTitle: 'Full Stack Developer',
+    skillSummary: 'Frontend · Backend · APIs',
+    bio: 'Full Stack Developer at SurxTech specializing in building high-performance web applications, scalable backend microservices, and modern database architectures.',
+    skills: ['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'TypeScript'],
+    experience: 'Full Stack Developer · SurxTech',
+    portfolioUrl: 'https://varunraj.web.app/',
+    linkedin: 'https://linkedin.com',
+    github: 'https://github.com',
+    instagram: 'https://instagram.com/jarnurav',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'varunraj',
+    status: 'Online 💻',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #f0fdfa 50%, #ccfbf1 100%)',
+    bgImage: '/images/team-cards/bg-fullstack.jpg',
+  },
+  {
+    id: 'rajarajan',
+    icon: '⚙️',
+    bg: 'linear-gradient(135deg,#059669,#10b981)',
+    teamTitle: 'Development Team',
+    memberName: 'Raja Rajan',
+    roleTitle: 'Full Stack Developer',
+    skillSummary: 'Next.js · Node.js · Cloud APIs',
+    bio: 'Full Stack Developer engineering robust cloud-native systems, seamless API integrations, and intuitive responsive user interfaces for modern businesses.',
+    skills: ['React', 'Next.js', 'Node.js', 'REST APIs', 'SQL', 'Docker', 'Git'],
+    experience: 'Full Stack Developer · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: 'https://github.com',
+    instagram: 'https://instagram.com/_rajzx_45',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'rajarajan',
+    status: 'Online ⚙️',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #ecfdf5 50%, #a7f3d0 100%)',
+    bgImage: '/images/team-cards/bg-cloud-systems.jpg',
+  },
+  {
+    id: 'stephenraj',
+    icon: '🎨',
+    bg: 'linear-gradient(135deg,#ec4899,#f43f5e)',
+    teamTitle: 'Design Team',
+    memberName: 'Stephen Raj',
+    roleTitle: 'UI/UX Designer',
+    skillSummary: 'Product Design · Figma · Systems',
+    bio: 'UI/UX Designer focused on crafting user-centered digital experiences, comprehensive design systems, interactive prototypes, and high-impact visual interfaces.',
+    skills: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping', 'Design Systems', 'User Research'],
+    experience: 'UI/UX Designer · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: '',
+    instagram: 'https://instagram.com/stephensteve123',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'stephenraj',
+    status: 'Designing 🎨',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fdf2f8 50%, #fbcfe8 100%)',
+    bgImage: '/images/team-cards/bg-ui-ux.jpg',
+  },
+  {
+    id: 'shivan',
+    icon: '🎬',
+    bg: 'linear-gradient(135deg,#f59e0b,#ea580c)',
+    teamTitle: 'Creative Media Team',
+    memberName: 'Shivan',
+    roleTitle: 'Video Editor & Motion Designer',
+    skillSummary: 'Video Editing · Motion VFX · Reels',
+    bio: 'Creative Video Editor and Motion Designer delivering cinematic brand videos, dynamic motion graphics, engaging short-form reels, and post-production visuals.',
+    skills: ['Premiere Pro', 'After Effects', 'Motion Graphics', 'Color Grading', 'Reels & Shorts', 'Sound Design'],
+    experience: 'Video Editor · SurxTech',
+    portfolioUrl: '',
+    linkedin: 'https://linkedin.com',
+    github: '',
+    instagram: 'https://instagram.com/unlucky_sivan_02',
+    email: 'surxtech@gmail.com',
+    avatarUrl: '',
+    handle: 'shivan',
+    status: 'Editing 🎬',
+    innerGradient: 'linear-gradient(160deg, #ffffff 0%, #fffbeb 50%, #fed7aa 100%)',
+    bgImage: '/images/team-cards/bg-video-editor.png',
   },
 ];
 
@@ -63,10 +155,10 @@ export default function TeamSection() {
           The People
         </div>
         <h2 className="s-title">
-          Meet Our <span className="highlight-text">Founders</span>
+          Meet Our <span className="highlight-text">Team</span>
         </h2>
         <p style={{ color: 'var(--muted)', marginTop: '12px', fontSize: '15px', maxWidth: '580px', margin: '12px auto 0' }}>
-          The leadership team behind SurxTech. Hover or click to explore profile details.
+          The founders, developers, designers, and creatives behind SurxTech. Hover or click to explore profile details.
         </p>
       </div>
 
@@ -77,51 +169,29 @@ export default function TeamSection() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 340px))',
           justifyContent: 'center',
           gap: '32px',
-          maxWidth: '740px',
+          maxWidth: '1160px',
           margin: '0 auto',
           padding: '0 12px'
         }}
       >
         {members.map((m) => (
-          <div key={m.id} style={{ width: '100%', cursor: 'pointer' }} onClick={() => handleMemberClick(m)}>
+          <div key={m.id} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <ProfileCard
-              avatarUrl={m.avatarUrl}
-              miniAvatarUrl={m.avatarUrl}
               icon={m.icon}
+              cardBg={m.bg}
+              bgImage={m.bgImage}
               name={m.memberName}
               title={m.roleTitle}
               skillSummary={m.skillSummary}
-              handle={m.handle}
-              status={m.status}
-              innerGradient={m.innerGradient}
-              contactText={m.portfolioUrl ? "View Portfolio" : "View Profile"}
+              linkedin={m.linkedin}
+              github={m.github}
+              instagram={m.instagram}
+              email={m.email}
+              contactText={m.portfolioUrl ? "Portfolio" : "View Profile"}
               onContactClick={() => handleMemberClick(m)}
             />
           </div>
         ))}
-      </div>
-
-      {/* OTHER TEAM MEMBERS UPDATING SOON BANNER */}
-      <div
-        style={{
-          padding: '14px 24px',
-          background: 'rgba(37, 99, 235, 0.05)',
-          border: '1px dashed rgba(37, 99, 235, 0.3)',
-          borderRadius: '16px',
-          maxWidth: '460px',
-          margin: '40px auto 0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '10px',
-          color: '#2563eb',
-          fontSize: '13.5px',
-          fontWeight: 600,
-          boxShadow: '0 4px 14px rgba(37, 99, 235, 0.04)'
-        }}
-      >
-        <Sparkles size={18} color="#2563eb" />
-        <span>Other team member profile will be updated soon!</span>
       </div>
 
       {/* TEAM MEMBER PROFILE MODAL */}
@@ -223,13 +293,30 @@ export default function TeamSection() {
                   <Globe size={16} /> Visit Portfolio
                 </a>
               )}
-              <a
-                href={`mailto:${activeMember.email}`}
-                className="btn-primary"
-                style={{ flex: 1, justifyContent: 'center', fontSize: '13.5px', padding: '12px 20px' }}
-              >
-                <Mail size={16} /> Email {activeMember.memberName.split(' ')[0]}
-              </a>
+              {activeMember.instagram && (
+                <a
+                  href={activeMember.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{
+                    flex: 1,
+                    justifyContent: 'center',
+                    fontSize: '13.5px',
+                    padding: '12px 20px',
+                    background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
+                    color: '#ffffff',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    borderRadius: '10px',
+                    textDecoration: 'none',
+                    border: 'none',
+                  }}
+                >
+                  <Instagram size={16} /> Instagram @{activeMember.instagram.split('.com/')[1] || 'surxtech'}
+                </a>
+              )}
               {activeMember.linkedin && (
                 <a
                   href={activeMember.linkedin}

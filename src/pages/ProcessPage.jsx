@@ -1,6 +1,7 @@
 import React from 'react';
 import ProcessSection from '../components/ProcessSection';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 import { Layers, ShieldCheck, Zap, RefreshCw } from 'lucide-react';
 
 const processPillars = [
@@ -27,8 +28,19 @@ const processPillars = [
 ];
 
 export default function ProcessPage() {
+  const breadcrumbs = [
+    { name: 'Home', item: '/' },
+    { name: 'Process', item: '/process' },
+  ];
+
   return (
-    <div className="page-wrapper" style={{ paddingTop: '120px' }}>
+    <div className="page-wrapper" style={{ paddingTop: '100px' }}>
+      <SEO
+        title="Our 4-Stage Agile Development Process | SURXTECH Dindigul"
+        description="Learn how SURXTECH builds high-scale web and mobile software: Discovery & Architecture, UI/UX Prototype, Agile Coding, and Rigorous Testing & Deployment."
+        canonical="/process"
+        breadcrumbs={breadcrumbs}
+      />
       <ProcessSection />
 
       <section className="section" style={{ paddingTop: '20px' }}>
