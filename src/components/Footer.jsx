@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Mail, MessageSquare, Linkedin, MapPin, Phone, Shield } from 'lucide-react';
+import { Instagram, Mail, MessageSquare, Linkedin, MapPin, Phone, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer id="footer">
-      <div className="footer-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '36px' }}>
-        <div style={{ maxWidth: '320px' }}>
+      <div className="footer-main">
+        <div className="footer-brand" style={{ maxWidth: '340px' }}>
           <Link to="/" className="f-logo">
             <img src="/logo.png" alt="SURXTECH Logo" className="logo-img" />
             <span className="logo-text">SURX<em>TECH</em></span>
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
         <div className="f-social">
           <a href="https://instagram.com/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="Instagram @surxtech">
-            <Camera size={16} />
+            <Instagram size={16} />
           </a>
           <a href="mailto:surxtech@gmail.com" className="soc-btn" title="Email surxtech@gmail.com">
             <Mail size={16} />

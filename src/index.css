@@ -1287,8 +1287,22 @@ footer {
   z-index: 1;
 }
 
-.footer-main { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 56px; }
-.footer-brand p { color: var(--muted); font-size: 14px; line-height: 1.7; font-weight: 300; margin-top: 16px; max-width: 260px; }
+.footer-main,
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1.1fr 1.1fr 1.1fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+.footer-brand p,
+.f-tagline {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-top: 14px;
+  max-width: 320px;
+}
 .f-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; text-decoration: none; }
 .f-logo-mark, .f-logo-img {
   width: 36px;
@@ -1975,7 +1989,8 @@ footer {
   .split-grid { grid-template-columns: 1fr; gap: 56px; }
   .split-visual { height: 400px; }
   .f-card-1, .f-card-2, .f-card-3 { display: none; }
-  .footer-main { grid-template-columns: 1fr 1fr; }
+  .footer-main,
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
   .work-grid { grid-template-columns: 1fr 1fr; }
   .work-card.span-2 { grid-column: span 1; }
   .contact-grid { grid-template-columns: 1fr; gap: 52px; }
@@ -2011,7 +2026,8 @@ footer {
   .cta-wrap { padding: 0 20px 70px; }
   .cta-inner { padding: 56px 24px; }
   footer { padding: 48px 20px 32px; }
-  .footer-main { grid-template-columns: 1fr; }
+  .footer-main,
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .f-row { grid-template-columns: 1fr; }
   .hero-badge-strip { flex-wrap: wrap; justify-content: center; gap: 16px; border-radius: 20px; padding: 18px 24px; }
   .hb-div { display: none; }
