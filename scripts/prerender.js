@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const distDir = path.resolve(__dirname, '../dist');
 
 // Import solutions data
-import { businessServices, studentServices, genuineCaseStudies, genuineBlogArticles, defaultFaqs } from '../src/data/solutionsData.js';
+import { businessServices, genuineCaseStudies, genuineBlogArticles, defaultFaqs } from '../src/data/solutionsData.js';
 
 const SITE_URL = 'https://www.surxtech.com';
 
@@ -19,17 +19,17 @@ const routes = [
   {
     path: '/',
     title: 'SURXTECH | IT Company & Software Development in Dindigul',
-    description: 'SURXTECH provides website development, mobile apps, AI solutions and custom software for businesses, along with MCA, BCA and engineering student project guidance in Tamil Nadu.',
-    h1: 'Building Digital Solutions for Businesses and Future Innovators',
+    description: 'SURXTECH is an IT startup and software development company based in Nilakottai, Dindigul, Tamil Nadu. Building custom websites, mobile applications, AI solutions, and enterprise software.',
+    h1: 'Building Digital Solutions for Growing Businesses',
     content: `
       <section>
         <h2>IT Company & Software Development in Dindigul, Tamil Nadu</h2>
-        <p>Headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>, <strong>SURXTECH</strong> is a modern software development startup operating with a dual mission: engineering high-performance digital products for businesses and providing transparent, responsible technical project guidance for college students.</p>
+        <p>Headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>, <strong>SURXTECH</strong> is a modern software development startup dedicated to engineering high-performance digital products, web applications, and enterprise software systems for businesses.</p>
         <p>We combine modern full-stack architectures (React, Next.js, Node.js, Python, Flutter) with dependable local customer support across Nilakottai, Dindigul, Batlagundu, Madurai, Theni, and Tamil Nadu.</p>
       </section>
 
       <section>
-        <h2>Segment A: Business Digital Solutions</h2>
+        <h2>Business Digital Solutions & Services</h2>
         <p>We engineer scalable web applications, mobile apps, and business software tailored for startups, retail shops, clinics, educational institutions, and growing enterprises:</p>
         <ul>
           <li><a href="/web-development"><strong>Web Development Services</strong></a>: Lightning-fast business websites, corporate portals, and custom React/Next.js web applications.</li>
@@ -41,22 +41,7 @@ const routes = [
           <li><a href="/seo-services"><strong>Search Engine Optimization (SEO)</strong></a>: Local SEO in Dindigul, Google Business Profile optimization, and technical SEO audits.</li>
           <li><a href="/website-maintenance"><strong>Website Maintenance & Support</strong></a>: Annual maintenance contracts (AMC), security patches, speed audits, and 99.9% uptime.</li>
         </ul>
-        <p><a href="/business-solutions">Explore All Business Solutions &rarr;</a></p>
-      </section>
-
-      <section>
-        <h2>Segment B: College Student Project Solutions</h2>
-        <p>SURXTECH provides complete, ethical technical project guidance and mentoring for computer science, IT, and engineering students across Tamil Nadu:</p>
-        <ul>
-          <li><a href="/mca-projects"><strong>MCA Final Year Projects</strong></a>: Advanced cloud architectures, microservices, and enterprise full-stack implementations.</li>
-          <li><a href="/bca-projects"><strong>BCA Projects & Mini Projects</strong></a>: Clean database management systems, web applications, and practical management portals.</li>
-          <li><a href="/engineering-projects"><strong>Engineering Final Year Projects (BE / B.Tech)</strong></a>: Capstone projects for CSE, IT, and ECE with complete IEEE documentation.</li>
-          <li><a href="/python-projects"><strong>Python Projects</strong></a>: Machine learning, OpenCV computer vision, natural language processing, and Django/Flask APIs.</li>
-          <li><a href="/mern-stack-projects"><strong>MERN Stack Projects</strong></a>: Real-time web applications built with MongoDB, Express.js, React, and Node.js.</li>
-          <li><a href="/ai-ml-projects"><strong>AI & Machine Learning Projects</strong></a>: Predictive analytics, deep learning models, and dataset training with source code.</li>
-          <li><a href="/react-projects"><strong>React Projects</strong></a>: Modern interactive web applications with state management and REST API integrations.</li>
-        </ul>
-        <p><a href="/student-projects">Explore Student Project Guidance &rarr;</a></p>
+        <p><a href="/services">Explore All Business Services &rarr;</a></p>
       </section>
 
       <section>
@@ -88,11 +73,11 @@ const routes = [
   {
     path: '/about',
     title: 'About SURXTECH | IT Startup & Software Development Company in Dindigul',
-    description: 'Learn about SURXTECH, an IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer software solutions for businesses and mentor college students on technical projects.',
-    h1: 'Engineering Modern Technology for Businesses & Students',
+    description: 'Learn about SURXTECH, an IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer high-performance web applications, custom software, mobile apps, and AI solutions for growing businesses.',
+    h1: 'Engineering Modern Technology for Growing Businesses',
     content: `
       <h2>Our Mission & Core Philosophy</h2>
-      <p>SURXTECH is an IT startup headquartered in Nilakottai, Dindigul District, Tamil Nadu. We empower small and medium enterprises with custom digital systems while bridging the academic-to-industry gap for college students through transparent technical mentoring.</p>
+      <p>SURXTECH is an IT startup headquartered in Nilakottai, Dindigul District, Tamil Nadu. We empower small and medium enterprises with custom digital systems, scalable cloud architectures, and conversion-optimized websites.</p>
       <p>Our team of experienced engineers, architects, and designers specialize in modern stacks including React, Next.js, Node.js, Python, and Flutter.</p>
       <p>Office: Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208. Phone: <a href="tel:+919342553805">+91 93425 53805</a>.</p>
     `
@@ -117,16 +102,14 @@ const routes = [
   },
   {
     path: '/services',
-    title: 'Software Development & Student Project Solutions | SURXTECH Dindigul',
-    description: 'Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile apps, and student final-year project guidance.',
-    h1: 'End-to-End Digital Services & Student Project Guidance',
+    title: 'Business Software Development & Digital Services | SURXTECH Dindigul',
+    description: 'Comprehensive software services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile apps, AI solutions, and SEO.',
+    h1: 'End-to-End Business Software & Digital Services',
     content: `
-      <h2>Dual Capability Suite for Business & Academia</h2>
-      <p>We provide full-stack web and mobile application engineering for businesses, alongside comprehensive final-year project guidance for college students across Tamil Nadu.</p>
-      <h3>Business Services:</h3>
+      <h2>Full-Scale Engineering for Modern Businesses</h2>
+      <p>We provide full-stack web and mobile application engineering, cloud infrastructure, and custom business software for enterprises across Tamil Nadu.</p>
+      <h3>Available Services:</h3>
       <p><a href="/web-development">Web Development</a> · <a href="/ecommerce-development">E-Commerce</a> · <a href="/mobile-app-development">Mobile Apps</a> · <a href="/custom-software-development">Custom Software</a> · <a href="/ai-solutions">AI Solutions</a> · <a href="/ui-ux-design">UI/UX Design</a> · <a href="/seo-services">SEO Services</a> · <a href="/website-maintenance">Website Maintenance</a></p>
-      <h3>Student Project Tracks:</h3>
-      <p><a href="/mca-projects">MCA Projects</a> · <a href="/bca-projects">BCA Projects</a> · <a href="/engineering-projects">BE / B.Tech Projects</a> · <a href="/python-projects">Python Projects</a> · <a href="/mern-stack-projects">MERN Stack</a> · <a href="/ai-ml-projects">AI/ML Projects</a> · <a href="/react-projects">React Projects</a></p>
     `
   },
   {
@@ -166,10 +149,10 @@ const routes = [
   {
     path: '/contact',
     title: 'Contact SURXTECH | IT Company in Nilakottai & Dindigul, Tamil Nadu',
-    description: 'Get in touch with SURXTECH for business website development, mobile apps, custom software, and student project guidance. Office in Nilakottai, Dindigul.',
+    description: 'Get in touch with SURXTECH for business website development, mobile apps, and custom software. Office in Nilakottai, Dindigul.',
     h1: 'Connect With Our Engineering Team in Nilakottai, Dindigul',
     content: `
-      <h2>Reach Out for Business Software or Student Project Guidance</h2>
+      <h2>Reach Out for Business Software Solutions</h2>
       <p><strong>Physical Office:</strong> Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208, India.</p>
       <p><strong>WhatsApp / Phone:</strong> <a href="tel:+919342553805">+91 93425 53805</a></p>
       <p><strong>Email:</strong> <a href="mailto:surxtech@gmail.com">surxtech@gmail.com</a></p>
@@ -179,23 +162,23 @@ const routes = [
   {
     path: '/privacy-policy',
     title: 'Privacy Policy | SURXTECH',
-    description: 'SURXTECH privacy policy. Learn how we handle client data, student project confidentiality, and website visitor privacy with total transparency.',
+    description: 'SURXTECH privacy policy. Learn how we handle client data, intellectual property confidentiality, and website visitor privacy with total transparency.',
     h1: 'Privacy Policy',
-    content: `<h2>Data Protection & Privacy Standards</h2><p>SURXTECH respects your privacy and protects business proprietary information and student project materials.</p>`
+    content: `<h2>Data Protection & Privacy Standards</h2><p>SURXTECH respects your privacy and protects business proprietary information and client assets.</p>`
   },
   {
     path: '/terms-and-conditions',
     title: 'Terms and Conditions | SURXTECH',
-    description: 'SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients and students.',
+    description: 'SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients.',
     h1: 'Terms and Conditions',
-    content: `<h2>Terms of Service & Engagement Guidelines</h2><p>Comprehensive terms covering milestone payments, full source code ownership handover, and academic learning integrity.</p>`
+    content: `<h2>Terms of Service & Engagement Guidelines</h2><p>Comprehensive terms covering milestone payments, full source code ownership handover, and quality warranty standards.</p>`
   },
   {
     path: '/blog',
     title: 'Technology & Software Engineering Blog | SURXTECH Dindigul',
-    description: 'Practical software architecture insights, web development best practices, and college student final-year project guides by SURXTECH in Tamil Nadu.',
+    description: 'Practical software architecture insights, web development best practices, and IT strategy guides by SURXTECH in Tamil Nadu.',
     h1: 'SURXTECH Engineering Blog',
-    content: `<h2>Practical Guides on Software Development & Academic Projects</h2><p>Articles written by our software engineers on selecting IT companies in Dindigul, MCA/engineering final-year project ideas, and business website strategy.</p>`
+    content: `<h2>Practical Guides on Software Development & Business Technology</h2><p>Articles written by our software engineers on selecting IT companies in Dindigul, website costs, custom software vs builders, and digital strategy.</p>`
   }
 ];
 
@@ -220,28 +203,7 @@ businessServices.forEach(s => {
   });
 });
 
-// Add all 7 student project routes
-studentServices.forEach(p => {
-  routes.push({
-    path: p.path,
-    title: p.metaTitle,
-    description: p.metaDesc,
-    h1: p.title,
-    content: `
-      <h2>${p.tagline}</h2>
-      <p>${p.description}</p>
-      <h3>Eligibility & Courses</h3>
-      <p>${p.targetAudience}</p>
-      <h3>Curriculum & Technical Scope</h3>
-      <ul>${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
-      <h3>Deliverables</h3>
-      <ul>${p.deliverables.map(d => `<li>${d}</li>`).join('')}</ul>
-      <p><a href="/contact">Enquire About ${p.shortTitle} &rarr;</a></p>
-    `
-  });
-});
-
-// Add all 10 blog post routes
+// Add all business blog post routes
 genuineBlogArticles.forEach(a => {
   routes.push({
     path: `/blog/${a.slug}`,
@@ -315,18 +277,15 @@ async function prerender() {
     );
 
     // Inject 100% VISIBLE semantic HTML inside <div id="root">
-    // NO display:none! React client-side render replaces #root cleanly upon mount.
     const semanticMarkup = `
       <div id="root">
         <header class="site-prerender-nav">
           <a href="/" style="font-weight: 800; font-size: 18px; color: #0f172a; text-decoration: none;">SURXTECH</a>
           <nav>
             <a href="/">Home</a> | 
-            <a href="/business-solutions">Business Solutions</a> | 
-            <a href="/student-projects">Student Projects</a> | 
-            <a href="/portfolio">Portfolio</a> | 
-            <a href="/blog">Blog</a> | 
             <a href="/about">About</a> | 
+            <a href="/services">Service</a> | 
+            <a href="/services#enquiry">Enquire</a> | 
             <a href="/contact">Contact</a>
           </nav>
         </header>

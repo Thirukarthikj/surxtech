@@ -33,7 +33,7 @@ export default function TermsConditionsPage() {
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '24px', padding: 'clamp(24px, 4vw, 44px)', boxShadow: 'var(--shadow-sm)', lineHeight: '1.8', color: 'var(--muted)', fontSize: '15px' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '10px' }}>1. Scope of Engagement</h2>
           <p style={{ marginBottom: '20px' }}>
-            By engaging SURXTECH for business website development, mobile app engineering, custom software solutions, or student project guidance, you agree to these Terms and Conditions. All project scopes, timelines, and deliverables are confirmed in writing prior to project mobilization.
+            By engaging SURXTECH for business website development, mobile app engineering, AI automation, or custom software solutions, you agree to these Terms and Conditions. All project scopes, timelines, and deliverables are confirmed in writing prior to project mobilization.
           </p>
 
           <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '10px' }}>2. Intellectual Property &amp; Code Ownership</h2>
@@ -41,9 +41,9 @@ export default function TermsConditionsPage() {
             Upon receipt of 100% of the agreed project fees, full legal ownership of the developed source code, custom graphic assets, and database architectures is transferred completely to the client. SURXTECH retains the right to display non-confidential project screenshots in our portfolio.
           </p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '10px' }}>3. Academic Integrity Policy for Student Projects</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '10px' }}>3. Quality Assurance &amp; Warranty</h2>
           <p style={{ marginBottom: '20px' }}>
-            SURXTECH provides academic project consulting and technical mentoring to empower college students with real-world software engineering skills. Our guidance includes source code walkthroughs, conceptual explanations, system architecture diagrams, and mock viva preparation. Students remain responsible for understanding and defending their work before academic review committees.
+            SURXTECH guarantees that all software delivered adheres to industry coding best practices, security standards, and agreed functional specifications. We provide post-deployment warranty support to address any bugs or defects in the delivered scope.
           </p>
 
           <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '10px' }}>4. Milestone Payments &amp; Deliverables</h2>

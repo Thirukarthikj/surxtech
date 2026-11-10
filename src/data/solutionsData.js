@@ -1,5 +1,5 @@
-// Centralized Data for Business Solutions & Student Projects
-// Tailored for SURXTECH: Software Development & Student Project Guidance in Nilakottai, Dindigul, Tamil Nadu
+// Centralized Data for Business Solutions & Software Development
+// Tailored for SURXTECH: Software Development & Digital Solutions in Nilakottai, Dindigul, Tamil Nadu
 
 export const businessServices = [
   {
@@ -308,260 +308,7 @@ export const businessServices = [
   }
 ];
 
-export const studentServices = [
-  {
-    slug: 'mca-projects',
-    path: '/mca-projects',
-    title: 'MCA Final Year Project Development in Tamil Nadu',
-    shortTitle: 'MCA Projects',
-    navTitle: 'MCA Final Year',
-    icon: '🎓',
-    metaTitle: 'MCA Final Year Project Development & Guidance Tamil Nadu | SURXTECH',
-    metaDesc: 'Complete MCA final year project development in Tamil Nadu. Cloud, MERN, AI/ML, and Python IEEE projects with source code, report documentation, and viva coaching.',
-    primaryKeyword: 'MCA final year projects Tamil Nadu',
-    secondaryKeywords: ['MCA project guidance Dindigul', 'MCA IEEE projects with source code', 'Full stack projects for MCA'],
-    tagline: 'Master Real-World Software Engineering for Your MCA Final Year Project',
-    description: 'We mentor MCA students through rigorous, industry-grade final year project implementations. We focus on modern full-stack architectures, microservices, cloud databases, and machine learning models — pairing clean code with complete documentation and viva coaching.',
-    targetAudience: 'Final year and pre-final year MCA students across universities and affiliated colleges in Tamil Nadu.',
-    features: [
-      'Industry-Standard Frameworks: MERN Stack, Python Django/FastAPI, Flutter, AI/ML',
-      'Full Working Source Code with Git Version Control Repository',
-      'IEEE-Aligned Project Documentation Report adhering to College Guidelines',
-      'Complete Database ER Diagrams, UML Diagrams, and System Architecture',
-      'Professional PowerPoint Presentation (PPT) for Project Reviews',
-      '1-on-1 Code Explanation & Viva Question-Answer Mock Preparation'
-    ],
-    deliverables: [
-      'Clean, Well-Commented Source Code',
-      'Project Report (.docx and .pdf format)',
-      'Review Presentation Slides (.pptx)',
-      'Database Schema & SQL Dump Files',
-      'Recorded Demonstration Video / Live Walkthrough'
-    ],
-    faqs: [
-      {
-        q: 'Will I understand the code well enough to answer viva questions?',
-        a: 'Yes, absolutely. We conduct dedicated line-by-line code explanation sessions explaining how the modules interact, how APIs are constructed, and how database queries execute, so you can confidently answer the external examiner.'
-      },
-      {
-        q: 'Can you develop a custom project idea suggested by our college guide?',
-        a: 'Yes. We frequently develop custom project titles and problem statements approved by college faculties, tailoring the implementation to specific academic requirements.'
-      }
-    ]
-  },
-  {
-    slug: 'bca-projects',
-    path: '/bca-projects',
-    title: 'BCA Final Year Projects in Tamil Nadu',
-    shortTitle: 'BCA Projects',
-    navTitle: 'BCA Projects',
-    icon: '💻',
-    metaTitle: 'BCA Final Year Project Guidance & Source Code Tamil Nadu | SURXTECH',
-    metaDesc: 'BCA final year and mini project guidance in Tamil Nadu. Clean web development, Python, PHP, and React projects with project report, PPT, and viva preparation.',
-    primaryKeyword: 'BCA final year projects',
-    secondaryKeywords: ['BCA mini project guidance Dindigul', 'BCA web projects with source code', 'Python projects for BCA students'],
-    tagline: 'Practical Project Guidance for BCA Students With Step-by-Step Mentoring',
-    description: 'Designed specifically for BCA students, our project guidance covers interactive web applications, desktop management systems, and practical database projects. We ensure you gain practical confidence in building software from start to finish.',
-    targetAudience: 'BCA and B.Sc Computer Science students seeking reliable project guidance.',
-    features: [
-      'Beginner-to-Intermediate Tech Stacks: React, Python, PHP/MySQL, Node.js',
-      'Interactive User Interface with Clean Navigation',
-      'Step-by-Step Localhost Setup & Installation Support',
-      'Standard College Project Documentation Report & Synopsis',
-      'Project Review PPT with Architecture Diagrams',
-      'Mock Viva Practice with Experienced Developers'
-    ],
-    deliverables: [
-      'Complete Source Code Package',
-      'Detailed Project Report conforming to College Format',
-      'Presentation Slides for Review 1, 2, and Final Viva',
-      'Installation Guide and Database Setup Script'
-    ],
-    faqs: [
-      {
-        q: 'Do you help install and run the project on my laptop?',
-        a: 'Yes, we guide you through installing the required tools (VS Code, Node.js, Python, XAMPP/MySQL) and ensure the project runs smoothly on your personal system.'
-      }
-    ]
-  },
-  {
-    slug: 'engineering-projects',
-    path: '/engineering-projects',
-    title: 'Engineering Final Year Projects (BE / B.Tech CSE & IT)',
-    shortTitle: 'Engineering Projects',
-    navTitle: 'BE / B.Tech Projects',
-    icon: '⚙️',
-    metaTitle: 'Engineering Final Year Project Center in Tamil Nadu | BE BTech CSE | SURXTECH',
-    metaDesc: 'BE and B.Tech CSE/IT final year project guidance in Tamil Nadu. AI/ML, cloud, IoT, full-stack, and IEEE projects with complete source code, report, and viva support.',
-    primaryKeyword: 'Engineering final year projects',
-    secondaryKeywords: ['BE BTech CSE IT projects Dindigul', 'IEEE final year projects Tamil Nadu', 'Computer science engineering projects'],
-    tagline: 'High-Caliber Technical Engineering Projects Adhering to IEEE Standards',
-    description: 'Engineering final-year projects require rigorous architectural design, algorithmic depth, and comprehensive documentation. SURXTECH mentors BE and B.Tech CSE, IT, and ECE students with cutting-edge technologies and deep technical mentoring.',
-    targetAudience: 'BE / B.Tech Computer Science, Information Technology, and AI/Data Science engineering students.',
-    features: [
-      'IEEE Base Paper Analysis & Enhanced Novel Methodology Implementations',
-      'Deep Learning, Computer Vision, NLP, and Cloud Architecture Stacks',
-      'Data Flow Diagrams (DFD Level 0, 1, 2), ER Diagrams & UML Activity Charts',
-      'Performance Metric Comparisons (Accuracy, Precision, Recall, F1-Score)',
-      'Complete Anna University / Autonomous College Format Project Documentation',
-      'Structured Review Preparation for Zeroth, Mid, and Final Sem Viva'
-    ],
-    deliverables: [
-      'Production-Grade Source Code Repository',
-      'IEEE Base Paper & Proposed System Documentation',
-      'Formal Project Report Book Material (Chapters 1 to 7)',
-      'Comprehensive Presentation Slides (PPT)',
-      'Execution Video and Benchmark Result Graphs'
-    ],
-    faqs: [
-      {
-        q: 'Can you implement algorithms from published IEEE research papers?',
-        a: 'Yes. We analyze the IEEE base paper, extract the mathematical model or algorithmic pipeline, and implement both the baseline and proposed enhanced methodologies with measurable result charts.'
-      }
-    ]
-  },
-  {
-    slug: 'python-projects',
-    path: '/python-projects',
-    title: 'Python Projects for College Students',
-    shortTitle: 'Python Projects',
-    navTitle: 'Python Projects',
-    icon: '🐍',
-    metaTitle: 'Python Projects for College Students in Tamil Nadu | SURXTECH',
-    metaDesc: 'Python final year and mini projects for college students. Machine learning, data analytics, web automation, Flask, Django with source code and report in Dindigul.',
-    primaryKeyword: 'Python projects for college students',
-    secondaryKeywords: ['Python final year projects Tamil Nadu', 'Machine learning Python projects', 'Django web projects for students'],
-    tagline: 'Hands-On Python Development for Data Science, AI, and Web Applications',
-    description: 'Python is the world’s most versatile language for data science, machine learning, and rapid web prototyping. We provide students with practical, well-commented Python project code, dataset preprocessing scripts, and full academic reports.',
-    targetAudience: 'BCA, MCA, B.Sc CS, and Engineering students building Python projects.',
-    features: [
-      'Libraries & Frameworks: Pandas, NumPy, Scikit-learn, TensorFlow, Django, FastAPI',
-      'Real-World Datasets from Kaggle, UCI, and Custom Scraped Sources',
-      'Data Visualization Graphs (Matplotlib, Seaborn) for Result Analysis',
-      'Modular, Object-Oriented Clean Code Following PEP 8 Standards',
-      'Complete Project Synopsis, Report, and Module Descriptions',
-      'Execution Support via Anaconda, Jupyter Notebook, and VS Code'
-    ],
-    deliverables: [
-      'Python Source Code Scripts & Notebooks',
-      'Processed Datasets (.csv, .json, images)',
-      'College Format Project Report with Output Screenshots',
-      'Viva Questions and Answers Guide'
-    ],
-    faqs: [
-      {
-        q: 'Are the Python datasets and models trained on real data?',
-        a: 'Yes, we use genuine datasets, train models with clear accuracy metrics, and generate confusion matrices and classification reports that validate your project.'
-      }
-    ]
-  },
-  {
-    slug: 'mern-stack-projects',
-    path: '/mern-stack-projects',
-    title: 'MERN Stack Final Year Projects for College Students',
-    shortTitle: 'MERN Stack Projects',
-    navTitle: 'MERN Stack Projects',
-    icon: '⚡',
-    metaTitle: 'MERN Stack Final Year Projects with Source Code Tamil Nadu | SURXTECH',
-    metaDesc: 'Full stack MERN (MongoDB, Express, React, Node.js) final year projects for MCA and Engineering students. Modern REST APIs, JWT authentication, and live demo.',
-    primaryKeyword: 'MERN stack final year projects',
-    secondaryKeywords: ['React Node MongoDB projects for students', 'Full stack development college projects', 'MERN project with source code and report'],
-    tagline: 'Build Scalable, Modern Full-Stack Web Applications That Impress Examiners',
-    description: 'The MERN stack (MongoDB, Express.js, React.js, Node.js) is the most sought-after skillset by top tech companies. Our MERN student projects feature JWT authentication, RESTful APIs, responsive React interfaces, and cloud database integration.',
-    targetAudience: 'MCA, BCA, and Engineering students who want to build real full-stack systems.',
-    features: [
-      'Full-Stack Architecture: React SPA Frontend + Node/Express Backend + MongoDB Cloud',
-      'Secure User Authentication with JSON Web Tokens (JWT) & Password Hashing (Bcrypt)',
-      'CRUD Operations with Responsive Dashboards & Real-Time State Management',
-      'Database Schema Models designed with Mongoose ORM',
-      'Postman API Testing Collections for Review Demonstration',
-      'Complete College Project Report with Entity-Relationship (ER) Diagrams'
-    ],
-    deliverables: [
-      'Frontend and Backend Source Code Repositories',
-      'Database Export File / MongoDB Atlas Connection',
-      'Standard Academic Project Documentation Report',
-      'Project Presentation Slides (PPT)',
-      'Viva Coaching on REST APIs and Component Architecture'
-    ],
-    faqs: [
-      {
-        q: 'Will having a MERN stack project help me in campus job interviews?',
-        a: 'Yes, significantly. Recruiters prioritize candidates who demonstrate real full-stack experience with React, Node.js, and API architecture over basic theoretical projects.'
-      }
-    ]
-  },
-  {
-    slug: 'ai-ml-projects',
-    path: '/ai-ml-projects',
-    title: 'AI and Machine Learning Projects for College Students',
-    shortTitle: 'AI & ML Projects',
-    navTitle: 'AI & ML Projects',
-    icon: '🧠',
-    metaTitle: 'AI and Machine Learning Projects for Students Tamil Nadu | SURXTECH',
-    metaDesc: 'Cutting-edge AI and Machine Learning final year projects for engineering & MCA students. Deep learning, CNN, NLP, and predictive models with full reports.',
-    primaryKeyword: 'AI and machine learning projects',
-    secondaryKeywords: ['Deep learning student projects Tamil Nadu', 'AI final year project with source code', 'Computer vision projects for engineering'],
-    tagline: 'Build Cutting-Edge Machine Learning and Deep Learning Applications',
-    description: 'Artificial intelligence is reshaping technology. We guide students through machine learning algorithms, Convolutional Neural Networks (CNN) for image recognition, Natural Language Processing (NLP) models, and web application integration using Streamlit or Flask.',
-    targetAudience: 'BE / B.Tech CSE, IT, AI & Data Science, and MCA postgraduate students.',
-    features: [
-      'Deep Learning Models: CNN, LSTM, ResNet, VGG, YOLO for Object Detection',
-      'Machine Learning Algorithms: Random Forest, SVM, XGBoost, Decision Trees',
-      'Interactive Web User Interface (Streamlit / Flask / React) to Test Predictions',
-      'Model Accuracy, Precision, Recall, and Loss Graphs for Project Reports',
-      'Complete Theoretical Background, Algorithm Flowcharts & Mathematical Foundations',
-      'Viva Q&A Coaching Covering Hyperparameter Tuning, Overfitting, and Data Preprocessing'
-    ],
-    deliverables: [
-      'Trained Model Weights (.h5, .pkl, .pt)',
-      'Complete Source Code Scripts & Web App Interface',
-      'IEEE / University Standard Project Report',
-      'Presentation PPT with Graphical Result Comparisons'
-    ],
-    faqs: [
-      {
-        q: 'Can the AI model be tested with live image uploads or text input?',
-        a: 'Yes. We package our AI/ML models with an interactive web UI where the external examiner can upload a test image or input test data and watch the model predict in real time.'
-      }
-    ]
-  },
-  {
-    slug: 'react-projects',
-    path: '/react-projects',
-    title: 'React Projects for College Students',
-    shortTitle: 'React Projects',
-    navTitle: 'React Projects',
-    icon: '⚛️',
-    metaTitle: 'React Projects for College Students with Source Code | SURXTECH',
-    metaDesc: 'Frontend and full-stack React projects for college students in Tamil Nadu. Clean component architecture, Tailwind CSS, API integration, report, and viva guidance.',
-    primaryKeyword: 'React projects for students',
-    secondaryKeywords: ['Frontend web development college projects', 'React mini projects for BCA', 'React JS final year project source code'],
-    tagline: 'Modern Component-Driven Web Applications Built With Contemporary React',
-    description: 'Master contemporary frontend development with our React student project guidance. We teach students functional components, custom hooks, context state management, and seamless backend API communication with clean visual design.',
-    targetAudience: 'BCA, B.Sc CS, MCA, and Engineering students focusing on frontend and UI engineering.',
-    features: [
-      'Modern React 18 with Functional Components & React Hooks (useState, useEffect, useMemo)',
-      'Responsive Styling with CSS Modules or Tailwind CSS',
-      'Client-Side Routing with React Router v6 / v7',
-      'REST API Integration using Axios or Native Fetch API',
-      'Clean Component Hierarchy & Folder Organization',
-      'College Project Report Documentation & Viva Prep'
-    ],
-    deliverables: [
-      'Modular React Source Code Project',
-      'Complete Project Report conforming to College Standards',
-      'Project Review Presentation Slides',
-      'Code Walkthrough and Viva Coaching'
-    ],
-    faqs: [
-      {
-        q: 'Can a React project connect to a backend database like MongoDB or MySQL?',
-        a: 'Yes. We can pair your React application with a Node.js/Express or Python backend to provide full dynamic database functionality.'
-      }
-    ]
-  }
-];
+export const studentServices = [];
 
 export const genuineCaseStudies = [
   {
@@ -630,37 +377,6 @@ A trustworthy software development firm operates with structured milestone revie
     `
   },
   {
-    slug: 'best-final-year-project-ideas-for-mca-students',
-    title: 'Best Final Year Project Ideas for MCA Students (IEEE Aligned)',
-    date: '2026-02-18',
-    readTime: '8 min read',
-    author: 'J. Thirukarthik',
-    category: 'Student Project Guidance',
-    metaTitle: 'Best Final Year Project Ideas for MCA Students | SURXTECH',
-    metaDesc: 'Top final-year project ideas for MCA students. Explore MERN stack architectures, cloud applications, AI/ML models, and IEEE topics with practical guidance.',
-    primaryKeyword: 'MCA final year projects',
-    excerpt: 'Explore high-impact project ideas for MCA final year students that demonstrate modern full-stack engineering, cloud integration, and algorithmic depth.',
-    content: `
-### Elevating Your MCA Final Year Project
-For MCA postgraduate students, a final year project is not merely an academic requirement — it is the single most scrutinized element on your resume when attending campus placements and technical interviews. External examiners and recruiters look for robust system architecture, secure authentication, and real-world problem-solving ability.
-
-### 1. Enterprise Multi-Tenant SaaS Platform with RBAC
-- **Technologies:** React, Node.js, Express, MongoDB, Redis, JWT.
-- **Concept:** Build a multi-tenant business management portal where different organizations register, manage team roles (Admin, Manager, Staff), and execute automated workflows with isolated database tenancy.
-- **Academic Value:** Demonstrates deep mastery of database modeling, RESTful API security, and middleware authorization.
-
-### 2. AI-Driven Medical Document Analyzer & Prescription Parser
-- **Technologies:** Python, FastAPI, Tesseract OCR / TrOCR, OpenCV, React.
-- **Concept:** An application that extracts handwritten medical prescriptions, validates medication dosages against standard pharmaceutical databases, and alerts users to potential contraindications.
-- **Academic Value:** Combines Computer Vision, natural language processing, and clean web UI execution.
-
-### 3. Real-Time Logistics & Fleet Tracking with Geofencing
-- **Technologies:** Flutter, Node.js, WebSockets, PostGIS / MongoDB Geospatial Queries.
-- **Concept:** A live package tracking mobile and web system displaying vehicle movement in real time with automated alert triggers when delivery agents cross defined geographical boundaries.
-- **Academic Value:** Demonstrates WebSocket handling, spatial querying, and cross-platform mobile synchronization.
-    `
-  },
-  {
     slug: 'why-every-small-business-needs-a-website',
     title: 'Why Every Small Business in Tamil Nadu Needs a Professional Website',
     date: '2026-03-01',
@@ -683,48 +399,6 @@ A custom, branded website with your own domain name (e.g. \`yourcompany.com\`) a
 
 ### 3. Automated Inquiries and Direct WhatsApp Integration
 Your website works 24 hours a day, 7 days a week. With integrated quote forms and direct WhatsApp chat buttons, visitors can browse your products and services at 10 PM and send an inquiry that converts into revenue the next morning.
-    `
-  },
-  {
-    slug: 'python-project-ideas-for-computer-science-students',
-    title: 'Top Python Project Ideas for Computer Science College Students',
-    date: '2026-03-12',
-    readTime: '7 min read',
-    author: 'J. Thirukarthik',
-    category: 'Student Projects',
-    metaTitle: 'Top Python Project Ideas for Computer Science Students | SURXTECH',
-    metaDesc: 'Practical Python project ideas for college students. Data science, machine learning, Django web applications, and computer vision with source code guidance.',
-    primaryKeyword: 'Python projects for college students',
-    excerpt: 'Comprehensive guide to selecting and developing an exceptional Python project with datasets, algorithms, and web integration for your college submission.',
-    content: `
-### Why Python Dominates Academic & Industry Projects
-Python’s concise syntax and expansive ecosystem of scientific libraries make it the premier choice for college mini and major projects. Whether you are in BCA, B.Sc CS, or BE Computer Science, building an end-to-end Python project gives you practical coding skills directly applicable to software careers.
-
-### Recommended Project Domains:
-1. **Automated Defect Detection in Manufacturing using CNN:** Utilizing OpenCV and TensorFlow to classify assembly line defects from camera feeds with accuracy visualization.
-2. **Predictive Stock & Commodity Pricing with LSTM Networks:** Long Short-Term Memory recurrent neural networks forecasting time-series trends with live interactive charts.
-3. **Cybersecurity Network Intrusion Detection System (NIDS):** Classifying malicious packets using Random Forest and XGBoost trained on modern intrusion datasets.
-    `
-  },
-  {
-    slug: 'mern-stack-project-ideas-for-final-year-students',
-    title: 'MERN Stack Project Ideas for Final Year College Students',
-    date: '2026-03-25',
-    readTime: '7 min read',
-    author: 'J. Thirukarthik',
-    category: 'Web Development',
-    metaTitle: 'MERN Stack Project Ideas for Final Year Students | SURXTECH',
-    metaDesc: 'Explore modern MERN stack project ideas for MCA and engineering students. Full-stack React, Node.js, Express, and MongoDB architectures with clean source code.',
-    primaryKeyword: 'MERN stack final year projects',
-    excerpt: 'Step-by-step roadmap for developing and presenting a production-grade MERN stack final year project that satisfies academic evaluation criteria.',
-    content: `
-### Why Examiners Love MERN Stack Projects
-Examiners consistently reward projects that demonstrate clear architectural separation between frontend presentation and backend business logic. MERN projects demonstrate real industry software engineering: asynchronous API endpoints, document-oriented database design, and component-based UI state management.
-
-### Top MERN Project Concepts:
-1. **Campus Placement & Interview Training Portal:** Student performance dashboards, mock test timers, resume analysis, and recruiter scheduling.
-2. **E-Learning & Course Platform with Live Quiz Modules:** Video streaming, automated progress tracking, payment simulation, and certificate generation.
-3. **Freelance Service Marketplace with Milestone Escrow:** Bid submissions, chat channels, client review systems, and project status tracking.
     `
   },
   {
@@ -771,48 +445,6 @@ Many businesses start with spreadsheets or generic subscription software. As ord
     `
   },
   {
-    slug: 'ai-project-ideas-for-engineering-students',
-    title: 'Innovative AI Project Ideas for Engineering Students (BE / B.Tech)',
-    date: '2026-04-24',
-    readTime: '8 min read',
-    author: 'J. Thirukarthik',
-    category: 'Engineering Projects',
-    metaTitle: 'AI Project Ideas for Engineering Students | SURXTECH Guidance',
-    metaDesc: 'Innovative artificial intelligence and machine learning project ideas for BE/B.Tech engineering students with IEEE alignment, code, and viva preparation.',
-    primaryKeyword: 'AI and machine learning projects',
-    excerpt: 'Stand out in your engineering viva examination with innovative artificial intelligence project topics tested against real-world benchmark datasets.',
-    content: `
-### Selecting an Engineering-Grade AI Project
-Engineering evaluations require more than running a standard pre-trained classifier. Evaluators assess your dataset preprocessing pipeline, architectural choices, hyperparameter tuning, and comparative baseline benchmarks.
-
-### Recommended Engineering AI Topics:
-1. **Smart Agriculture Crop Disease Detection with Edge Deployment:** Utilizing lightweight MobileNet/YOLO to classify plant leaf pathologies directly in offline mobile environments.
-2. **Intelligent Traffic Density Estimation & Signal Timing Optimization:** Computer vision pipeline calculating real-time intersection vehicle congestion to dynamically regulate traffic timers.
-3. **Biometric Liveness Detection against Anti-Spoofing Attacks:** Multi-layer deep learning architecture distinguishing authentic facial scans from 2D printouts and video replays.
-    `
-  },
-  {
-    slug: 'how-to-select-a-final-year-project-technology',
-    title: 'How to Select the Right Technology Stack for Your Final Year Project',
-    date: '2026-05-05',
-    readTime: '6 min read',
-    author: 'J. Thirukarthik',
-    category: 'Career & Projects',
-    metaTitle: 'How to Select a Final Year Project Technology | SURXTECH',
-    metaDesc: 'A practical framework for college students choosing between Python, MERN stack, Java, Flutter, or AI for their final-year academic project.',
-    primaryKeyword: 'Final year project development in Tamil Nadu',
-    excerpt: 'Practical advice from senior software engineers on matching your academic strengths, career ambitions, and college guidelines with the right tech stack.',
-    content: `
-### Aligning Your Project Stack With Your Career Goals
-A common trap students fall into is selecting a technology solely because a friend recommended it. Your final year project should act as a stepping stone toward the specific engineering job you want to secure after graduation.
-
-### Technology Selection Guide:
-- **Choose MERN Stack (React, Node, Mongo):** If you want to become a full-stack web developer or frontend engineer.
-- **Choose Python (Data Science & ML):** If you are targeting roles in data analytics, machine learning engineering, or research.
-- **Choose Flutter / Dart:** If you want to enter the booming mobile app development ecosystem.
-    `
-  },
-  {
     slug: 'website-development-vs-website-builders',
     title: 'Custom Website Development vs Website Builders (Wix, Shopify, WordPress)',
     date: '2026-05-18',
@@ -842,9 +474,9 @@ export const defaultFaqs = [
       'SURXTECH provides end-to-end digital solutions for small and medium businesses, startups, and institutions across Tamil Nadu. This includes custom web development, e-commerce stores, Android mobile applications, bespoke business software, AI-powered automation, UI/UX prototyping, local SEO, and ongoing technical maintenance.',
   },
   {
-    question: 'How does SURXTECH guide college students on final-year projects?',
+    question: 'What industries and business sectors does SURXTECH serve?',
     answer:
-      'We provide complete technical mentorship for MCA, BCA, B.Sc CS, BE, and B.Tech students. Our senior engineers guide students through modern stacks like Python, MERN (MongoDB, Express, React, Node), AI/Machine Learning, and Flutter. We provide clean source code, architecture diagrams, IEEE documentation reports, PPTs, and line-by-line code explanation for confident viva presentations.',
+      'We build tailored digital solutions for small and medium businesses, retail shops, hospitals & clinics, educational institutions, restaurants, travel agencies, and tech startups across Tamil Nadu. Every solution is custom-engineered to match your industry workflow.',
   },
   {
     question: 'How fast can SURXTECH kick off a business development project?',
@@ -854,7 +486,7 @@ export const defaultFaqs = [
   {
     question: 'Where is SURXTECH located, and do you serve clients outside Dindigul?',
     answer:
-      'Our physical headquarters is in Nilakottai, Dindigul District, Tamil Nadu. We work with clients and students locally in Dindigul, Batlagundu, Madurai, Theni, and Coimbatore, as well as remotely across Tamil Nadu and worldwide.',
+      'Our physical headquarters is in Nilakottai, Dindigul District, Tamil Nadu. We work with clients and enterprises locally in Dindigul, Batlagundu, Madurai, Theni, and Coimbatore, as well as remotely across Tamil Nadu and worldwide.',
   },
   {
     question: 'Will our business own 100% of the source code and intellectual property?',
@@ -862,8 +494,8 @@ export const defaultFaqs = [
       'Yes, 100%. Upon final handover, full ownership of all source code, database architectures, Figma designs, and intellectual property transfers directly to your business.',
   },
   {
-    question: 'How does SURXTECH support responsible student project learning?',
+    question: 'What is the development process and timeline for a typical project?',
     answer:
-      'We emphasize genuine technical understanding. Students work directly with real source code and learn how the system is architected, how databases interact, and how to defend their project in college reviews and viva examinations.',
+      'Timelines range from 1 to 4 weeks for business websites and 4 to 8 weeks for complex web applications or mobile apps. We work in 4 structured phases: Discovery & Architecture, UI/UX Wireframing, Agile Development Sprints, and Quality Assurance with deployment and post-launch support.',
   },
 ];

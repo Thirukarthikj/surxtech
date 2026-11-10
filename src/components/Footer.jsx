@@ -12,7 +12,7 @@ export default function Footer() {
             <span className="logo-text">SURX<em>TECH</em></span>
           </Link>
           <p className="f-tagline" style={{ lineHeight: '1.7', marginTop: '14px' }}>
-            IT Startup &amp; Software Development Company based in Nilakottai, Dindigul, Tamil Nadu. Building digital products for businesses and mentoring college students on technical projects.
+            IT Startup &amp; Software Development Company based in Nilakottai, Dindigul, Tamil Nadu. Building high-performance websites, custom software, mobile applications, and AI solutions for growing businesses.
             <br />
             <br />
             <strong>Creative Design. Powerful Code. Smart Apps.</strong>
@@ -20,9 +20,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="f-group-title">Business Solutions</div>
+          <div className="f-group-title">Business Services</div>
           <ul className="f-links">
-            <li><Link to="/business-solutions">Solutions Overview</Link></li>
+            <li><Link to="/services">All Services Overview</Link></li>
             <li><Link to="/web-development">Web Development</Link></li>
             <li><Link to="/ecommerce-development">E-Commerce Stores</Link></li>
             <li><Link to="/mobile-app-development">Android &amp; iOS Apps</Link></li>
@@ -31,20 +31,6 @@ export default function Footer() {
             <li><Link to="/ui-ux-design">UI/UX Design</Link></li>
             <li><Link to="/seo-services">SEO Services</Link></li>
             <li><Link to="/website-maintenance">Website Maintenance</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <div className="f-group-title">Student Projects</div>
-          <ul className="f-links">
-            <li><Link to="/student-projects">Projects Overview</Link></li>
-            <li><Link to="/mca-projects">MCA Final Year Projects</Link></li>
-            <li><Link to="/bca-projects">BCA Projects</Link></li>
-            <li><Link to="/engineering-projects">BE / B.Tech Projects</Link></li>
-            <li><Link to="/python-projects">Python Projects</Link></li>
-            <li><Link to="/mern-stack-projects">MERN Stack Projects</Link></li>
-            <li><Link to="/ai-ml-projects">AI &amp; ML Projects</Link></li>
-            <li><Link to="/react-projects">React Projects</Link></li>
           </ul>
         </div>
 

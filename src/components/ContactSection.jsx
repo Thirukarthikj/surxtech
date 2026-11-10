@@ -153,14 +153,14 @@ export default function ContactSection({ selectedServiceFromModal }) {
                 Select a service
               </option>
               <option value="Web Development">Web Development</option>
-              <option value="App Development">App Development</option>
+              <option value="E-Commerce Development">E-Commerce Development</option>
+              <option value="App Development">App Development (iOS &amp; Android)</option>
+              <option value="Custom Software Development">Custom Software Development</option>
+              <option value="AI Solutions & Automation">AI Solutions &amp; Automation</option>
               <option value="UI / UX Design">UI / UX Design</option>
-              <option value="Graphic Design">Graphic Design</option>
-              <option value="Video Editing">Video Editing</option>
+              <option value="SEO & Digital Marketing">SEO &amp; Digital Marketing</option>
+              <option value="Website Maintenance">Website Maintenance</option>
               <option value="Branding & Identity">Branding &amp; Identity</option>
-              <option value="Content Creation">Content Creation</option>
-              <option value="College Student Internships">College Student Internships</option>
-              <option value="College Projects (Mini & Major)">College Projects (Mini &amp; Major)</option>
               <option value="Other">Other</option>
             </select>
           </div>

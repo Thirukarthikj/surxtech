@@ -186,7 +186,7 @@ export default function BlogDetailPage() {
       {/* CTA */}
       <CTASection
         title="Ready to Build or Consult With Our Engineers?"
-        subtitle="Contact SURXTECH in Nilakottai, Dindigul today for software development or student project guidance."
+        subtitle="Contact SURXTECH in Nilakottai, Dindigul today for custom software development or digital project consulting."
       />
     </div>
   );

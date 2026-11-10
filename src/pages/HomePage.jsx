@@ -9,8 +9,8 @@ import FAQSection, { defaultFaqs } from '../components/FAQSection';
 import CTASection from '../components/CTASection';
 import SEO from '../components/SEO';
 import { organizationSchema, websiteSchema, localBusinessSchema, createFAQSchema } from '../utils/seoSchemas';
-import { businessServices, studentServices, genuineCaseStudies } from '../data/solutionsData';
-import { ArrowRight, CheckCircle2, ShieldCheck, Code2, GraduationCap, Briefcase, Sparkles, MapPin, Phone, Mail } from 'lucide-react';
+import { businessServices, genuineCaseStudies } from '../data/solutionsData';
+import { ArrowRight, CheckCircle2, ShieldCheck, Code2, Briefcase, Sparkles, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function HomePage() {
   const homeSchemas = [
@@ -24,7 +24,7 @@ export default function HomePage() {
     <div className="page-wrapper">
       <SEO
         title="SURXTECH | IT Company & Software Development in Dindigul"
-        description="SURXTECH provides website development, mobile apps, AI solutions and custom software for businesses, along with MCA, BCA and engineering student project guidance in Tamil Nadu."
+        description="SURXTECH provides website development, mobile apps, AI solutions and custom software for businesses across Nilakottai, Dindigul, and Tamil Nadu."
         canonical="/"
         schema={homeSchemas}
       />
@@ -42,7 +42,7 @@ export default function HomePage() {
             IT Company &amp; Software Development in <span className="highlight-text">Dindigul</span>
           </h2>
           <p style={{ color: 'var(--muted)', fontSize: '16.5px', lineHeight: '1.8', marginBottom: '24px' }}>
-            Headquartered in <strong>Nilakottai, Dindigul District</strong>, <strong>SURXTECH</strong> is a modern technology startup operating with a clear dual mission: delivering robust, production-grade <strong>digital solutions for businesses</strong> and providing transparent, hands-on <strong>technical project guidance for college students</strong> across Tamil Nadu.
+            Headquartered in <strong>Nilakottai, Dindigul District</strong>, <strong>SURXTECH</strong> is a modern software development startup dedicated to engineering robust, high-performance <strong>digital solutions for businesses</strong> across Tamil Nadu. We partner with startups, retail shops, clinics, educational institutions, and growing enterprises to build custom web, mobile, and cloud software systems.
           </p>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '14.5px', color: 'var(--ink)' }}>
@@ -58,12 +58,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CUSTOMER SEGMENT A: BUSINESS SOLUTIONS ── */}
-      <section className="section alt" id="business-solutions">
+      {/* ── CORE DIGITAL SOLUTIONS ── */}
+      <section className="section alt" id="services-overview">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '44px', flexWrap: 'wrap', gap: '20px' }}>
           <div>
             <div className="s-label">
-              <Briefcase size={14} style={{ marginRight: '4px' }} /> Segment A: Enterprise &amp; SME Solutions
+              <Briefcase size={14} style={{ marginRight: '4px' }} /> Enterprise &amp; SME Technology Solutions
             </div>
             <h2 className="s-title">
               Digital Solutions for <span className="highlight-text">Growing Businesses</span>
@@ -72,13 +72,13 @@ export default function HomePage() {
               Engineered for small and medium businesses, startups, retailers, clinics, institutions, and service providers seeking modern web, mobile, and custom software systems.
             </p>
           </div>
-          <Link to="/business-solutions" className="btn-primary" style={{ padding: '12px 24px' }}>
-            View All Business Solutions <ArrowRight size={16} />
+          <Link to="/services" className="btn-primary" style={{ padding: '12px 24px' }}>
+            View All Services <ArrowRight size={16} />
           </Link>
         </div>
 
         <div className="home-hub-grid">
-          {businessServices.slice(0, 6).map((svc) => (
+          {businessServices.map((svc) => (
             <Link key={svc.slug} to={svc.path} className="home-hub-card">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
                 <div className="hub-card-icon" style={{ fontSize: '28px' }}>{svc.icon}</div>
@@ -89,71 +89,6 @@ export default function HomePage() {
               <p className="hub-card-desc">{svc.description.slice(0, 130)}...</p>
               <div className="hub-card-btn">
                 <span>Explore {svc.shortTitle}</span>
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ── CUSTOMER SEGMENT B: STUDENT PROJECT SOLUTIONS ── */}
-      <section className="section" id="student-projects">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '44px', flexWrap: 'wrap', gap: '20px' }}>
-          <div>
-            <div className="s-label">
-              <GraduationCap size={14} style={{ marginRight: '4px' }} /> Segment B: Academic Guidance &amp; Mentoring
-            </div>
-            <h2 className="s-title">
-              College Student <span className="highlight-text">Project Guidance</span>
-            </h2>
-            <p style={{ color: 'var(--muted)', marginTop: '10px', fontSize: '15.5px', maxWidth: '640px' }}>
-              For MCA, BCA, B.Sc CS, BE, and B.Tech students across Tamil Nadu. We emphasize hands-on learning, architectural comprehension, and thorough viva preparation.
-            </p>
-          </div>
-          <Link to="/student-projects" className="btn-outline" style={{ padding: '12px 24px' }}>
-            Explore All Student Projects <ArrowRight size={16} />
-          </Link>
-        </div>
-
-        {/* Ethical Academic Support Commitment Banner */}
-        <div
-          style={{
-            background: 'rgba(37, 99, 235, 0.06)',
-            border: '1px solid rgba(37, 99, 235, 0.2)',
-            borderRadius: '16px',
-            padding: '20px 24px',
-            marginBottom: '36px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            flexWrap: 'wrap',
-          }}
-        >
-          <ShieldCheck size={28} color="var(--blue)" style={{ flexShrink: 0 }} />
-          <div style={{ flex: 1, minWidth: '260px' }}>
-            <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--ink)' }}>
-              Responsible Academic Guidance &amp; Mentorship
-            </div>
-            <div style={{ fontSize: '13.5px', color: 'var(--muted)', marginTop: '4px' }}>
-              We believe in honest educational support. We teach students the full source code structure, database queries, and architectural flows line-by-line so they gain genuine technical competence and defend their projects with confidence.
-            </div>
-          </div>
-        </div>
-
-        <div className="home-hub-grid">
-          {studentServices.slice(0, 6).map((proj) => (
-            <Link key={proj.slug} to={proj.path} className="home-hub-card">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
-                <div className="hub-card-icon" style={{ fontSize: '28px' }}>{proj.icon}</div>
-                <span className="hub-card-badge" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#059669', borderColor: 'rgba(16, 185, 129, 0.25)' }}>
-                  Student Guidance
-                </span>
-              </div>
-              <h3 className="hub-card-title">{proj.shortTitle}</h3>
-              <div className="hub-card-sub" style={{ color: '#059669', fontWeight: 600 }}>{proj.primaryKeyword}</div>
-              <p className="hub-card-desc">{proj.description.slice(0, 130)}...</p>
-              <div className="hub-card-btn">
-                <span>View {proj.shortTitle} Guidance</span>
                 <ArrowRight size={16} />
               </div>
             </Link>
@@ -257,8 +192,8 @@ export default function HomePage() {
 
       {/* ── CTA SECTION ── */}
       <CTASection
-        title="Building Digital Solutions for Businesses and Future Innovators"
-        subtitle="Need a high-performance business website, custom software, or college final year project guidance? Connect with our engineering team in Nilakottai, Dindigul."
+        title="Ready to Transform Your Business With High-Performance Software?"
+        subtitle="Need a modern business website, custom software application, mobile app, or AI automation? Connect with our engineering team in Nilakottai, Dindigul."
       />
     </div>
   );

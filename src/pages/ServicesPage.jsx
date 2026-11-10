@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ServicesBento, { servicesData } from '../components/ServicesBento';
 import ServiceModal from '../components/ServiceModal';
 import ProcessSection from '../components/ProcessSection';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SEO from '../components/SEO';
-import { Send, Check, MessageSquare, GraduationCap, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
+import { Send, Check, MessageSquare, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
 
 export default function ServicesPage({ onSelectService, selectedService, setSelectedService }) {
+  const location = useLocation();
   const [enquiryForm, setEnquiryForm] = useState({
     name: '',
     email: '',
@@ -19,6 +20,15 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (location.hash === '#enquiry' || location.hash === '#service-enquiry') {
+      const el = document.getElementById('enquiry') || document.getElementById('service-enquiry');
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, [location]);
 
   const handleEnquireSubmit = (e) => {
     e.preventDefault();
@@ -41,14 +51,6 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
     setEnquiryForm((prev) => ({ ...prev, service: svc.name }));
   };
 
-  const handleStudentProgramSelect = (serviceName) => {
-    setEnquiryForm((prev) => ({ ...prev, service: serviceName }));
-    const enquiryEl = document.getElementById('service-enquiry');
-    if (enquiryEl) {
-      enquiryEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
@@ -57,188 +59,29 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
   return (
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
-        title="Software Development & Student Project Solutions | SURXTECH Dindigul"
-        description="Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile apps, and student final-year project guidance."
+        title="Software Development & Digital Services | SURXTECH Dindigul"
+        description="Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile applications, AI solutions, and SEO."
         canonical="/services"
         breadcrumbs={breadcrumbs}
       />
 
-      {/* Segment Navigation Quick Links */}
+      {/* Segment Navigation Quick Link */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px 20px', display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
         <Link to="/business-solutions" className="btn-primary" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          <Briefcase size={15} /> Business Solutions Hub →
+          <Briefcase size={15} /> Explore All Business Solutions &rarr;
         </Link>
-        <Link to="/student-projects" className="btn-outline" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          <GraduationCap size={15} /> Student Projects Hub →
+        <Link to="/contact" className="btn-outline" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
+          Schedule a Consultation &rarr;
         </Link>
       </div>
 
       <ServicesBento onSelectService={handleServiceSelectFromBento} />
 
-      {/* STUDENT PROJECTS & GUIDANCE SPOTLIGHT */}
-      <section className="section" style={{ paddingTop: '20px', paddingBottom: '40px' }}>
-        <div
-          style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            background: 'linear-gradient(135deg, rgba(37,99,235,0.04) 0%, rgba(14,165,233,0.06) 100%)',
-            border: '1px solid rgba(37, 99, 235, 0.2)',
-            borderRadius: '24px',
-            padding: '48px 36px',
-            boxShadow: '0 12px 36px rgba(37, 99, 235, 0.05)',
-          }}
-        >
-          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
-            <div className="s-label" style={{ justifyContent: 'center' }}>
-              <GraduationCap size={16} /> Student Project Solutions
-            </div>
-            <h2 className="s-title" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', marginBottom: '12px' }}>
-              College Student <span className="highlight-text">Project Guidance</span>
-            </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.7' }}>
-              We mentor MCA, BCA, B.Sc CS, BE, and B.Tech students through final-year and mini projects with source code, report documentation, and 1-on-1 viva coaching.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '24px',
-            }}
-          >
-            {/* Card 1: Internship */}
-            <div
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--border)',
-                borderRadius: '20px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(139, 92, 246, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '24px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  🎓
-                </div>
-                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#8b5cf6', marginBottom: '8px' }}>
-                  Industrial Training
-                </div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-                  Internships for College Students
-                </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
-                  Gain real industrial training working alongside senior software engineers. Build production-grade features in React, Node.js, Flutter, UI/UX, and cloud deployments.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-                  {[
-                    'Live project exposure on real-world web & mobile applications',
-                    'Direct 1-on-1 mentorship from tech leads and architects',
-                    'Authorized Internship Certificate & Letter of Recommendation',
-                    'Technical interview preparation & resume enhancement'
-                  ].map((feat, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
-                      <CheckCircle2 size={16} color="var(--blue)" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                type="button"
-                className="btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => handleStudentProgramSelect('College Student Internships')}
-              >
-                Apply for Internship <ArrowRight size={16} />
-              </button>
-            </div>
-
-            {/* Card 2: College Projects */}
-            <div
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--border)',
-                borderRadius: '20px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(6, 182, 212, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '24px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  💡
-                </div>
-                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#06b6d4', marginBottom: '8px' }}>
-                  Academic Assistance
-                </div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-                  College Projects (Mini &amp; Major)
-                </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
-                  End-to-end development of mini, semester, and final-year academic projects for Engineering, BCA, MCA, and IT students with complete documentation.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-                  {[
-                    '100% bug-free working source code with clean architecture',
-                    'Complete IEEE / University standard project documentation report',
-                    'System architecture diagrams, ER diagrams & database schema',
-                    'Full code explanation & viva presentation defense coaching'
-                  ].map((feat, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
-                      <CheckCircle2 size={16} color="var(--blue)" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                type="button"
-                className="btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => handleStudentProgramSelect('College Projects (Mini & Major)')}
-              >
-                Enquire for College Project <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* OUR PROCESS SECTION */}
       <ProcessSection />
 
       {/* SERVICE ENQUIRY FORM SECTION */}
-      <section className="section" id="service-enquiry" style={{ marginTop: '40px' }}>
+      <section className="section" id="enquiry" style={{ marginTop: '40px' }}>
         <div className="enquiry-card">
           <div className="enquiry-hdr">
             <div className="s-label">

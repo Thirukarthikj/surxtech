@@ -63,8 +63,8 @@ export default function WhatsAppChat({
       text: 'Hi SurxTech! I have an idea for a web or mobile application and would like to discuss it.',
     },
     {
-      title: '🎓 College Project / Internship',
-      text: 'Hi SurxTech! I am a student interested in college projects & internship opportunities.',
+      title: '💼 Custom Software & Mobile Apps',
+      text: 'Hi SurxTech! I am looking for custom software, mobile app, or AI automation solutions for my business.',
     },
     {
       title: '🎨 UI/UX & Motion Design',

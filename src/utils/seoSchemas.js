@@ -8,7 +8,7 @@ export const organizationSchema = {
   url: 'https://www.surxtech.com',
   logo: 'https://www.surxtech.com/logo.png',
   description:
-    'SURXTECH is an IT startup and software development company based in Nilakottai, Dindigul, Tamil Nadu, providing web development, mobile apps, AI solutions, and college student project guidance.',
+    'SURXTECH is an IT startup and software development company based in Nilakottai, Dindigul, Tamil Nadu, providing web development, mobile apps, AI solutions, and custom software for growing businesses.',
   email: 'surxtech@gmail.com',
   telephone: '+919342553805',
   address: {
