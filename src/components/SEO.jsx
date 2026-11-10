@@ -15,11 +15,15 @@ export default function SEO({
   schema = null,
   breadcrumbs = null,
 }) {
-  const fullCanonical = canonical
-    ? canonical.startsWith('http')
-      ? canonical
-      : `${SITE_URL}${canonical.startsWith('/') ? canonical : `/${canonical}`}`
-    : SITE_URL;
+  let cleanPath = canonical;
+  if (cleanPath && cleanPath !== '/' && cleanPath.endsWith('/')) {
+    cleanPath = cleanPath.slice(0, -1);
+  }
+  const fullCanonical = cleanPath
+    ? cleanPath.startsWith('http')
+      ? cleanPath
+      : `${SITE_URL}${cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`}`
+    : `${SITE_URL}/`;
 
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
 

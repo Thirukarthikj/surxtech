@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -7,25 +7,26 @@ import WhatsAppChat from './components/WhatsAppChat';
 import ServiceModal from './components/ServiceModal';
 import ProjectModal from './components/ProjectModal';
 
-// Existing Pages
+// Homepage eager-loaded for instant first paint
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import TeamPage from './pages/TeamPage';
-import ServicesPage from './pages/ServicesPage';
-import ProcessPage from './pages/ProcessPage';
-import WorkPage from './pages/WorkPage';
-import ContactPage from './pages/ContactPage';
 
-// New High-Intent Landing Pages
-import BusinessSolutionsPage from './pages/BusinessSolutionsPage';
-import BusinessDetailPage from './pages/BusinessDetailPage';
-import StudentProjectsPage from './pages/StudentProjectsPage';
-import StudentDetailPage from './pages/StudentDetailPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
-import BlogPage from './pages/BlogPage';
-import BlogDetailPage from './pages/BlogDetailPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import TermsConditionsPage from './pages/TermsConditionsPage';
+// Secondary pages lazy-loaded to optimize bundle size and TBT
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const TeamPage = lazy(() => import('./pages/TeamPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ProcessPage = lazy(() => import('./pages/ProcessPage'));
+const WorkPage = lazy(() => import('./pages/WorkPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
+const BusinessSolutionsPage = lazy(() => import('./pages/BusinessSolutionsPage'));
+const BusinessDetailPage = lazy(() => import('./pages/BusinessDetailPage'));
+const StudentProjectsPage = lazy(() => import('./pages/StudentProjectsPage'));
+const StudentDetailPage = lazy(() => import('./pages/StudentDetailPage'));
+const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const TermsConditionsPage = lazy(() => import('./pages/TermsConditionsPage'));
 
 // Helper to auto-scroll to top on page route changes
 function ScrollToTopOnRoute() {
@@ -64,7 +65,8 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <main>
-        <Routes>
+        <Suspense fallback={<div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }} />}>
+          <Routes>
           {/* Core Pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -134,7 +136,8 @@ export default function App() {
           {/* 404 Fallback */}
           <Route path="*" element={<HomePage />} />
         </Routes>
-      </main>
+      </Suspense>
+    </main>
 
       <Footer />
       <BackToTop />
