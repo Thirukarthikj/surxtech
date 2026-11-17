@@ -76,13 +76,67 @@ const routes = [
     `
   },
   {
+    path: '/it-company-in-dindigul',
+    title: 'IT Company in Dindigul | SurxTech – Software & Web Development',
+    description: 'Looking for an IT company in Dindigul? SurxTech provides professional website development, software development, mobile applications, AI automation and digital solutions.',
+    h1: 'IT Company in Dindigul – SurxTech',
+    content: `
+      <section>
+        <h2>Professional IT & Software Development Services in Dindigul</h2>
+        <p>SurxTech is an independent software development and IT solutions company based in Nilakottai, Dindigul District, Tamil Nadu (PIN: 624208). We engineer modern, scalable digital systems for small businesses, startups, retail enterprises, healthcare providers, and growing companies across Dindigul city, Nilakottai, Batlagundu, Palani, Oddanchatram, Kodaikanal, Madurai, Theni, and Tamil Nadu.</p>
+        <p><strong>Geographic Note:</strong> Our primary development office is located in Nilakottai within Dindigul District. We serve clients across Dindigul city and all surrounding towns with both direct on-site consultations and rapid online delivery.</p>
+      </section>
+
+      <section>
+        <h2>Our Core IT Services in Dindigul</h2>
+        <ul>
+          <li><strong>Website Development:</strong> High-performance business websites, lead-generation pages, and corporate portals.</li>
+          <li><strong>Full Stack Web Applications:</strong> Custom SaaS platforms, client portals, and cloud databases built on React, Next.js, and Node.js.</li>
+          <li><strong>Mobile Application Development:</strong> High-speed Android and iOS applications built using Flutter and React Native.</li>
+          <li><strong>Custom Software Development:</strong> Bespoke billing, ERP, CRM, and inventory automation systems tailored to your business workflow.</li>
+          <li><strong>E-commerce Development:</strong> Scalable online stores with UPI/card payment gateways and automated WhatsApp order alerts.</li>
+          <li><strong>AI Automation Solutions:</strong> WhatsApp chatbots, document AI, automated lead management, and predictive business tools.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why Choose SurxTech?</h2>
+        <ul>
+          <li>Direct access to senior software developers without middlemen.</li>
+          <li>100% source code ownership and intellectual property transfer.</li>
+          <li>Modern production tech stack (React, Next.js, Node.js, Python, Flutter, PostgreSQL).</li>
+          <li>Local regional support with rapid response times across Dindigul District.</li>
+          <li>Zero hidden costs, milestone-based pricing, and clear deliverables.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Frequently Asked Questions</h2>
+        <div>
+          <h3>Is SurxTech located in Dindigul?</h3>
+          <p>SurxTech is headquartered in Nilakottai within Dindigul District, Tamil Nadu (PIN: 624208). We serve businesses throughout Dindigul city, Nilakottai, Batlagundu, Palani, Madurai, and Tamil Nadu.</p>
+          <h3>What services do you provide?</h3>
+          <p>We provide custom websites, web applications, mobile apps, custom software (ERP/billing), e-commerce platforms, AI chatbots, and technical SEO.</p>
+          <h3>How much does a website or software cost?</h3>
+          <p>Standard business websites start from ₹8,000 to ₹25,000; e-commerce and custom software applications range from ₹25,000 to ₹75,000+ depending on features.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Contact SurxTech for Your Project in Dindigul</h2>
+        <p><strong>Office:</strong> Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208.</p>
+        <p><strong>Phone / WhatsApp:</strong> <a href="tel:+919342553805">+91 93425 53805</a> | <strong>Email:</strong> <a href="mailto:surxtech@gmail.com">surxtech@gmail.com</a></p>
+      </section>
+    `
+  },
+  {
     path: '/about',
     title: 'About SURXTECH | IT Startup & Software Development Company in Dindigul',
-    description: 'Learn about SURXTECH, an IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer software solutions for businesses and mentor college students on technical projects.',
-    h1: 'Engineering Modern Technology for Businesses & Students',
+    description: 'Learn about SURXTECH, an independent IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer custom software, web applications, and digital solutions for growing businesses.',
+    h1: 'Engineering Modern Digital Solutions for Growing Businesses',
     content: `
       <h2>Our Mission & Core Philosophy</h2>
-      <p>SURXTECH is an IT startup headquartered in Nilakottai, Dindigul District, Tamil Nadu. We empower small and medium enterprises with custom digital systems while bridging the academic-to-industry gap for college students through transparent technical mentoring.</p>
+      <p>SURXTECH is an IT startup headquartered in Nilakottai, Dindigul District, Tamil Nadu. We empower small and medium enterprises with custom digital systems, modern web platforms, mobile apps, and business automation.</p>
       <p>Our team of experienced engineers, architects, and designers specialize in modern stacks including React, Next.js, Node.js, Python, and Flutter.</p>
       <p>Office: Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208. Phone: <a href="tel:+919342553805">+91 93425 53805</a>.</p>
     `
@@ -165,10 +219,10 @@ const routes = [
   {
     path: '/contact',
     title: 'Contact SURXTECH | IT Company in Nilakottai & Dindigul, Tamil Nadu',
-    description: 'Get in touch with SURXTECH for business website development, mobile apps, custom software, and student project guidance. Office in Nilakottai, Dindigul.',
+    description: 'Get in touch with SURXTECH for business website development, mobile apps, custom software, and AI solutions. Office in Nilakottai, Dindigul.',
     h1: 'Connect With Our Engineering Team in Nilakottai, Dindigul',
     content: `
-      <h2>Reach Out for Business Software or Student Project Guidance</h2>
+      <h2>Reach Out for Business Software or Web Development</h2>
       <p><strong>Physical Office:</strong> Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208, India.</p>
       <p><strong>WhatsApp / Phone:</strong> <a href="tel:+919342553805">+91 93425 53805</a></p>
       <p><strong>Email:</strong> <a href="mailto:surxtech@gmail.com">surxtech@gmail.com</a></p>
@@ -178,23 +232,23 @@ const routes = [
   {
     path: '/privacy-policy',
     title: 'Privacy Policy | SURXTECH',
-    description: 'SURXTECH privacy policy. Learn how we handle client data, student project confidentiality, and website visitor privacy with total transparency.',
+    description: 'SURXTECH privacy policy. Learn how we handle client data, proprietary software source code, and website visitor privacy with total transparency.',
     h1: 'Privacy Policy',
-    content: `<h2>Data Protection & Privacy Standards</h2><p>SURXTECH respects your privacy and protects business proprietary information and student project materials.</p>`
+    content: `<h2>Data Protection & Privacy Standards</h2><p>SURXTECH respects your privacy and strictly protects business proprietary information and source code assets.</p>`
   },
   {
     path: '/terms-and-conditions',
     title: 'Terms and Conditions | SURXTECH',
-    description: 'SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients and students.',
+    description: 'SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients.',
     h1: 'Terms and Conditions',
-    content: `<h2>Terms of Service & Engagement Guidelines</h2><p>Comprehensive terms covering milestone payments, full source code ownership handover, and academic learning integrity.</p>`
+    content: `<h2>Terms of Service & Engagement Guidelines</h2><p>Comprehensive terms covering milestone payments, full source code ownership handover, and enterprise warranty protections.</p>`
   },
   {
     path: '/blog',
     title: 'Technology & Software Engineering Blog | SURXTECH Dindigul',
-    description: 'Practical software architecture insights, web development best practices, and college student final-year project guides by SURXTECH in Tamil Nadu.',
+    description: 'Practical software architecture insights, web development best practices, and IT guidance by SURXTECH in Tamil Nadu.',
     h1: 'SURXTECH Engineering Blog',
-    content: `<h2>Practical Guides on Software Development & Academic Projects</h2><p>Articles written by our software engineers on selecting IT companies in Dindigul, MCA/engineering final-year project ideas, and business website strategy.</p>`
+    content: `<h2>Practical Guides on Software Development & Web Architecture</h2><p>Articles written by our software engineers on choosing IT companies in Dindigul, website development costs, custom software ROI, and modern web frameworks.</p>`
   }
 ];
 

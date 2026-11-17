@@ -15,6 +15,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const corePages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
+  { url: '/it-company-in-dindigul', priority: '0.98', changefreq: 'weekly' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/team', priority: '0.75', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },

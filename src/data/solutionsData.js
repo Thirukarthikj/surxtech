@@ -47,6 +47,90 @@ export const businessServices = [
     ]
   },
   {
+    slug: 'website-development',
+    path: '/website-development',
+    title: 'Website Development Company in Dindigul',
+    shortTitle: 'Website Development',
+    navTitle: 'Website Development',
+    icon: '💻',
+    metaTitle: 'Website Development Company in Dindigul | SURXTECH',
+    metaDesc: 'Looking for a website development company in Dindigul? SURXTECH engineers fast, responsive, and SEO-optimized business websites and corporate portals.',
+    primaryKeyword: 'Website development company in Dindigul',
+    secondaryKeywords: ['Web design company in Dindigul', 'Best web developers Dindigul', 'Website design Nilakottai'],
+    tagline: 'Custom Business Websites Designed to Rank High on Google and Drive Inquiries',
+    description: 'We develop modern, mobile-first business websites tailored to companies across Dindigul, Nilakottai, and Tamil Nadu. From corporate landing pages to multi-page business portals, every site features sub-second load times, clean code, SSL security, and integrated Google SEO.',
+    targetAudience: 'Small and medium businesses, retail shops, clinics, schools, colleges, and local service providers in Dindigul and Tamil Nadu.',
+    features: [
+      'Modern Component-Driven Architecture (React & Next.js)',
+      '100% Mobile Responsive Layout Across All Devices',
+      'Integrated Local SEO & Google Search Console Verification',
+      'Direct WhatsApp Chat & Fast Contact Lead Capture',
+      'Ultra-Fast CDN Hosting with Automatic SSL Certificates',
+      'User-Friendly Content Management & Instant Updates'
+    ],
+    deliverables: [
+      'Complete Production-Ready Website',
+      'Full Source Code Ownership with No Vendor Lock-In',
+      'Google Analytics 4 & Search Console Setup',
+      'Domain & Fast Cloud Hosting Deployment',
+      '12 Months Technical Support & Warranty'
+    ],
+    faqs: [
+      {
+        q: 'How much does website development cost in Dindigul?',
+        a: 'A professional business website typically ranges from ₹8,000 to ₹25,000 depending on features, page count, and custom integrations.'
+      },
+      {
+        q: 'Will our website rank on Google for Dindigul searches?',
+        a: 'Yes. Every website is built with structured data schemas, optimized meta tags, XML sitemaps, and local SEO signals targeting Dindigul and Tamil Nadu searches.'
+      },
+      {
+        q: 'How long does website delivery take?',
+        a: 'Most standard business websites are completed, tested, and launched within 7 to 14 business days.'
+      }
+    ]
+  },
+  {
+    slug: 'web-application-development',
+    path: '/web-application-development',
+    title: 'Full Stack Web Application Development in Tamil Nadu',
+    shortTitle: 'Web Application Development',
+    navTitle: 'Web Applications',
+    icon: '⚡',
+    metaTitle: 'Web Application Development Company in Tamil Nadu | SURXTECH',
+    metaDesc: 'Scalable full-stack web application development by SURXTECH in Dindigul. Custom React, Next.js, Node.js, and cloud backend engineering for enterprise portals and SaaS.',
+    primaryKeyword: 'Web application development Tamil Nadu',
+    secondaryKeywords: ['Custom web app development Dindigul', 'Full stack development company', 'React Node application development'],
+    tagline: 'High-Concurrency Web Applications Engineered for Complex Business Logic',
+    description: 'When standard websites fall short of your operational needs, SURXTECH engineers bespoke full-stack web applications. We build secure multi-tenant SaaS platforms, interactive client portals, real-time dashboards, and custom business management software.',
+    targetAudience: 'Enterprises, logistics providers, healthcare networks, financial consultants, and technology startups.',
+    features: [
+      'Full-Stack JavaScript & TypeScript (React, Next.js, Node.js, Express)',
+      'Robust Relational & Document Databases (PostgreSQL, MongoDB, Redis)',
+      'RESTful & GraphQL API Architecture with JWT Authentication',
+      'Role-Based Access Control (RBAC) & Secure Multi-Tenancy',
+      'Real-Time WebSocket Integration for Live Data & Notifications',
+      'Containerized Cloud Deployment on AWS, DigitalOcean, or Vercel'
+    ],
+    deliverables: [
+      'Full-Stack Web Application Codebase',
+      'Database Schema Architecture & Migration Scripts',
+      'Interactive Admin & Staff Portals',
+      'REST API Documentation & Postman Collection',
+      'Cloud Server CI/CD Pipeline Setup'
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between a website and a web application?',
+        a: 'A website is primarily informational, designed to present content and capture leads. A web application is dynamic software accessible via a browser with user accounts, database transactions, automated workflows, and interactive dashboards.'
+      },
+      {
+        q: 'Can web applications handle thousands of simultaneous users?',
+        a: 'Yes. By utilizing asynchronous Node.js runtimes, connection-pooled databases, and CDN edge caching, our web applications scale horizontally to handle high traffic surges.'
+      }
+    ]
+  },
+  {
     slug: 'ecommerce-development',
     path: '/ecommerce-development',
     title: 'E-Commerce Website Development in Tamil Nadu',
@@ -198,6 +282,45 @@ export const businessServices = [
       {
         q: 'Can AI help a local small business in Tamil Nadu?',
         a: 'Absolutely. A smart AI WhatsApp bot, for instance, can answer customer queries in English or Tamil, take appointments, and send product catalogues 24/7 without requiring manual intervention.'
+      }
+    ]
+  },
+  {
+    slug: 'ai-automation',
+    path: '/ai-automation',
+    title: 'AI Automation Company in Dindigul & Tamil Nadu',
+    shortTitle: 'AI Automation',
+    navTitle: 'AI Automation',
+    icon: '🤖',
+    metaTitle: 'AI Automation Company in Dindigul | Smart AI Solutions | SURXTECH',
+    metaDesc: 'Automate business workflows with SURXTECH. AI-powered WhatsApp chatbots, automated invoice data extraction, customer service automation, and smart analytics.',
+    primaryKeyword: 'AI automation company in Dindigul',
+    secondaryKeywords: ['AI solutions Tamil Nadu', 'WhatsApp chatbot development Dindigul', 'Business workflow automation'],
+    tagline: 'Practical Artificial Intelligence & Automated Workflows for Modern Businesses',
+    description: 'We build practical AI systems that save hours of manual labor every week. From smart WhatsApp ordering bots and automated receipt data extraction to predictive sales analytics and custom AI copilots trained on your company data.',
+    targetAudience: 'Retailers, clinics, distributors, customer support desks, and startups in Dindigul and Tamil Nadu looking to cut operational costs.',
+    features: [
+      '24/7 Smart WhatsApp Chatbots for Instant Customer Support & Sales',
+      'Automated Document OCR for Invoices, Receipts, and Orders',
+      'Predictive Inventory & Sales Demand Forecasting Models',
+      'Custom LLM Assistants Trained on Internal Business Knowledge',
+      'Automated Lead Qualification & CRM Workflow Sync',
+      'Data Privacy & Secure On-Premise / Private Cloud Inference'
+    ],
+    deliverables: [
+      'Custom AI Automation Workflow Integration',
+      'WhatsApp Cloud API Configuration & Bot Hosting',
+      'Automated Data Extraction Pipeline',
+      'Management Dashboard & Analytics Reporting'
+    ],
+    faqs: [
+      {
+        q: 'How does an AI WhatsApp bot help my business?',
+        a: 'An AI bot responds instantly to customer inquiries 24/7, shares product catalogs, answers frequently asked questions in English or Tamil, and routes high-value sales directly to your team.'
+      },
+      {
+        q: 'Do I need complex technical infrastructure to use AI automation?',
+        a: 'No. SURXTECH manages all backend AI models, API connections, and cloud hosting, delivering a plug-and-play solution that connects seamlessly with your existing WhatsApp, email, or database.'
       }
     ]
   },
@@ -908,6 +1031,86 @@ While website builders like Wix, Squarespace, and basic WordPress templates adve
 1. **Page Load Speed & Core Web Vitals:** Custom React/Next.js websites load in under 1.5 seconds because they contain only the code your site requires, while builders load hundreds of heavy, unused script libraries.
 2. **SEO Flexibility & Ranking Power:** Custom architecture allows complete control over clean semantic HTML, structured JSON-LD schemas, and pre-rendered server response headers.
 3. **Total Cost of Ownership:** Website builders charge escalating monthly app subscriptions and transaction fees. Custom websites have minimal hosting overhead and zero software vendor lock-in.
+    `
+  },
+  {
+    slug: 'website-vs-web-application-difference',
+    title: "Website vs Web Application: What's the Difference and Which Do You Need?",
+    date: '2026-06-01',
+    readTime: '6 min read',
+    author: 'J. Thirukarthik',
+    category: 'Web Architecture',
+    metaTitle: "Website vs Web Application: What's the Difference? | SURXTECH",
+    metaDesc: 'Understand the fundamental differences between a website and a web application. Learn which one fits your business goals, budget, and operational requirements.',
+    primaryKeyword: 'Website vs web application',
+    excerpt: 'Confused whether your business needs a static website or a dynamic web application? Here is a clear, non-technical breakdown of functions, costs, and scalability.',
+    content: `
+### Navigating the Digital Product Spectrum
+One of the most common dilemmas business owners face when modernizing their operations is deciding whether to build a standard business website or invest in a custom web application. While both run in a web browser, their architectures, user interactions, and business purposes are fundamentally distinct.
+
+### 1. What is a Business Website?
+A website is primarily informational and content-driven. It acts as your 24/7 digital company brochure, brand portfolio, and lead-generation engine.
+- **Primary Function:** Present information, educate visitors, showcase products/services, and collect inquiries via forms or WhatsApp buttons.
+- **User Interaction:** One-way communication where visitors consume text, images, and videos with minimal data processing.
+- **Common Examples:** Corporate landing pages, doctor clinic introduction pages, hotel info sites, and educational institute portals.
+- **Best Suited For:** Businesses seeking brand credibility, local Google search visibility, and organic inquiries.
+
+### 2. What is a Web Application?
+A web application is interactive software accessed through a web browser. Rather than just displaying information, it performs complex business logic, manipulates databases, and automates operational workflows.
+- **Primary Function:** Solve complex business problems through authenticated user accounts, data calculations, dynamic filtering, and transactions.
+- **User Interaction:** Two-way dynamic interaction. Users submit data, trigger automated background tasks, manage orders, and receive real-time updates.
+- **Common Examples:** Multi-tenant SaaS platforms, retail billing and inventory management systems, customer support ticketing desks, and booking engines.
+- **Best Suited For:** Businesses looking to automate manual operations, eliminate double-entry paperwork, and scale digital services.
+
+### 3. Comparison Matrix: Website vs Web Application
+| Feature | Business Website | Web Application |
+| :--- | :--- | :--- |
+| **Primary Goal** | Brand credibility & lead capture | Workflow automation & task completion |
+| **User Role** | Reader / Inquirer | Active User / Operator |
+| **Database Complexity** | Minimal (Contact forms & CMS) | Advanced (Relational/Document schemas, RBAC) |
+| **Authentication** | None or simple admin login | Multi-role user accounts & secure sessions |
+| **Development Time** | 1 to 2 weeks | 3 to 6+ weeks |
+| **Tech Stack** | React, Next.js, Semantic HTML5 | React, Node.js, PostgreSQL/MongoDB, Cloud APIs |
+
+### 4. Which One Does Your Business Need?
+If your primary goal is to establish professional online credibility in Dindigul or Tamil Nadu and attract customer calls and WhatsApp inquiries, start with a high-performance **business website**. If you need internal staff portals, online booking calculations, automated invoicing, or private customer dashboards, you need a custom **web application**. At SurxTech, we build both with 100% source code ownership and tailored architectures.
+    `
+  },
+  {
+    slug: 'how-to-choose-a-web-development-company',
+    title: 'How to Choose a Web Development Company in Tamil Nadu: 7 Essential Checks',
+    date: '2026-06-15',
+    readTime: '7 min read',
+    author: 'J. Thirukarthik',
+    category: 'Business IT Strategy',
+    metaTitle: 'How to Choose a Web Development Company in Tamil Nadu | SURXTECH',
+    metaDesc: '7 vital criteria to evaluate before hiring a web development company in Tamil Nadu. Avoid agency traps, verify code ownership, speed benchmarks, and support SLAs.',
+    primaryKeyword: 'How to choose a web development company',
+    excerpt: 'Hiring the wrong web agency can lead to slow sites, vendor lock-in, and wasted budgets. Here is how to evaluate developer technical capability and contract terms.',
+    content: `
+### Protecting Your Technology Investment
+Choosing an agency or technology partner to build your business website or digital application is one of the highest-leverage business decisions you will make. A poorly engineered site will fail to rank on Google, frustrate smartphone visitors with slow load times, and force costly rebuilds within months.
+
+### 1. Demand 100% Source Code & Asset Ownership
+Never sign a contract where the agency retains copyright or legal ownership of your website source code or database. If you decide to migrate hosts or bring in new engineers later, you must own your digital property completely. At SurxTech, full intellectual property and code ownership transfer to you upon project handover.
+
+### 2. Verify Real PageSpeed and Core Web Vitals Benchmarks
+Ask prospective agencies to provide live URLs of previous client work, then test those URLs using Google’s free [PageSpeed Insights](https://pagespeed.web.dev/). If their portfolio sites score below 70 on mobile, your site will suffer from slow user engagement and weak Google search rankings. Demand hand-coded modern stacks like React or Next.js that score 90+.
+
+### 3. Ensure Mobile-First Responsive Design
+More than 75% of web searches across Tamil Nadu originate from mobile smartphones. Inspect candidate agencies' previous work on small smartphone screens. Ensure buttons are easily tappable, text scales naturally, and layouts do not horizontally scroll or overflow.
+
+### 4. Evaluate Built-in Local SEO and Schema Markup
+A beautiful website is worthless if zero potential customers can find it on Google. Ensure the agency includes technical on-page SEO: unique title tags, descriptive meta descriptions, Open Graph cards, XML sitemaps, and Schema.org structured data (Organization, LocalBusiness, BreadcrumbList) as standard deliverables.
+
+### 5. Require Direct Developer Access
+Avoid agencies where your instructions must pass through multiple non-technical sales intermediaries. Being able to discuss feature nuances directly with the tech leads and developers writing your code eliminates misunderstandings and shortens delivery cycles.
+
+### 6. Transparent Milestone-Based Pricing
+Trustworthy development firms provide fixed-scope agreements with clearly defined milestone payments (e.g. initial architecture, staging review, production launch). Beware of suspiciously low upfront quotes that later bill heavily for basic necessities like contact form setups or SSL certificates.
+
+### 7. Post-Launch Maintenance and SLA Support
+Software requires regular security updates, database backups, and server health checks. Confirm that your partner provides a clear post-launch warranty and an affordable Annual Maintenance Contract (AMC) so you are never left stranded during emergencies.
     `
   }
 ];
