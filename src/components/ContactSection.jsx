@@ -160,8 +160,6 @@ export default function ContactSection({ selectedServiceFromModal }) {
               <option value="UI / UX Design">UI / UX Design</option>
               <option value="SEO & Digital Marketing">SEO &amp; Digital Marketing</option>
               <option value="Website Maintenance">Website Maintenance</option>
-              <option value="College Project (MCA, BCA, BE, B.Tech)">College Project (MCA, BCA, BE, B.Tech)</option>
-              <option value="Python / AI / ML Student Project">Python / AI / ML Student Project</option>
               <option value="Branding & Identity">Branding &amp; Identity</option>
               <option value="Other">Other</option>
             </select>

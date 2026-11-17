@@ -4,7 +4,7 @@ const SITE_URL = 'https://www.surxtech.com';
 const DEFAULT_IMAGE = `${SITE_URL}/logo.png`;
 const DEFAULT_TITLE = 'SURXTECH | IT Company & Software Development in Dindigul';
 const DEFAULT_DESC =
-  'SURXTECH provides website development, mobile apps, AI solutions and custom software for businesses, along with MCA, BCA and engineering student project guidance in Tamil Nadu.';
+  'SURXTECH is an independent IT startup and software development company based in Nilakottai, Dindigul, Tamil Nadu. Official domain: surxtech.com. We build websites, mobile apps, and custom software for growing businesses.';
 
 export default function SEO({
   title = DEFAULT_TITLE,

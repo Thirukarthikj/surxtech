@@ -4,7 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { businessServices, studentServices, genuineBlogArticles } from '../src/data/solutionsData.js';
+import { businessServices, genuineBlogArticles } from '../src/data/solutionsData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,7 +19,6 @@ const corePages = [
   { url: '/team', priority: '0.75', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
   { url: '/business-solutions', priority: '0.9', changefreq: 'weekly' },
-  { url: '/student-projects', priority: '0.9', changefreq: 'weekly' },
   { url: '/portfolio', priority: '0.85', changefreq: 'weekly' },
   { url: '/case-studies', priority: '0.85', changefreq: 'weekly' },
   { url: '/process', priority: '0.75', changefreq: 'monthly' },
@@ -51,17 +50,7 @@ businessServices.forEach((s) => {
   });
 });
 
-// 3. Student Project Tracks
-studentServices.forEach((p) => {
-  urls.push({
-    loc: `${SITE_URL}${p.path}`,
-    lastmod: TODAY,
-    changefreq: 'weekly',
-    priority: '0.9',
-  });
-});
-
-// 4. Genuine Blog Articles
+// 3. Genuine Blog Articles
 genuineBlogArticles.forEach((a) => {
   urls.push({
     loc: `${SITE_URL}/blog/${a.slug}`,

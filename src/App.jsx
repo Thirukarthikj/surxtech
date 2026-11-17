@@ -20,8 +20,6 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 const BusinessSolutionsPage = lazy(() => import('./pages/BusinessSolutionsPage'));
 const BusinessDetailPage = lazy(() => import('./pages/BusinessDetailPage'));
-const StudentProjectsPage = lazy(() => import('./pages/StudentProjectsPage'));
-const StudentDetailPage = lazy(() => import('./pages/StudentDetailPage'));
 const SeoAdminPage = lazy(() => import('./pages/SeoAdminPage'));
 const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -116,17 +114,17 @@ export default function App() {
           <Route path="/seo-services" element={<BusinessDetailPage defaultSlug="seo-services" />} />
           <Route path="/website-maintenance" element={<BusinessDetailPage defaultSlug="website-maintenance" />} />
 
-          {/* Student Project Solutions Landing Pages */}
-          <Route path="/student-projects" element={<StudentProjectsPage />} />
-          <Route path="/mca-projects" element={<StudentDetailPage defaultSlug="mca-projects" />} />
-          <Route path="/bca-projects" element={<StudentDetailPage defaultSlug="bca-projects" />} />
-          <Route path="/btech-projects" element={<StudentDetailPage defaultSlug="btech-projects" />} />
-          <Route path="/bsc-cs-projects" element={<StudentDetailPage defaultSlug="bsc-cs-projects" />} />
-          <Route path="/engineering-projects" element={<StudentDetailPage defaultSlug="engineering-projects" />} />
-          <Route path="/python-projects" element={<StudentDetailPage defaultSlug="python-projects" />} />
-          <Route path="/mern-stack-projects" element={<StudentDetailPage defaultSlug="mern-stack-projects" />} />
-          <Route path="/ai-ml-projects" element={<StudentDetailPage defaultSlug="ai-ml-projects" />} />
-          <Route path="/react-projects" element={<StudentDetailPage defaultSlug="react-projects" />} />
+          {/* Former Student Project Routes -> Redirect to /services */}
+          <Route path="/student-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/mca-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/bca-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/btech-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/bsc-cs-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/engineering-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/python-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/mern-stack-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/ai-ml-projects" element={<Navigate to="/services" replace />} />
+          <Route path="/react-projects" element={<Navigate to="/services" replace />} />
 
           {/* Scalable Keyword Management & SEO Dashboard */}
           <Route path="/seo-admin" element={<SeoAdminPage />} />

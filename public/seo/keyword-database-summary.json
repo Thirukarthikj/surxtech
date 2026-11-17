@@ -1,7 +1,7 @@
 {
-  "lastGenerated": "2026-11-17T04:37:59.056Z",
+  "lastGenerated": "2026-11-17T06:31:57.104Z",
   "grandCandidateCombinations": 36300,
-  "activeMatrixPoolCount": 13003,
+  "activeMatrixPoolCount": 13007,
   "locationsCovered": [
     "Nilakottai",
     "Dindigul",
@@ -156,5 +156,5 @@
       "url": "/student-projects"
     }
   ],
-  "curatedPriorityCount": 20
+  "curatedPriorityCount": 22
 }

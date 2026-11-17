@@ -12,7 +12,7 @@ export default function TermsConditionsPage() {
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
         title="Terms and Conditions | SURXTECH"
-        description="SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients and students."
+        description="SURXTECH terms of service. Guidelines, deliverables, intellectual property ownership, and milestone policies for business clients."
         canonical="/terms-and-conditions"
         breadcrumbs={breadcrumbs}
       />

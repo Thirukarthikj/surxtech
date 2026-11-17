@@ -194,6 +194,11 @@ export default function TeamSection() {
         ))}
       </div>
 
+      <div style={{ textAlign: 'center', marginTop: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', color: 'var(--muted)', fontSize: '14px' }}>
+        <Sparkles size={18} color="#2563eb" />
+        <span>Other team member profile will be updated soon!</span>
+      </div>
+
       {/* TEAM MEMBER PROFILE MODAL */}
       {activeMember && (
         <div className="modal-overlay" onClick={() => setActiveMember(null)}>
