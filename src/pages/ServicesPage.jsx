@@ -65,14 +65,31 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
         breadcrumbs={breadcrumbs}
       />
 
-      {/* Segment Navigation Quick Link */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px 20px', display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <Link to="/business-solutions" className="btn-primary" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          <Briefcase size={15} /> Explore All Business Solutions &rarr;
-        </Link>
-        <Link to="/contact" className="btn-outline" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          Schedule a Consultation &rarr;
-        </Link>
+      {/* Dual Capability Suite Switcher */}
+      <div style={{ maxWidth: '1100px', margin: '0 auto 30px', padding: '0 24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderLeft: '4px solid var(--blue)', borderRadius: '18px', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--blue)', letterSpacing: '0.08em' }}>Segment A</div>
+              <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--ink)', marginTop: '2px' }}>Business Digital Solutions</div>
+              <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '4px' }}>Websites, Apps, AI Automation &amp; Custom Software</div>
+            </div>
+            <Link to="/business-solutions" className="btn-primary" style={{ padding: '9px 16px', fontSize: '13px', flexShrink: 0 }}>
+              Business Hub <ArrowRight size={13} />
+            </Link>
+          </div>
+
+          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderLeft: '4px solid #10b981', borderRadius: '18px', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#059669', letterSpacing: '0.08em' }}>Segment B</div>
+              <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--ink)', marginTop: '2px' }}>Student Project Solutions</div>
+              <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '4px' }}>MCA, BCA, BE, B.Tech, Python &amp; MERN Mentoring</div>
+            </div>
+            <Link to="/student-projects" className="btn-primary" style={{ padding: '9px 16px', fontSize: '13px', background: '#059669', borderColor: '#059669', flexShrink: 0 }}>
+              Student Hub <ArrowRight size={13} />
+            </Link>
+          </div>
+        </div>
       </div>
 
       <ServicesBento onSelectService={handleServiceSelectFromBento} />
@@ -142,6 +159,11 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
                       {svc.icon} {svc.name}
                     </option>
                   ))}
+                  <option value="MCA Final Year Projects">🎓 MCA Final Year Projects</option>
+                  <option value="BCA Final Year Projects">💻 BCA Final Year Projects</option>
+                  <option value="BE / B.Tech Projects">⚙️ Engineering Final Year Projects</option>
+                  <option value="Python / AI Projects">🧠 Python &amp; AI/ML Projects</option>
+                  <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
                 </select>
               </div>
 

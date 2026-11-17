@@ -1,0 +1,160 @@
+{
+  "lastGenerated": "2026-11-17T04:37:59.056Z",
+  "grandCandidateCombinations": 36300,
+  "activeMatrixPoolCount": 13003,
+  "locationsCovered": [
+    "Nilakottai",
+    "Dindigul",
+    "Madurai",
+    "Theni",
+    "Batlagundu",
+    "Coimbatore",
+    "Chennai",
+    "Trichy",
+    "Salem",
+    "Erode",
+    "Tiruppur",
+    "Karur",
+    "Namakkal",
+    "Tirunelveli",
+    "Thanjavur",
+    "Sivakasi",
+    "Virudhunagar",
+    "Kodaikanal",
+    "Palani",
+    "Tamil Nadu"
+  ],
+  "businessServices": [
+    {
+      "name": "Web Development Company",
+      "url": "/web-development"
+    },
+    {
+      "name": "Website Development",
+      "url": "/web-development"
+    },
+    {
+      "name": "IT Company",
+      "url": "/"
+    },
+    {
+      "name": "Software Development Company",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "E-Commerce Website Development",
+      "url": "/ecommerce-development"
+    },
+    {
+      "name": "Android App Development Company",
+      "url": "/mobile-app-development"
+    },
+    {
+      "name": "Mobile App Development",
+      "url": "/mobile-app-development"
+    },
+    {
+      "name": "AI Development Company",
+      "url": "/ai-solutions"
+    },
+    {
+      "name": "Custom Software Development",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "Business Automation Services",
+      "url": "/ai-solutions"
+    },
+    {
+      "name": "UI UX Design Services",
+      "url": "/ui-ux-design"
+    },
+    {
+      "name": "SEO Company",
+      "url": "/seo-services"
+    },
+    {
+      "name": "Website Maintenance Services",
+      "url": "/website-maintenance"
+    },
+    {
+      "name": "Clinic Management Software",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "Retail Billing Software",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "Restaurant POS System",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "School Management Software",
+      "url": "/custom-software-development"
+    },
+    {
+      "name": "Tour Booking Web Portal",
+      "url": "/web-development"
+    }
+  ],
+  "studentServices": [
+    {
+      "name": "MCA Final Year Projects",
+      "url": "/mca-projects"
+    },
+    {
+      "name": "BCA Final Year Projects",
+      "url": "/bca-projects"
+    },
+    {
+      "name": "B.Sc Computer Science Projects",
+      "url": "/bsc-cs-projects"
+    },
+    {
+      "name": "BE Final Year Projects",
+      "url": "/engineering-projects"
+    },
+    {
+      "name": "B.Tech Final Year Projects",
+      "url": "/btech-projects"
+    },
+    {
+      "name": "Python Final Year Projects",
+      "url": "/python-projects"
+    },
+    {
+      "name": "MERN Stack Projects",
+      "url": "/mern-stack-projects"
+    },
+    {
+      "name": "React JS Projects",
+      "url": "/react-projects"
+    },
+    {
+      "name": "AI ML Final Year Projects",
+      "url": "/ai-ml-projects"
+    },
+    {
+      "name": "Data Science Projects",
+      "url": "/ai-ml-projects"
+    },
+    {
+      "name": "Machine Learning Projects",
+      "url": "/ai-ml-projects"
+    },
+    {
+      "name": "Final Year Project Guidance Center",
+      "url": "/student-projects"
+    },
+    {
+      "name": "IEEE Final Year Projects",
+      "url": "/student-projects"
+    },
+    {
+      "name": "College Mini Projects",
+      "url": "/student-projects"
+    }
+  ],
+  "curatedPriorityCount": 20
+}

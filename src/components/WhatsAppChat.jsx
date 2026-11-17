@@ -59,8 +59,12 @@ export default function WhatsAppChat({
 
   const quickPrompts = [
     {
-      title: '🚀 Start a New Project',
+      title: '🚀 Start a Business Project',
       text: 'Hi SurxTech! I have an idea for a web or mobile application and would like to discuss it.',
+    },
+    {
+      title: '🎓 College Project Guidance',
+      text: 'Hi SurxTech! I am a student looking for final year project guidance (MCA, BCA, BE, B.Tech).',
     },
     {
       title: '💼 Custom Software & Mobile Apps',

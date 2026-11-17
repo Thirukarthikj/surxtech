@@ -12,7 +12,7 @@ export default function Footer() {
             <span className="logo-text">SURX<em>TECH</em></span>
           </Link>
           <p className="f-tagline" style={{ lineHeight: '1.7', marginTop: '14px' }}>
-            IT Startup &amp; Software Development Company based in Nilakottai, Dindigul, Tamil Nadu. Building high-performance websites, custom software, mobile applications, and AI solutions for growing businesses.
+            IT Startup &amp; Software Development Company based in Nilakottai, Dindigul, Tamil Nadu. Building digital products for businesses and providing technical project mentoring for college students.
             <br />
             <br />
             <strong>Creative Design. Powerful Code. Smart Apps.</strong>
@@ -31,6 +31,21 @@ export default function Footer() {
             <li><Link to="/ui-ux-design">UI/UX Design</Link></li>
             <li><Link to="/seo-services">SEO Services</Link></li>
             <li><Link to="/website-maintenance">Website Maintenance</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <div className="f-group-title">Student Projects</div>
+          <ul className="f-links">
+            <li><Link to="/student-projects">Projects Overview</Link></li>
+            <li><Link to="/mca-projects">MCA Final Year Projects</Link></li>
+            <li><Link to="/bca-projects">BCA Projects</Link></li>
+            <li><Link to="/bsc-cs-projects">B.Sc Computer Science</Link></li>
+            <li><Link to="/btech-projects">B.Tech IT &amp; AI Projects</Link></li>
+            <li><Link to="/engineering-projects">BE Final Year Projects</Link></li>
+            <li><Link to="/python-projects">Python Projects</Link></li>
+            <li><Link to="/mern-stack-projects">MERN Stack Projects</Link></li>
+            <li><Link to="/ai-ml-projects">AI &amp; ML Projects</Link></li>
           </ul>
         </div>
 
