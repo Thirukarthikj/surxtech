@@ -20,6 +20,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 const BusinessSolutionsPage = lazy(() => import('./pages/BusinessSolutionsPage'));
 const BusinessDetailPage = lazy(() => import('./pages/BusinessDetailPage'));
+const DindigulItCompanyPage = lazy(() => import('./pages/DindigulItCompanyPage'));
 const SeoAdminPage = lazy(() => import('./pages/SeoAdminPage'));
 const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -103,12 +104,18 @@ export default function App() {
             element={<ContactPage selectedService={selectedService} />}
           />
 
+          {/* Dedicated Dindigul Local SEO Hub */}
+          <Route path="/it-company-in-dindigul" element={<DindigulItCompanyPage />} />
+
           {/* Business Solutions Landing Pages */}
           <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
+          <Route path="/website-development" element={<BusinessDetailPage defaultSlug="website-development" />} />
           <Route path="/web-development" element={<BusinessDetailPage defaultSlug="web-development" />} />
+          <Route path="/web-application-development" element={<BusinessDetailPage defaultSlug="web-application-development" />} />
           <Route path="/ecommerce-development" element={<BusinessDetailPage defaultSlug="ecommerce-development" />} />
           <Route path="/mobile-app-development" element={<BusinessDetailPage defaultSlug="mobile-app-development" />} />
           <Route path="/custom-software-development" element={<BusinessDetailPage defaultSlug="custom-software-development" />} />
+          <Route path="/ai-automation" element={<BusinessDetailPage defaultSlug="ai-automation" />} />
           <Route path="/ai-solutions" element={<BusinessDetailPage defaultSlug="ai-solutions" />} />
           <Route path="/ui-ux-design" element={<BusinessDetailPage defaultSlug="ui-ux-design" />} />
           <Route path="/seo-services" element={<BusinessDetailPage defaultSlug="seo-services" />} />

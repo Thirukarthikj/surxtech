@@ -29,11 +29,13 @@ export default function Footer() {
           <div className="f-group-title">Services</div>
           <ul className="f-links">
             <li><Link to="/services">All Services Overview</Link></li>
-            <li><Link to="/web-development">Web Development</Link></li>
-            <li><Link to="/ecommerce-development">E-Commerce Stores</Link></li>
+            <li><Link to="/it-company-in-dindigul" style={{ color: 'var(--blue)', fontWeight: 600 }}>IT Company in Dindigul</Link></li>
+            <li><Link to="/website-development">Website Development</Link></li>
+            <li><Link to="/web-application-development">Web Applications</Link></li>
             <li><Link to="/mobile-app-development">Android &amp; iOS Apps</Link></li>
             <li><Link to="/custom-software-development">Custom Software</Link></li>
-            <li><Link to="/ai-solutions">AI Business Solutions</Link></li>
+            <li><Link to="/ai-automation">AI Automation Solutions</Link></li>
+            <li><Link to="/ecommerce-development">E-Commerce Stores</Link></li>
             <li><Link to="/ui-ux-design">UI/UX Design</Link></li>
             <li><Link to="/seo-services">SEO Services</Link></li>
             <li><Link to="/website-maintenance">Website Maintenance</Link></li>
