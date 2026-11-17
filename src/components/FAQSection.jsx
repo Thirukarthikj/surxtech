@@ -33,7 +33,7 @@ export default function FAQSection({
           )}
         </h2>
         <p style={{ color: 'var(--muted)', marginTop: '12px', fontWeight: '300', fontSize: '15px', maxWidth: '600px', margin: '12px auto 0' }}>
-          Clear answers to common questions about our business technology solutions and student project guidance.
+          Clear answers to common questions about our software development, digital solutions, and client engagement process.
         </p>
       </div>
 

@@ -15,7 +15,7 @@ export default function BlogPage() {
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
         title="Technology & Software Engineering Blog | SURXTECH Dindigul"
-        description="Practical software architecture insights, web development best practices, and college student final-year project guides by SURXTECH in Tamil Nadu."
+        description="Practical software architecture insights, web development best practices, and IT strategy guides by SURXTECH in Tamil Nadu."
         canonical="/blog"
         breadcrumbs={breadcrumbs}
       />
@@ -29,7 +29,7 @@ export default function BlogPage() {
           SURXTECH <span className="highlight-text">Engineering Blog</span>
         </h1>
         <p style={{ color: 'var(--muted)', fontSize: '16.5px', maxWidth: '720px', margin: '0 auto 28px', lineHeight: '1.7' }}>
-          Practical articles written by our software engineers on web architecture, small business digital growth, and college student project excellence in Tamil Nadu.
+          Practical articles written by our software engineers on web architecture, cloud systems, and small business digital growth in Tamil Nadu.
         </p>
       </section>
 
@@ -112,7 +112,7 @@ export default function BlogPage() {
       {/* CTA */}
       <CTASection
         title="Looking for Expert Engineering Support?"
-        subtitle="Connect with our software team in Nilakottai, Dindigul today to build your custom web application or final year project."
+        subtitle="Connect with our software team in Nilakottai, Dindigul today to build your custom web application or business software system."
       />
     </div>
   );

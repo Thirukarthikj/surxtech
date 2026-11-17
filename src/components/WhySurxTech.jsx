@@ -4,7 +4,7 @@ const whyItems = [
   {
     icon: '⚡',
     title: 'Rapid Engineering & Delivery',
-    desc: 'We build quickly with clean architecture without cutting corners. Your business launch or academic deadline is treated with absolute commitment.',
+    desc: 'We build quickly with clean architecture without cutting corners. Your business launch and digital roadmap are treated with absolute commitment.',
   },
   {
     icon: '🔒',
@@ -13,8 +13,8 @@ const whyItems = [
   },
   {
     icon: '🎯',
-    title: 'Honest Technical Mentoring',
-    desc: 'For students, we ensure line-by-line comprehension so you can confidently defend your project in college viva reviews and interviews.',
+    title: 'Dedicated Engineering Support',
+    desc: 'Direct communication with the engineers building your solution. Continuous post-deployment maintenance, SLA guarantees, and security updates.',
   },
   {
     icon: '📍',
@@ -70,11 +70,11 @@ export default function WhySurxTech() {
         <div className="split-content">
           <div className="s-label">Why Choose SURXTECH</div>
           <h2 className="s-title">
-            Why Businesses &amp; Students<br />
+            Why Growing Businesses<br />
             <span className="highlight-text">Trust Our Team</span>
           </h2>
           <p>
-            We combine production software engineering standards with transparent local mentoring. Whether developing an enterprise web portal or building an IEEE-aligned MCA/engineering project, we prioritize clean code, measurable performance, and real technical mastery.
+            We combine modern software engineering standards with transparent local collaboration. Whether developing an enterprise web application, mobile app, or custom business management system, we prioritize clean code, measurable performance, and real business value.
           </p>
           <div className="why-list">
             {whyItems.map((item, i) => (

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.js",
+    "build": "node scripts/generateSitemap.js && node scripts/generateKeywordDatabase.js && vite build && node scripts/prerender.js",
+    "seo:generate": "node scripts/generateSitemap.js && node scripts/generateKeywordDatabase.js",
     "preview": "vite preview"
   },
   "dependencies": {

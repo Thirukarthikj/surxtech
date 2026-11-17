@@ -40,43 +40,31 @@ export default function Navbar({ theme, toggleTheme }) {
         </li>
         <li>
           <NavLink
-            to="/business-solutions"
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
-            Business
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/student-projects"
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
-            Student Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/portfolio"
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
-            Portfolio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/blog"
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             About
           </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Service
+          </NavLink>
+        </li>
+        <li>
+          <Link
+            to="/services#enquiry"
+            className="nav-link"
+            onClick={() => {
+              const el = document.getElementById('enquiry') || document.getElementById('service-enquiry');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Enquire
+          </Link>
         </li>
         <li>
           <NavLink

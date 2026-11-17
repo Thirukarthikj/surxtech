@@ -385,6 +385,81 @@ export const studentServices = [
     ]
   },
   {
+    slug: 'btech-projects',
+    path: '/btech-projects',
+    title: 'B.Tech Final Year Projects in Tamil Nadu (IT & AI/DS)',
+    shortTitle: 'B.Tech Projects',
+    navTitle: 'B.Tech Projects',
+    icon: '🚀',
+    metaTitle: 'B.Tech Final Year Projects in Tamil Nadu | IEEE Topics | SURXTECH',
+    metaDesc: 'B.Tech Information Technology, AI and Data Science final year project development in Tamil Nadu. Working code, IEEE documentation, PPT, and viva defense coaching.',
+    primaryKeyword: 'B.Tech final year projects Tamil Nadu',
+    secondaryKeywords: ['B.Tech IT project guidance Dindigul', 'IEEE final year projects for BTech', 'BTech AI DS capstone projects'],
+    tagline: 'High-Scale B.Tech Capstone Projects Engineered to IEEE Standards',
+    description: 'We guide B.Tech IT, AI & Data Science, and Computer Science students through advanced capstone projects with modern cloud architectures, microservices, deep learning models, and full IEEE research reports.',
+    targetAudience: 'B.Tech IT, Computer Science, and Artificial Intelligence & Data Science students across Anna University and affiliated engineering colleges in Tamil Nadu.',
+    features: [
+      'Cloud Architecture & Microservices: AWS/GCP, Docker, Redis, Kubernetes',
+      'Artificial Intelligence & Deep Learning: CNN, Transformers, LLM Fine-Tuning, YOLO',
+      'Production-Ready Git Repository with Modular Code & Clean Architecture',
+      'IEEE Conference / Transactions Standard Project Report Documentation',
+      'System Architecture Diagrams: ER Diagrams, DFD, Sequence & UML Diagrams',
+      'One-on-One Code Explanation Sessions for Confident Viva Defense'
+    ],
+    deliverables: [
+      'Production-Ready Source Code & Local Deployment Scripts',
+      'University-Formatted Project Documentation Report (.docx & .pdf)',
+      'Review Presentation Slides (PPT) for Review 1, Review 2 & Final Viva',
+      'Database Schema, ER & UML Diagram Assets',
+      'Viva Voce Defense Coaching & Mock Q&A Sessions'
+    ],
+    faqs: [
+      {
+        q: 'Do you provide IEEE paper alignment for B.Tech capstone projects?',
+        a: 'Yes. All our B.Tech project topics are aligned with contemporary IEEE computer society conference and transaction publications, complete with mathematical formulations and benchmark analysis.'
+      },
+      {
+        q: 'Can B.Tech students choose cross-domain AI and cloud projects?',
+        a: 'Yes, we specialize in high-concurrency cross-domain implementations combining machine learning models with scalable web dashboards and mobile applications.'
+      }
+    ]
+  },
+  {
+    slug: 'bsc-cs-projects',
+    path: '/bsc-cs-projects',
+    title: 'B.Sc Computer Science Final Year Projects in Tamil Nadu',
+    shortTitle: 'B.Sc Projects',
+    navTitle: 'B.Sc CS Projects',
+    icon: '📊',
+    metaTitle: 'B.Sc Computer Science Projects in Tamil Nadu | SURXTECH',
+    metaDesc: 'B.Sc Computer Science and B.Sc IT final year project development in Tamil Nadu. Python, PHP, Java, React projects with source code, report, and viva coaching.',
+    primaryKeyword: 'B.Sc computer science projects Tamil Nadu',
+    secondaryKeywords: ['B.Sc CS mini projects Dindigul', 'BSc IT final year projects with source code', 'Python projects for BSc students'],
+    tagline: 'Practical Software Development & Academic Mentoring for B.Sc CS Students',
+    description: 'Designed specifically for B.Sc Computer Science and B.Sc IT students, our project guidance covers interactive web applications, database management systems, and practical automation scripts. We ensure you gain practical confidence in building software from start to finish.',
+    targetAudience: 'B.Sc Computer Science, B.Sc Information Technology, and B.Sc Software Systems students.',
+    features: [
+      'Practical Stacks: Python Django/Flask, PHP & MySQL, Modern React & Node.js',
+      'Structured Database Design with Normalized Relational Schemas',
+      'Complete College Project Report Documentation adhering to University Format',
+      'Step-by-Step Code Walkthrough and Review Preparation',
+      'Professional PowerPoint (PPT) Presentation for Academic Reviews'
+    ],
+    deliverables: [
+      'Full Working Project Source Code',
+      'University-Format Project Report (.docx & .pdf)',
+      'Review Presentation PPT',
+      'Database Schema and Installation Guide',
+      'Viva Examination Coaching & Key Q&A Prep'
+    ],
+    faqs: [
+      {
+        q: 'Can B.Sc students choose modern web or Python machine learning topics?',
+        a: 'Yes. We encourage B.Sc students to build modern Python or React web applications that demonstrate clear real-world utility and score top marks in viva evaluations.'
+      }
+    ]
+  },
+  {
     slug: 'engineering-projects',
     path: '/engineering-projects',
     title: 'Engineering Final Year Projects (BE / B.Tech CSE & IT)',

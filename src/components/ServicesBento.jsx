@@ -79,26 +79,26 @@ export const servicesData = [
     deliverables: ['Social Media Campaign Strategy', 'Ad Copywriting & Scripts', 'Content Calendar Creation', 'Email Marketing Newsletters', 'SEO Blog Writing']
   },
   {
-    id: 'internships',
+    id: 'ai-solutions',
     num: '08',
-    icon: '🎓',
-    name: 'College Student Internships',
-    desc: 'Hands-on industrial internships for college students. Work on live production applications with senior developer mentorship and verified certification.',
-    tags: ['Live Projects', 'Mentorship', 'Certification'],
+    icon: '🤖',
+    name: 'AI & Automation Solutions',
+    desc: 'Intelligent business automation, custom AI chatbots, workflow automations, and smart integrations for enterprise efficiency.',
+    tags: ['AI Chatbots', 'Automation', 'APIs'],
     class: 'b8',
-    details: 'We provide comprehensive industrial internship programs for college students looking for real-world development experience. Work directly alongside our engineers on React, Node.js, Flutter, UI/UX, and cloud deployments with official completion letters and verified recommendation certificates.',
-    deliverables: ['Hands-on Real-World Project Experience', '1-on-1 Guidance from Tech Leads', 'Verified Internship Certificate & LOR', 'Full Stack & Mobile Development Training', 'Resume Building & Technical Interview Prep']
+    details: 'Leverage artificial intelligence to automate customer communications, streamline internal business operations, and build intelligent data workflows.',
+    deliverables: ['Custom AI Chatbots', 'Workflow & Zapier Automation', 'OpenAI & Gemini API Integrations', 'Automated Lead Routing', 'Smart Business Analytics']
   },
   {
-    id: 'college-projects',
+    id: 'seo-marketing',
     num: '09',
-    icon: '💡',
-    name: 'College Projects (Mini & Major)',
-    desc: 'End-to-end college project solutions for engineering & IT students — complete working source code, project documentation report, PPT, and viva coaching.',
-    tags: ['Mini Projects', 'Final Year', 'IEEE & Custom'],
+    icon: '📈',
+    name: 'SEO & Digital Marketing',
+    desc: 'Local search engine optimization, Google Maps ranking, and data-driven marketing to put your business at the top of search results.',
+    tags: ['Local SEO', 'Google Maps', 'Growth'],
     class: 'b9',
-    details: 'Get your mini and major college projects built with high code quality and contemporary frameworks. We provide clean, bug-free source code, database architectures, IEEE/college standard documentation, PPT presentations, and full viva explanation support.',
-    deliverables: ['Complete Working Source Code & GitHub Repo', 'IEEE / College Format Project Report & Documentation', 'System Architecture & Database Schema Diagrams', 'Project Presentation PPT & Demo Video', 'Complete Code Explanation & Viva Preparation']
+    details: 'Dominate organic search results in your target markets. We optimize technical SEO, build authoritative citations, and manage high-converting local campaigns.',
+    deliverables: ['Local SEO & Google Business Profile', 'Technical SEO Audits & Schemas', 'Keyword Research & Competitor Analysis', 'Conversion Rate Optimization', 'Performance Analytics Reports']
   }
 ];
 

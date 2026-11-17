@@ -89,42 +89,41 @@ export default function StudentProjectsPage() {
             maxWidth: '1000px',
             margin: '0 auto',
             background: 'var(--surface)',
-            border: '1px solid rgba(37, 99, 235, 0.25)',
+            border: '1px solid rgba(16, 185, 129, 0.35)',
             borderRadius: '20px',
-            padding: '30px',
-            boxShadow: 'var(--shadow-sm)',
+            padding: '28px 32px',
             display: 'flex',
             alignItems: 'center',
-            gap: '20px',
+            gap: '24px',
             flexWrap: 'wrap',
           }}
         >
-          <ShieldCheck size={36} color="var(--blue)" style={{ flexShrink: 0 }} />
+          <ShieldCheck size={38} color="#10b981" style={{ flexShrink: 0 }} />
           <div style={{ flex: 1, minWidth: '280px' }}>
-            <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '6px' }}>
-              Responsible Academic Mentoring &amp; Learning Integrity
-            </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.6', margin: 0 }}>
-              At SURXTECH, our focus is empowering students with practical coding competence. We teach you how the architecture works, walk you through the database schemas, and prepare you to present your project with confidence before external examiners. We promote learning, understanding, and technical growth.
+            <div style={{ fontSize: '17px', fontWeight: 800, color: 'var(--ink)' }}>
+              Ethical Educational Support &amp; Comprehension-First Mentoring
+            </div>
+            <p style={{ color: 'var(--muted)', fontSize: '14.5px', margin: '6px 0 0', lineHeight: '1.6' }}>
+              We believe real learning comes from understanding system design. Our software engineers conduct comprehensive code walkthroughs, explain algorithms line-by-line, and teach you how to defend your architecture with confidence during external college review panels.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Degrees & Streams Supported */}
+      {/* Academic Disciplines Covered */}
       <section className="section">
-        <div style={{ textAlign: 'center', marginBottom: '44px' }}>
-          <div className="s-label" style={{ justifyContent: 'center' }}>Academic Programs</div>
-          <h2 className="s-title">Degrees &amp; Streams We Mentor</h2>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className="s-label" style={{ justifyContent: 'center' }}>Target Degrees</div>
+          <h2 className="s-title">Programs &amp; Degrees Supported</h2>
           <p style={{ color: 'var(--muted)', marginTop: '8px', fontSize: '15px' }}>
-            Specialized project architectures conforming to university academic standards.
+            Tailored engineering guidance aligned with university syllabi and college submission criteria.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', maxWidth: '1100px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1050px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
           {[
             { degree: 'MCA (Master of Computer Applications)', desc: 'Cloud SaaS, MERN full-stack, enterprise databases & IEEE-aligned papers.' },
-            { degree: 'BE / B.Tech (CSE, IT, AI & Data Science)', desc: 'Deep learning, computer vision, distributed systems & novel algorithm benchmarks.' },
+            { degree: 'BE & B.Tech (CSE, IT, AI & DS)', desc: 'High-scale distributed systems, machine learning models, computer vision & IoT integrations.' },
             { degree: 'BCA (Bachelor of Computer Applications)', desc: 'Practical database applications, modern React/Node web portals & Python automation.' },
             { degree: 'B.Sc Computer Science & IT', desc: 'Core programming concepts, database management systems & clean web interfaces.' }
           ].map((item, idx) => (
@@ -208,4 +207,3 @@ export default function StudentProjectsPage() {
     </div>
   );
 }
-

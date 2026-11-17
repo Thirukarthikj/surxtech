@@ -14,7 +14,7 @@ export default function ContactPage({ selectedService }) {
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
         title="Contact SURXTECH | IT Company in Nilakottai & Dindigul, Tamil Nadu"
-        description="Get in touch with SURXTECH for business website development, mobile apps, custom software, and student project guidance. Office in Nilakottai, Dindigul."
+        description="Get in touch with SURXTECH for business website development, mobile apps, and custom software solutions. Office in Nilakottai, Dindigul."
         canonical="/contact"
         schema={localBusinessSchema}
         breadcrumbs={breadcrumbs}

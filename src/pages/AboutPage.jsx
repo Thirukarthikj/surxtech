@@ -16,7 +16,7 @@ export default function AboutPage() {
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
         title="About SURXTECH | IT Startup & Software Development Company in Dindigul"
-        description="Learn about SURXTECH, an IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer software solutions for businesses and mentor college students on technical projects."
+        description="Learn about SURXTECH, an IT startup in Nilakottai, Dindigul, Tamil Nadu. We engineer high-performance web applications, custom software, mobile apps, and AI solutions for growing businesses."
         canonical="/about"
         breadcrumbs={breadcrumbs}
       />
@@ -27,30 +27,30 @@ export default function AboutPage() {
           <MapPin size={14} style={{ marginRight: '4px' }} /> Rooted in Tamil Nadu
         </div>
         <h1 className="s-title" style={{ fontSize: 'clamp(32px, 5vw, 50px)', marginBottom: '16px' }}>
-          Engineering Modern Technology for <span className="highlight-text">Businesses &amp; Students</span>
+          Engineering Modern Technology for <span className="highlight-text">Growing Businesses</span>
         </h1>
         <p style={{ color: 'var(--muted)', fontSize: '16.5px', maxWidth: '760px', margin: '0 auto 28px', lineHeight: '1.7' }}>
-          SURXTECH is an IT startup headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>. We operate with a dual commitment: delivering high-performance digital products for enterprises, and providing transparent, responsible technical project guidance for college students.
+          SURXTECH is an IT startup headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>. We are dedicated to delivering high-performance digital products, scalable web applications, custom enterprise systems, and intelligent automation for businesses across Tamil Nadu and beyond.
         </p>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Mission & Philosophy */}
       <section className="section alt" style={{ padding: '40px 24px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
           <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '32px' }}>
             <h2 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-              Our Business Mission
+              Our Mission
             </h2>
             <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7' }}>
-              To empower small and medium businesses in Dindigul, Madurai, and throughout Tamil Nadu with enterprise-grade web applications, custom management software, e-commerce stores, and AI automation that eliminate manual inefficiencies and fuel commercial growth.
+              To empower startups, retail enterprises, healthcare providers, educational institutions, and growing businesses with enterprise-grade web applications, custom management software, e-commerce stores, and AI automation that eliminate manual inefficiencies and fuel commercial growth.
             </p>
           </div>
           <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '20px', padding: '32px' }}>
             <h2 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-              Our Academic Mission
+              Our Engineering Philosophy
             </h2>
             <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7' }}>
-              To bridge the critical gap between university syllabi and industry expectations by mentoring MCA, BCA, and Engineering students through genuine software project development with thorough architectural comprehension, clean source code, and confident viva preparation.
+              We believe in writing clean, scalable code with zero proprietary vendor lock-in. Every client receives 100% full ownership of their source code, database architectures, and digital assets, paired with transparent collaboration and reliable local support.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             Meet Our <span className="highlight-text">Engineering Team</span>
           </h2>
           <p style={{ color: 'var(--muted)', maxWidth: '560px', margin: '0 auto 28px', fontSize: '15px', lineHeight: '1.7' }}>
-            Meet our tech leads, full stack developers, UI/UX designers, and media creators who turn your business ideas and student project requirements into clean, working code.
+            Meet our tech leads, full stack developers, UI/UX designers, and cloud architects who turn your business vision into production-ready software.
           </p>
           <Link to="/team" className="btn-primary" style={{ display: 'inline-flex' }}>
             Meet The Team <ArrowRight size={16} />
@@ -82,7 +82,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Ready to Work with an IT Company That Delivers?"
-        subtitle="Contact our Nilakottai engineering team today for business software development or student project mentoring."
+        subtitle="Contact our Nilakottai engineering team today to discuss your next web, mobile, or enterprise software project."
       />
     </div>
   );

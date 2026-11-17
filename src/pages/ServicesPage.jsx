@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ServicesBento, { servicesData } from '../components/ServicesBento';
 import ServiceModal from '../components/ServiceModal';
 import ProcessSection from '../components/ProcessSection';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SEO from '../components/SEO';
-import { Send, Check, MessageSquare, GraduationCap, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
+import { Send, Check, MessageSquare, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
 
 export default function ServicesPage({ onSelectService, selectedService, setSelectedService }) {
+  const location = useLocation();
   const [enquiryForm, setEnquiryForm] = useState({
     name: '',
     email: '',
@@ -19,6 +20,15 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (location.hash === '#enquiry' || location.hash === '#service-enquiry') {
+      const el = document.getElementById('enquiry') || document.getElementById('service-enquiry');
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, [location]);
 
   const handleEnquireSubmit = (e) => {
     e.preventDefault();
@@ -41,14 +51,6 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
     setEnquiryForm((prev) => ({ ...prev, service: svc.name }));
   };
 
-  const handleStudentProgramSelect = (serviceName) => {
-    setEnquiryForm((prev) => ({ ...prev, service: serviceName }));
-    const enquiryEl = document.getElementById('service-enquiry');
-    if (enquiryEl) {
-      enquiryEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
@@ -57,188 +59,46 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
   return (
     <div className="page-wrapper" style={{ paddingTop: '100px' }}>
       <SEO
-        title="Software Development & Student Project Solutions | SURXTECH Dindigul"
-        description="Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile apps, and student final-year project guidance."
+        title="Software Development & Digital Services | SURXTECH Dindigul"
+        description="Comprehensive technology services by SURXTECH in Tamil Nadu: Web development, e-commerce, custom business software, mobile applications, AI solutions, and SEO."
         canonical="/services"
         breadcrumbs={breadcrumbs}
       />
 
-      {/* Segment Navigation Quick Links */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px 20px', display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <Link to="/business-solutions" className="btn-primary" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          <Briefcase size={15} /> Business Solutions Hub →
-        </Link>
-        <Link to="/student-projects" className="btn-outline" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
-          <GraduationCap size={15} /> Student Projects Hub →
-        </Link>
+      {/* Dual Capability Suite Switcher */}
+      <div style={{ maxWidth: '1100px', margin: '0 auto 30px', padding: '0 24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderLeft: '4px solid var(--blue)', borderRadius: '18px', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--blue)', letterSpacing: '0.08em' }}>Segment A</div>
+              <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--ink)', marginTop: '2px' }}>Business Digital Solutions</div>
+              <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '4px' }}>Websites, Apps, AI Automation &amp; Custom Software</div>
+            </div>
+            <Link to="/business-solutions" className="btn-primary" style={{ padding: '9px 16px', fontSize: '13px', flexShrink: 0 }}>
+              Business Hub <ArrowRight size={13} />
+            </Link>
+          </div>
+
+          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderLeft: '4px solid #10b981', borderRadius: '18px', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#059669', letterSpacing: '0.08em' }}>Segment B</div>
+              <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--ink)', marginTop: '2px' }}>Student Project Solutions</div>
+              <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '4px' }}>MCA, BCA, BE, B.Tech, Python &amp; MERN Mentoring</div>
+            </div>
+            <Link to="/student-projects" className="btn-primary" style={{ padding: '9px 16px', fontSize: '13px', background: '#059669', borderColor: '#059669', flexShrink: 0 }}>
+              Student Hub <ArrowRight size={13} />
+            </Link>
+          </div>
+        </div>
       </div>
 
       <ServicesBento onSelectService={handleServiceSelectFromBento} />
-
-      {/* STUDENT PROJECTS & GUIDANCE SPOTLIGHT */}
-      <section className="section" style={{ paddingTop: '20px', paddingBottom: '40px' }}>
-        <div
-          style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            background: 'linear-gradient(135deg, rgba(37,99,235,0.04) 0%, rgba(14,165,233,0.06) 100%)',
-            border: '1px solid rgba(37, 99, 235, 0.2)',
-            borderRadius: '24px',
-            padding: '48px 36px',
-            boxShadow: '0 12px 36px rgba(37, 99, 235, 0.05)',
-          }}
-        >
-          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
-            <div className="s-label" style={{ justifyContent: 'center' }}>
-              <GraduationCap size={16} /> Student Project Solutions
-            </div>
-            <h2 className="s-title" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', marginBottom: '12px' }}>
-              College Student <span className="highlight-text">Project Guidance</span>
-            </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.7' }}>
-              We mentor MCA, BCA, B.Sc CS, BE, and B.Tech students through final-year and mini projects with source code, report documentation, and 1-on-1 viva coaching.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '24px',
-            }}
-          >
-            {/* Card 1: Internship */}
-            <div
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--border)',
-                borderRadius: '20px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(139, 92, 246, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '24px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  🎓
-                </div>
-                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#8b5cf6', marginBottom: '8px' }}>
-                  Industrial Training
-                </div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-                  Internships for College Students
-                </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
-                  Gain real industrial training working alongside senior software engineers. Build production-grade features in React, Node.js, Flutter, UI/UX, and cloud deployments.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-                  {[
-                    'Live project exposure on real-world web & mobile applications',
-                    'Direct 1-on-1 mentorship from tech leads and architects',
-                    'Authorized Internship Certificate & Letter of Recommendation',
-                    'Technical interview preparation & resume enhancement'
-                  ].map((feat, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
-                      <CheckCircle2 size={16} color="var(--blue)" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                type="button"
-                className="btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => handleStudentProgramSelect('College Student Internships')}
-              >
-                Apply for Internship <ArrowRight size={16} />
-              </button>
-            </div>
-
-            {/* Card 2: College Projects */}
-            <div
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--border)',
-                borderRadius: '20px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(6, 182, 212, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '24px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  💡
-                </div>
-                <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#06b6d4', marginBottom: '8px' }}>
-                  Academic Assistance
-                </div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--ink)', marginBottom: '12px' }}>
-                  College Projects (Mini &amp; Major)
-                </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.7', marginBottom: '20px' }}>
-                  End-to-end development of mini, semester, and final-year academic projects for Engineering, BCA, MCA, and IT students with complete documentation.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-                  {[
-                    '100% bug-free working source code with clean architecture',
-                    'Complete IEEE / University standard project documentation report',
-                    'System architecture diagrams, ER diagrams & database schema',
-                    'Full code explanation & viva presentation defense coaching'
-                  ].map((feat, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--ink2)' }}>
-                      <CheckCircle2 size={16} color="var(--blue)" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                type="button"
-                className="btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => handleStudentProgramSelect('College Projects (Mini & Major)')}
-              >
-                Enquire for College Project <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* OUR PROCESS SECTION */}
       <ProcessSection />
 
       {/* SERVICE ENQUIRY FORM SECTION */}
-      <section className="section" id="service-enquiry" style={{ marginTop: '40px' }}>
+      <section className="section" id="enquiry" style={{ marginTop: '40px' }}>
         <div className="enquiry-card">
           <div className="enquiry-hdr">
             <div className="s-label">
@@ -299,6 +159,11 @@ export default function ServicesPage({ onSelectService, selectedService, setSele
                       {svc.icon} {svc.name}
                     </option>
                   ))}
+                  <option value="MCA Final Year Projects">🎓 MCA Final Year Projects</option>
+                  <option value="BCA Final Year Projects">💻 BCA Final Year Projects</option>
+                  <option value="BE / B.Tech Projects">⚙️ Engineering Final Year Projects</option>
+                  <option value="Python / AI Projects">🧠 Python &amp; AI/ML Projects</option>
+                  <option value="Other / Custom Inquiry">💡 Other / Custom Inquiry</option>
                 </select>
               </div>
 

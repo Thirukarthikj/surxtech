@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -22,6 +22,7 @@ const BusinessSolutionsPage = lazy(() => import('./pages/BusinessSolutionsPage')
 const BusinessDetailPage = lazy(() => import('./pages/BusinessDetailPage'));
 const StudentProjectsPage = lazy(() => import('./pages/StudentProjectsPage'));
 const StudentDetailPage = lazy(() => import('./pages/StudentDetailPage'));
+const SeoAdminPage = lazy(() => import('./pages/SeoAdminPage'));
 const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
@@ -119,11 +120,16 @@ export default function App() {
           <Route path="/student-projects" element={<StudentProjectsPage />} />
           <Route path="/mca-projects" element={<StudentDetailPage defaultSlug="mca-projects" />} />
           <Route path="/bca-projects" element={<StudentDetailPage defaultSlug="bca-projects" />} />
+          <Route path="/btech-projects" element={<StudentDetailPage defaultSlug="btech-projects" />} />
+          <Route path="/bsc-cs-projects" element={<StudentDetailPage defaultSlug="bsc-cs-projects" />} />
           <Route path="/engineering-projects" element={<StudentDetailPage defaultSlug="engineering-projects" />} />
           <Route path="/python-projects" element={<StudentDetailPage defaultSlug="python-projects" />} />
           <Route path="/mern-stack-projects" element={<StudentDetailPage defaultSlug="mern-stack-projects" />} />
           <Route path="/ai-ml-projects" element={<StudentDetailPage defaultSlug="ai-ml-projects" />} />
           <Route path="/react-projects" element={<StudentDetailPage defaultSlug="react-projects" />} />
+
+          {/* Scalable Keyword Management & SEO Dashboard */}
+          <Route path="/seo-admin" element={<SeoAdminPage />} />
 
           {/* Blog & Thought Leadership */}
           <Route path="/blog" element={<BlogPage />} />

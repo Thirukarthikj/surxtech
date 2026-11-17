@@ -24,7 +24,7 @@ const routes = [
     content: `
       <section>
         <h2>IT Company & Software Development in Dindigul, Tamil Nadu</h2>
-        <p>Headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>, <strong>SURXTECH</strong> is a modern software development startup operating with a dual mission: engineering high-performance digital products for businesses and providing transparent, responsible technical project guidance for college students.</p>
+        <p>Headquartered in <strong>Nilakottai, Dindigul District, Tamil Nadu</strong>, <strong>SURXTECH</strong> is a modern software development startup dedicated to engineering high-performance digital products, web applications, and enterprise software systems for businesses, alongside comprehensive academic technical project guidance for college students.</p>
         <p>We combine modern full-stack architectures (React, Next.js, Node.js, Python, Flutter) with dependable local customer support across Nilakottai, Dindigul, Batlagundu, Madurai, Theni, and Tamil Nadu.</p>
       </section>
 
@@ -45,18 +45,20 @@ const routes = [
       </section>
 
       <section>
-        <h2>Segment B: College Student Project Solutions</h2>
-        <p>SURXTECH provides complete, ethical technical project guidance and mentoring for computer science, IT, and engineering students across Tamil Nadu:</p>
+        <h2>Segment B: College Student Project Guidance</h2>
+        <p>SURXTECH mentors MCA, BCA, B.Sc CS, BE, and B.Tech students through real-world software project implementations with complete documentation, PPT, and viva defense coaching:</p>
         <ul>
           <li><a href="/mca-projects"><strong>MCA Final Year Projects</strong></a>: Advanced cloud architectures, microservices, and enterprise full-stack implementations.</li>
           <li><a href="/bca-projects"><strong>BCA Projects & Mini Projects</strong></a>: Clean database management systems, web applications, and practical management portals.</li>
-          <li><a href="/engineering-projects"><strong>Engineering Final Year Projects (BE / B.Tech)</strong></a>: Capstone projects for CSE, IT, and ECE with complete IEEE documentation.</li>
-          <li><a href="/python-projects"><strong>Python Projects</strong></a>: Machine learning, OpenCV computer vision, natural language processing, and Django/Flask APIs.</li>
+          <li><a href="/btech-projects"><strong>B.Tech Final Year Projects</strong></a>: Capstone projects for IT, AI, and DS with IEEE documentation and model weights.</li>
+          <li><a href="/bsc-cs-projects"><strong>B.Sc Computer Science Projects</strong></a>: Python, PHP, and React projects with source code, report, and viva coaching.</li>
+          <li><a href="/engineering-projects"><strong>Engineering Final Year Projects (BE)</strong></a>: Distributed systems, computer vision, and cloud solutions.</li>
+          <li><a href="/python-projects"><strong>Python Projects</strong></a>: Machine learning, OpenCV, NLP, and Django/Flask APIs.</li>
           <li><a href="/mern-stack-projects"><strong>MERN Stack Projects</strong></a>: Real-time web applications built with MongoDB, Express.js, React, and Node.js.</li>
           <li><a href="/ai-ml-projects"><strong>AI & Machine Learning Projects</strong></a>: Predictive analytics, deep learning models, and dataset training with source code.</li>
           <li><a href="/react-projects"><strong>React Projects</strong></a>: Modern interactive web applications with state management and REST API integrations.</li>
         </ul>
-        <p><a href="/student-projects">Explore Student Project Guidance &rarr;</a></p>
+        <p><a href="/student-projects">Explore All Student Project Guidance &rarr;</a></p>
       </section>
 
       <section>
@@ -126,7 +128,29 @@ const routes = [
       <h3>Business Services:</h3>
       <p><a href="/web-development">Web Development</a> · <a href="/ecommerce-development">E-Commerce</a> · <a href="/mobile-app-development">Mobile Apps</a> · <a href="/custom-software-development">Custom Software</a> · <a href="/ai-solutions">AI Solutions</a> · <a href="/ui-ux-design">UI/UX Design</a> · <a href="/seo-services">SEO Services</a> · <a href="/website-maintenance">Website Maintenance</a></p>
       <h3>Student Project Tracks:</h3>
-      <p><a href="/mca-projects">MCA Projects</a> · <a href="/bca-projects">BCA Projects</a> · <a href="/engineering-projects">BE / B.Tech Projects</a> · <a href="/python-projects">Python Projects</a> · <a href="/mern-stack-projects">MERN Stack</a> · <a href="/ai-ml-projects">AI/ML Projects</a> · <a href="/react-projects">React Projects</a></p>
+      <p><a href="/mca-projects">MCA Projects</a> · <a href="/bca-projects">BCA Projects</a> · <a href="/btech-projects">B.Tech Projects</a> · <a href="/bsc-cs-projects">B.Sc Projects</a> · <a href="/engineering-projects">BE Projects</a> · <a href="/python-projects">Python Projects</a> · <a href="/mern-stack-projects">MERN Stack</a> · <a href="/ai-ml-projects">AI/ML Projects</a> · <a href="/react-projects">React Projects</a></p>
+    `
+  },
+  {
+    path: '/business-solutions',
+    title: 'Business Software & Digital Solutions in Tamil Nadu | SURXTECH',
+    description: 'Full-scale enterprise and small business technology solutions by SURXTECH: Custom websites, e-commerce stores, mobile apps, CRM, ERP, and AI automation.',
+    h1: 'Enterprise & SME Digital Solutions',
+    content: `
+      <h2>Engineered for Business Scalability</h2>
+      <p>From local shops and clinics in Dindigul to regional enterprises across Tamil Nadu, SURXTECH builds custom web, mobile, and software systems with 100% source code ownership and zero lock-in.</p>
+      <p><a href="/web-development">Web Development</a> | <a href="/ecommerce-development">E-Commerce Stores</a> | <a href="/custom-software-development">Custom Software</a> | <a href="/mobile-app-development">Mobile Applications</a></p>
+    `
+  },
+  {
+    path: '/student-projects',
+    title: 'Student Project Center in Tamil Nadu | Final Year Projects | SURXTECH',
+    description: 'Professional final year and mini project development for MCA, BCA, B.Sc CS, BE, and B.Tech students in Tamil Nadu. Source code, report, PPT, and viva coaching.',
+    h1: 'College Student Project Guidance in Tamil Nadu',
+    content: `
+      <h2>Comprehension-First Engineering Mentoring</h2>
+      <p>SURXTECH mentors MCA, BCA, B.Sc CS, BE, and B.Tech students through real-world software project implementations with complete documentation, review presentations, and line-by-line viva coaching.</p>
+      <p><a href="/mca-projects">MCA Projects</a> | <a href="/bca-projects">BCA Projects</a> | <a href="/btech-projects">B.Tech Projects</a> | <a href="/bsc-cs-projects">B.Sc CS Projects</a> | <a href="/engineering-projects">BE Projects</a> | <a href="/python-projects">Python Projects</a> | <a href="/mern-stack-projects">MERN Stack Projects</a> | <a href="/ai-ml-projects">AI/ML Projects</a></p>
     `
   },
   {
@@ -220,7 +244,7 @@ businessServices.forEach(s => {
   });
 });
 
-// Add all 7 student project routes
+// Add all 9 student project routes
 studentServices.forEach(p => {
   routes.push({
     path: p.path,
@@ -230,11 +254,11 @@ studentServices.forEach(p => {
     content: `
       <h2>${p.tagline}</h2>
       <p>${p.description}</p>
-      <h3>Eligibility & Courses</h3>
+      <h3>Target Degree & Courses</h3>
       <p>${p.targetAudience}</p>
       <h3>Curriculum & Technical Scope</h3>
       <ul>${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
-      <h3>Deliverables</h3>
+      <h3>Deliverables Package</h3>
       <ul>${p.deliverables.map(d => `<li>${d}</li>`).join('')}</ul>
       <p><a href="/contact">Enquire About ${p.shortTitle} &rarr;</a></p>
     `
@@ -315,18 +339,15 @@ async function prerender() {
     );
 
     // Inject 100% VISIBLE semantic HTML inside <div id="root">
-    // NO display:none! React client-side render replaces #root cleanly upon mount.
     const semanticMarkup = `
       <div id="root">
         <header class="site-prerender-nav">
           <a href="/" style="font-weight: 800; font-size: 18px; color: #0f172a; text-decoration: none;">SURXTECH</a>
           <nav>
             <a href="/">Home</a> | 
-            <a href="/business-solutions">Business Solutions</a> | 
-            <a href="/student-projects">Student Projects</a> | 
-            <a href="/portfolio">Portfolio</a> | 
-            <a href="/blog">Blog</a> | 
             <a href="/about">About</a> | 
+            <a href="/services">Service</a> | 
+            <a href="/services#enquiry">Enquire</a> | 
             <a href="/contact">Contact</a>
           </nav>
         </header>

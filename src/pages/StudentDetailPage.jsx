@@ -101,56 +101,10 @@ export default function StudentDetailPage({ defaultSlug }) {
         </div>
       </section>
 
-      {/* Target Students & Overview */}
-      <section className="section" style={{ padding: '50px 24px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', alignItems: 'center' }}>
-          <div>
-            <div className="s-label">Eligibility &amp; Target Course</div>
-            <h2 className="s-title" style={{ fontSize: 'clamp(24px, 3.2vw, 36px)', marginBottom: '16px' }}>
-              Who Should Choose {project.shortTitle}?
-            </h2>
-            <p style={{ color: 'var(--muted)', fontSize: '15.5px', lineHeight: '1.7', marginBottom: '20px' }}>
-              {project.targetAudience}
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14.5px', color: 'var(--ink)' }}>
-                <CheckCircle2 size={18} color="#10b981" /> Fully aligned with university syllabus &amp; guidelines
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14.5px', color: 'var(--ink)' }}>
-                <CheckCircle2 size={18} color="#10b981" /> Working localhost installation setup on your laptop
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14.5px', color: 'var(--ink)' }}>
-                <CheckCircle2 size={18} color="#10b981" /> 1-on-1 viva voice question-and-answer preparation
-              </div>
-            </div>
-          </div>
-
-          <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '24px', padding: '36px', boxShadow: 'var(--shadow-md)' }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', marginBottom: '18px' }}>
-              What Makes Our {project.shortTitle} Guidance Different?
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              <li style={{ display: 'flex', gap: '12px', fontSize: '14px', color: 'var(--muted)', lineHeight: '1.5' }}>
-                <Code2 size={20} color="var(--blue)" style={{ flexShrink: 0 }} />
-                <span><strong>Industry Clean Code:</strong> Commented source code written to production coding standards.</span>
-              </li>
-              <li style={{ display: 'flex', gap: '12px', fontSize: '14px', color: 'var(--muted)', lineHeight: '1.5' }}>
-                <BookOpen size={20} color="#10b981" style={{ flexShrink: 0 }} />
-                <span><strong>University Format Documentation:</strong> Full IEEE / college format report with diagrams.</span>
-              </li>
-              <li style={{ display: 'flex', gap: '12px', fontSize: '14px', color: 'var(--muted)', lineHeight: '1.5' }}>
-                <Video size={20} color="#8b5cf6" style={{ flexShrink: 0 }} />
-                <span><strong>Presentation Ready:</strong> Professional PPT slides for Review 1, Review 2, and Final Viva.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Features & Syllabus */}
-      <section className="section alt">
+      {/* Key Features & Tech Stack */}
+      <section className="section">
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '44px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <div className="s-label" style={{ justifyContent: 'center' }}>Technical Scope</div>
             <h2 className="s-title">Curriculum &amp; Technical Features</h2>
             <p style={{ color: 'var(--muted)', marginTop: '8px', fontSize: '15px' }}>
@@ -268,4 +222,3 @@ export default function StudentDetailPage({ defaultSlug }) {
     </div>
   );
 }
-
