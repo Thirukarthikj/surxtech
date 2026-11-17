@@ -1290,9 +1290,13 @@ footer {
 .footer-main,
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.8fr 1.1fr 1.1fr 1.1fr 1.3fr;
-  gap: 40px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 48px;
   margin-bottom: 56px;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-brand p,
 .f-tagline {
@@ -1328,7 +1332,18 @@ footer {
 .f-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; font-weight: 300; }
 .f-links a:hover { color: var(--blue); }
 
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 16px; }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .f-copy { font-size: 13px; color: var(--muted); font-weight: 300; }
 .f-social { display: flex; gap: 10px; }
 .soc-btn {

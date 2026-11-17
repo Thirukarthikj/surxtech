@@ -1,26 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Mail, MessageSquare, Linkedin, MapPin, Phone, Shield } from 'lucide-react';
+import { Instagram, Mail, MessageSquare, Linkedin, Github, MapPin, Phone, ShieldCheck } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-main">
-        <div className="footer-brand" style={{ maxWidth: '340px' }}>
+        {/* Column 1: Brand & NAP */}
+        <div className="footer-brand" style={{ maxWidth: '360px' }}>
           <Link to="/" className="f-logo">
             <img src="/logo.png" alt="SURXTECH Logo" className="logo-img" />
             <span className="logo-text">SURX<em>TECH</em></span>
           </Link>
-          <p className="f-tagline" style={{ lineHeight: '1.7', marginTop: '14px' }}>
-            IT Startup &amp; Software Development Company based in Nilakottai, Dindigul, Tamil Nadu. Building digital products for businesses and providing technical project mentoring for college students.
+          <p className="f-tagline" style={{ lineHeight: '1.7', marginTop: '14px', fontSize: '14px', color: 'var(--muted)' }}>
+            <strong>SURXTECH</strong> is an independent IT startup &amp; software development company headquartered in Nilakottai, Dindigul District, Tamil Nadu. We engineer modern websites, custom software, mobile apps, and AI business solutions.
             <br />
             <br />
             <strong>Creative Design. Powerful Code. Smart Apps.</strong>
           </p>
+          <div style={{ marginTop: '14px', fontSize: '12px', color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <ShieldCheck size={14} color="var(--blue)" />
+            <span>Official Domain: <strong>surxtech.com</strong></span>
+          </div>
         </div>
 
+        {/* Column 2: Business Services */}
         <div>
-          <div className="f-group-title">Business Services</div>
+          <div className="f-group-title">Services</div>
           <ul className="f-links">
             <li><Link to="/services">All Services Overview</Link></li>
             <li><Link to="/web-development">Web Development</Link></li>
@@ -34,21 +40,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <div className="f-group-title">Student Projects</div>
-          <ul className="f-links">
-            <li><Link to="/student-projects">Projects Overview</Link></li>
-            <li><Link to="/mca-projects">MCA Final Year Projects</Link></li>
-            <li><Link to="/bca-projects">BCA Projects</Link></li>
-            <li><Link to="/bsc-cs-projects">B.Sc Computer Science</Link></li>
-            <li><Link to="/btech-projects">B.Tech IT &amp; AI Projects</Link></li>
-            <li><Link to="/engineering-projects">BE Final Year Projects</Link></li>
-            <li><Link to="/python-projects">Python Projects</Link></li>
-            <li><Link to="/mern-stack-projects">MERN Stack Projects</Link></li>
-            <li><Link to="/ai-ml-projects">AI &amp; ML Projects</Link></li>
-          </ul>
-        </div>
-
+        {/* Column 3: Company & Guides */}
         <div>
           <div className="f-group-title">Company &amp; Guides</div>
           <ul className="f-links">
@@ -63,24 +55,25 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Column 4: Contact & Location */}
         <div>
           <div className="f-group-title">Contact &amp; Location</div>
           <ul className="f-links">
-            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: 'var(--muted)', fontSize: '13px' }}>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: 'var(--muted)', fontSize: '13.5px', lineHeight: '1.5' }}>
               <MapPin size={16} color="var(--blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
-              <span>Nilakottai, Dindigul District, Tamil Nadu — 624208</span>
+              <span>Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208</span>
             </li>
-            <li style={{ marginTop: '8px' }}>
+            <li style={{ marginTop: '10px' }}>
               <a href="tel:+919342553805" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Phone size={15} color="var(--blue)" /> +91 93425 53805
               </a>
             </li>
-            <li style={{ marginTop: '8px' }}>
+            <li style={{ marginTop: '10px' }}>
               <a href="mailto:surxtech@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Mail size={15} color="var(--blue)" /> surxtech@gmail.com
               </a>
             </li>
-            <li style={{ marginTop: '8px' }}>
+            <li style={{ marginTop: '10px' }}>
               <a href="https://wa.me/919342553805?text=Hi%20SurxTech" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <MessageSquare size={15} color="#10b981" /> WhatsApp Chat
               </a>
@@ -91,7 +84,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="f-copy">
-          © {new Date().getFullYear()} SURXTECH. All rights reserved. Nilakottai, Dindigul, Tamil Nadu, India.
+          © {new Date().getFullYear()} SURXTECH. All rights reserved. Nilakottai, Dindigul District, Tamil Nadu, India.
         </div>
         <div className="f-social">
           <a href="https://instagram.com/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="Instagram @surxtech">
@@ -105,6 +98,9 @@ export default function Footer() {
           </a>
           <a href="https://linkedin.com/company/surxtech" className="soc-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <Linkedin size={16} />
+          </a>
+          <a href="https://github.com/Thirukarthikj" className="soc-btn" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <Github size={16} />
           </a>
         </div>
       </div>

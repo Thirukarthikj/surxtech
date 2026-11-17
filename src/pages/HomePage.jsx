@@ -9,7 +9,7 @@ import FAQSection, { defaultFaqs } from '../components/FAQSection';
 import CTASection from '../components/CTASection';
 import SEO from '../components/SEO';
 import { organizationSchema, websiteSchema, localBusinessSchema, createFAQSchema } from '../utils/seoSchemas';
-import { businessServices, studentServices, genuineCaseStudies } from '../data/solutionsData';
+import { businessServices, genuineCaseStudies } from '../data/solutionsData';
 import { ArrowRight, CheckCircle2, ShieldCheck, Code2, Briefcase, Sparkles, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function HomePage() {
@@ -96,45 +96,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STUDENT PROJECTS SPOTLIGHT ── */}
-      <section className="section" id="student-projects">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '44px', flexWrap: 'wrap', gap: '20px' }}>
-          <div>
-            <div className="s-label">
-              <Code2 size={14} style={{ marginRight: '4px' }} /> Academic Excellence &amp; Technical Mentoring
-            </div>
-            <h2 className="s-title">
-              Final Year Projects for <span className="highlight-text">College Students</span>
-            </h2>
-            <p style={{ color: 'var(--muted)', marginTop: '10px', fontSize: '15.5px', maxWidth: '640px' }}>
-              Comprehensive final year project development &amp; mentoring for MCA, BCA, B.Sc CS, BE, and B.Tech students in Tamil Nadu. Complete with clean source code, IEEE reports, PPTs, and viva coaching.
-            </p>
-          </div>
-          <Link to="/student-projects" className="btn-primary" style={{ padding: '12px 24px', background: '#059669', borderColor: '#059669' }}>
-            Explore All Projects <ArrowRight size={16} />
-          </Link>
-        </div>
 
-        <div className="home-hub-grid">
-          {studentServices.slice(0, 6).map((proj) => (
-            <Link key={proj.slug} to={proj.path} className="home-hub-card">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px' }}>
-                <div className="hub-card-icon" style={{ fontSize: '28px' }}>{proj.icon}</div>
-                <span className="hub-card-badge" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#059669', borderColor: 'rgba(16, 185, 129, 0.25)' }}>
-                  Student Track
-                </span>
-              </div>
-              <h3 className="hub-card-title">{proj.shortTitle}</h3>
-              <div className="hub-card-sub" style={{ color: '#059669', fontWeight: 600 }}>{proj.primaryKeyword}</div>
-              <p className="hub-card-desc">{proj.description.slice(0, 130)}...</p>
-              <div className="hub-card-btn">
-                <span>View Syllabus &amp; Code</span>
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* ── TECHNOLOGIES & ENGINEERING EXPERTISE ── */}
       <TechStack />

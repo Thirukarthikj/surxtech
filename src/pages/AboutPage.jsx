@@ -56,6 +56,23 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Brand Identity & Disambiguation */}
+      <section className="section" style={{ padding: '20px 24px 40px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', background: 'var(--surface)', border: '1px solid var(--border)', borderLeft: '4px solid var(--blue)', borderRadius: '20px', padding: '32px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+            <ShieldCheck size={20} color="var(--blue)" />
+            <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--ink)', margin: 0 }}>
+              SURXTECH™ Brand Identity &amp; Headquarters
+            </h2>
+          </div>
+          <p style={{ color: 'var(--muted)', fontSize: '14.5px', lineHeight: '1.8', margin: 0 }}>
+            <strong>SURXTECH</strong> (also written as <strong>SurxTech</strong>) is an independent technology startup and software development company founded by <strong>J. Thirukarthik</strong>. Headquartered at <strong>Main Road, Nilakottai, Dindigul District, Tamil Nadu — 624208, India</strong>.
+            <br />
+            Our official online domain is <strong><a href="https://www.surxtech.com" style={{ color: 'var(--blue)' }}>surxtech.com</a></strong>. SURXTECH provides commercial web application development, mobile applications, AI solutions, and enterprise software systems across Tamil Nadu. (SURXTECH is an independent technology company and is not affiliated with any educational institutes in Kolkata).
+          </p>
+        </div>
+      </section>
+
       <WhySurxTech />
       <TechStack />
 

@@ -1,14 +1,46 @@
 // Verified Structured Data (JSON-LD) for SURXTECH
+// Authoritative Brand Entity and Disambiguation Schema
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://www.surxtech.com/#organization',
   name: 'SURXTECH',
-  legalName: 'SURXTECH Software Solutions',
+  legalName: 'SURXTECH',
+  alternateName: ['SurxTech', 'SURXTECH Software Solutions', 'SURXTECH IT Company'],
   url: 'https://www.surxtech.com',
   logo: 'https://www.surxtech.com/logo.png',
+  image: 'https://www.surxtech.com/logo.png',
   description:
-    'SURXTECH is an IT startup and software development company based in Nilakottai, Dindigul, Tamil Nadu, providing web development, mobile apps, AI solutions, and college student project guidance.',
+    'SURXTECH is an independent IT startup and software development company based in Nilakottai, Dindigul District, Tamil Nadu, India. Official website: surxtech.com. We engineer modern websites, custom software, mobile applications, and AI business solutions.',
+  disambiguatingDescription:
+    'SURXTECH is an independent IT startup and software development company founded by J. Thirukarthik in Nilakottai, Dindigul District, Tamil Nadu, India (domain: surxtech.com). It is not affiliated with Sur Tech, JIS Group, or any educational institutions in Kolkata.',
+  brand: {
+    '@type': 'Brand',
+    '@id': 'https://www.surxtech.com/#brand',
+    name: 'SURXTECH',
+    alternateName: 'SurxTech',
+    url: 'https://www.surxtech.com',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'J. Thirukarthik',
+    jobTitle: 'Founder & Tech Lead',
+    url: 'https://thiruportfolio-navy.vercel.app/',
+  },
+  knowsAbout: [
+    'Web Development',
+    'Custom Software Development',
+    'Mobile Application Development',
+    'E-Commerce Development',
+    'Artificial Intelligence Solutions',
+    'UI/UX Design',
+    'Search Engine Optimization',
+    'React',
+    'Next.js',
+    'Node.js',
+    'Python',
+  ],
   email: 'surxtech@gmail.com',
   telephone: '+919342553805',
   address: {
@@ -23,14 +55,20 @@ export const organizationSchema = {
     'https://instagram.com/surxtech',
     'https://linkedin.com/company/surxtech',
     'https://github.com/Thirukarthikj',
+    'https://thiruportfolio-navy.vercel.app/',
   ],
 };
 
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': 'https://www.surxtech.com/#website',
   name: 'SURXTECH',
+  alternateName: 'SurxTech',
   url: 'https://www.surxtech.com',
+  publisher: {
+    '@id': 'https://www.surxtech.com/#organization',
+  },
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -44,12 +82,16 @@ export const websiteSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://www.surxtech.com/#localbusiness',
   name: 'SURXTECH - IT Company & Software Development',
   image: 'https://www.surxtech.com/logo.png',
   url: 'https://www.surxtech.com',
   telephone: '+919342553805',
   email: 'surxtech@gmail.com',
   priceRange: '₹₹',
+  parentOrganization: {
+    '@id': 'https://www.surxtech.com/#organization',
+  },
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Nilakottai Town',
